@@ -38,3 +38,15 @@ cd bin/lin64
 * On Linux-based systems install license to ~/.Xilinx
   * File is called "Xilinx.lic"
 
+### Executing ISE Notes
+
+* Assuming that install was to /opt/Xilinx:
+
+```
+#!/bin/bash
+
+# Start Xilinx ISE Webpack
+/opt/Xilinx/14.7/ISE_DS/settings64.sh
+/opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/ise
+```
+
