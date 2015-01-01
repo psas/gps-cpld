@@ -1,7 +1,7 @@
 
-Verilog and Xilinx ISE Webpack project files for a GPS -> SPI CPLD implementation
+## Verilog and Xilinx ISE Webpack project files for a GPS -> SPI CPLD implementation
 
-
+```
 Inputs         (From GPS chip)
 
 Q0
@@ -22,5 +22,5 @@ Clocks
 CLKGPS_14   14 Mhz GPS data clock
 CLKMCU_25   25 Mhz MCU data clock
 
-
+```
 

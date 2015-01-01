@@ -27,7 +27,7 @@ cd bin/lin64
 ```
 * The install is about 25Gb. Yep, you read that right.
 
-### Licence Notes
+### License Notes
 
 * Go to the Xilinx web site
   * Log in with your account
