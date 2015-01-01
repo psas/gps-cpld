@@ -1,12 +1,12 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2015-01-01T12:58:37</DateModified>
+  <DateModified>2015-01-01T14:18:32</DateModified>
   <ModuleName>asynch_edge_detect</ModuleName>
-  <SummaryTimeStamp>2015-01-01T12:41:48</SummaryTimeStamp>
-  <SavedFilePath>/home/kwilson/Projects/gps-cpld/edged/iseconfig/asynch_edge_detect.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>/home/kwilson/Projects/gps-cpld/edged/</ImplementationReportsDirectory>
-  <DateInitialized>2014-12-30T20:07:14</DateInitialized>
+  <SummaryTimeStamp>2015-01-01T14:16:11</SummaryTimeStamp>
+  <SavedFilePath>/home/kwilson/Projects/gps-cpld/proj/edgedet/iseconfig/asynch_edge_detect.xreport</SavedFilePath>
+  <ImplementationReportsDirectory>/home/kwilson/Projects/gps-cpld/proj/edgedet</ImplementationReportsDirectory>
+  <DateInitialized>2015-01-01T13:57:31</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>
  <body>

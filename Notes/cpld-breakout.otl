@@ -12,5 +12,7 @@ Web page
 Design files:
 	https://code.google.com/p/dangerous-prototypes-open-hardware/source/browse/
 	svn checkout http://dangerous-prototypes-open-hardware.googlecode.com/svn/trunk/ dangerous-prototypes-open-hardware-read-only
-		git svn clone  http://dangerous-prototypes-open-hardware.googlecode.com/svn/trunk/ dangerous-prototypes-open-hardware-read-only
+		git svn clone  http://dangerous-prototypes-open-hardware.googlecode.com/svn -T trunk -b branches -t tags
+			OR maybe...
+		git svn clone  http://dangerous-prototypes-open-hardware.googlecode.com/svn -T trunk
 

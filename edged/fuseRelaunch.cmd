@@ -1,1 +1,0 @@
--intstyle "ise" -incremental -lib "uni9000_ver" -lib "aim_ver" -lib "cpld_ver" -lib "xilinxcorelib_ver" -o "/home/kwilson/Projects/gps-cpld/edged/edged_tb_isim_beh.exe" -prj "/home/kwilson/Projects/gps-cpld/edged/edged_tb_beh.prj" "work.edged_tb" "work.glbl" 

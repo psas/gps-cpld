@@ -1,3 +1,0 @@
-verilog work "bridge_sm.v"
-verilog work "asynch_edge_detect.v"
-verilog work "bridge.v"

@@ -12,7 +12,7 @@ module edged_tb;
 	asynch_edge_detect uut (
 		.SYNC_CLK_IN(sync_clk), 
 		.ASYNC_IN(async_clk), 
-		.SYNC_OUT(sig_out) 
+		.DETECT_OUT(sig_out) 
 	);
 	
 	initial begin
