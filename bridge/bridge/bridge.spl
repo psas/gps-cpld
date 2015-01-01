@@ -1,0 +1,15 @@
+[Inputs]
+GPS_I0
+GPS_I1
+GPS_Q0
+GPS_Q1
+GPS_CLK_16_368
+MCU_CLK_25_000
+[Outputs]
+MCU_SCK
+MCU_SS
+MCU_MOSI
+[BiDir]
+[ATTRIBUTES]
+VeriModel bridge
+

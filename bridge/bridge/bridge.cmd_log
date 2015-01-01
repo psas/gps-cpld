@@ -1,0 +1,6 @@
+vhdtdtfi -lib work /home/kwilson/Projects/gps-cpld/bridge/bridge/bridge.v -lang verilog -prj bridge -o bridge.spl -module bridge -template /opt/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family xbr bridge.spl /home/kwilson/Projects/gps-cpld/bridge/bridge/bridge.sym 
+xst -intstyle ise -ifn "/home/kwilson/Projects/gps-cpld/bridge/bridge/bridge.xst" -ofn "/home/kwilson/Projects/gps-cpld/bridge/bridge/bridge.syr" 
+xst -intstyle ise -ifn "/home/kwilson/Projects/gps-cpld/bridge/bridge/bridge.xst" -ofn "/home/kwilson/Projects/gps-cpld/bridge/bridge/bridge.syr" 
+xst -intstyle ise -ifn "/home/kwilson/Projects/gps-cpld/bridge/bridge/bridge.xst" -ofn "/home/kwilson/Projects/gps-cpld/bridge/bridge/bridge.syr" 
+xst -intstyle ise -ifn "/home/kwilson/Projects/gps-cpld/bridge/bridge/bridge.xst" -ofn "/home/kwilson/Projects/gps-cpld/bridge/bridge/bridge.syr" 

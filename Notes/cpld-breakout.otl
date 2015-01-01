@@ -1,0 +1,16 @@
+
+CoolrunnerII CPLD Breakout from Dangerous Prototypes
+	Sold at Seeed studios
+		http://www.seeedstudio.com/depot/XC2C64A-CoolRunnerII-CPLD-development-board-p-800.html?cPath=6_10
+
+CPLD Part number: XC2C64A_VQ44
+
+Web page
+	http://dangerousprototypes.com/docs/CoolRunner-II_CPLD_breakout_board#Partslist
+	http://dangerousprototypes.com/docs/CPLD:_Complex_programmable_logic_devices
+
+Design files:
+	https://code.google.com/p/dangerous-prototypes-open-hardware/source/browse/
+	svn checkout http://dangerous-prototypes-open-hardware.googlecode.com/svn/trunk/ dangerous-prototypes-open-hardware-read-only
+		git svn clone  http://dangerous-prototypes-open-hardware.googlecode.com/svn/trunk/ dangerous-prototypes-open-hardware-read-only
+

@@ -1,23 +1,5 @@
 `timescale 1ns / 1ps
-//////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
-// 
-// Create Date:    17:05:29 12/28/2014 
-// Design Name: 
-// Module Name:    bridge 
-// Project Name: 
-// Target Devices: 
-// Tool versions: 
-// Description: 
-//
-// Dependencies: 
-//
-// Revision: 
-// Revision 0.01 - File Created
-// Additional Comments: 
-//
-//////////////////////////////////////////////////////////////////////////////////
+
 module bridge(
 	input GPS_I0,
 	input GPS_I1,
@@ -32,9 +14,6 @@ module bridge(
 	wire GPS_CLK_4_092;
 	
 	reg [3:0] gps_data = 4'h0;
-	
-	// New data is available
-	reg go_newdata     = 1'b0;
 	
 	// CLK_DIV4: Simple clock Divide by 4
 	//             CoolRunner-II
@@ -59,6 +38,10 @@ module bridge(
 	);
 	
 	// Instantiate edge detection here
-	
+	asynch_edge_detect asynch_edge_detect_inst(
+    .SYNC_CLK_IN(MCU_CLK_25_000),
+    .ASYNC_IN(GPS_CLK_4_092),
+    .SYNC_OUT(go_newdata)
+    );
 	
 endmodule
