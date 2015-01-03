@@ -1,0 +1,27 @@
+digraph bridge_sm {
+  graph [fontname="lucidasans-bold-14"];
+  rankdir=LR;
+  node [fontname="lucidasans-bold-14"];
+  reset -> start
+  start -> I0 [label = "DataReady"];
+  I0 -> I0_clk;
+  I0_clk -> I1;
+  I1 -> I1_clk;
+  I1_clk -> Q0;
+  Q0 -> Q0_clk;
+  Q0_clk -> Q1;
+  Q1 -> Q1_clk;
+  Q1_clk -> SS_Release    [label = " Counter == 0 "];
+  Q1_clk -> Wait_Datardy  [label = " Counter > 0 "];
+  SS_Release -> Wait_Datardy;
+  Wait_Datardy -> I0 [label = " DataReady "];
+  Wait_Datardy -> Wait_Datardy [ label=" !DataReady " ];
+  start [color=turquoise, peripheries=2, style=filled];
+  reset [color=red, peripheries=2, style=filled];
+  label="bridge_sm";
+  labelloc=top;
+  labeljust=center;
+  { rank=same; start, Wait_Datardy }
+  { rank=same; I0, I1, Q0, Q1 }
+  { rank=same; I0_clk, I1_clk, Q0_clk, Q1_clk }
+}

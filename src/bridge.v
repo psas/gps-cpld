@@ -13,9 +13,13 @@ module bridge(
 
 wire GPS_CLK_4_092;
 wire go_newdata;
+wire gps_i0_sync;
+wire gps_i1_sync;
+wire gps_q0_sync;
+wire gps_q1_sync;
 
-assign MCU_SS = ~go_newdata;
-assign MCU_SCK = GPS_CLK_4_092;
+assign MCU_SS   = ~go_newdata;
+assign MCU_SCK  = gps_i0_sync & gps_i1_sync & gps_q0_sync & gps_q1_sync;
 assign MCU_MOSI = 1'b1;
 
 // CLK_DIV4: Simple clock Divide by 4  CoolRunner-II
@@ -33,19 +37,40 @@ asynch_edge_detect asynch_edge_detect_inst(
 		.DETECT_OUT(go_newdata)
 );
 
+synchronizer synch_inst_i0 (
+	.asynch_input(GPS_I0),
+	.synch_clk(MCU_CLK_25_000),
+	.synch_output(gps_i0_sync)
+);
+	
+synchronizer synch_inst_i1 (
+	.asynch_input(GPS_I1),
+	.synch_clk(MCU_CLK_25_000),
+	.synch_output(gps_i1_sync)
+);
+
+synchronizer synch_inst_q0 (
+	.asynch_input(GPS_Q0),
+	.synch_clk(MCU_CLK_25_000),
+	.synch_output(gps_q0_sync)
+);
+
+synchronizer synch_inst_q1 (
+	.asynch_input(GPS_Q1),
+	.synch_clk(MCU_CLK_25_000),
+	.synch_output(gps_q1_sync)
+);
 
 // Instantiate bridge state machine here
-//bridge_sm bridge_sm_inst (
-//.GPS_I0(GPS_I0),
-//.GPS_I1(GPS_I1),
-//.GPS_Q0(GPS_Q0),
-//.GPS_Q1(GPS_Q1),
-//.MCU_CLK_25_000(GPS_CLK_25_000),
-//.MCU_SCK(MCU_SCK),
-//.MCU_SS(MCU_SS),
-//.MCU_SS(MCU_MOSI)
-//);
-
+bridge_sm bridge_sm_inst (
+.GPS_I0(gps_i0_sync),
+.GPS_I1(gps_i1_sync),
+.GPS_Q0(gps_q0_sync),
+.GPS_Q1(gps_q1_sync),
+.MCU_CLK_25_000(GPS_CLK_25_000),
+.MCU_SCK(MCU_SCK),
+.MCU_SS(MCU_SS),
+.MCU_SS(MCU_MOSI)
+);
 
 endmodule
-
