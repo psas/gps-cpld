@@ -2,161 +2,167 @@
 
 
 module bridge_sm(
-    input GPS_I0,
-    input GPS_I1,
-    input GPS_Q0,
-    input GPS_Q1,
-    input MCU_CLK_25_000,
-	input RESET,
+	input GPS_I0,
+	input GPS_I1,
+	input GPS_Q0,
+	input GPS_Q1,
+	input MCU_CLK_25_000,
+	input RESET_N,
 	input DATAREADY,
-    output MCU_SCK,
-    output MCU_SS,
-    output MCU_MOSI
-    );
+	output MCU_SCK,
+	output MCU_SS,
+	output MCU_MOSI
+  );
 
-    parameter reset_st          = 4'b0000;
-    parameter start_st          = 4'b0001;
-    parameter i0_st             = 4'b0010;
-    parameter i0_clk_st         = 4'b0011;
-    parameter i1_st             = 4'b0100;
-    parameter i1_clk_st         = 4'b0101;
-    parameter q0_st             = 4'b0110;
-    parameter q0_clk_st         = 4'b0111;
-    parameter q1_st             = 4'b1000;
-    parameter q1_clk_st         = 4'b1001;
-    parameter wait_dataready_st = 4'b1010;
-    parameter ss_release_st     = 4'b1011;
-    parameter state13           = 4'b1100;
-    parameter state14           = 4'b1101;
-    parameter state15           = 4'b1110;
-    parameter state16           = 4'b1111;
+  parameter reset_st          = 4'b0000;
+  parameter start_st          = 4'b0001;
+  parameter i0_st             = 4'b0010;
+  parameter i0_clk_st         = 4'b0011;
+  parameter i1_st             = 4'b0100;
+  parameter i1_clk_st         = 4'b0101;
+  parameter q0_st             = 4'b0110;
+  parameter q0_clk_st         = 4'b0111;
+  parameter q1_st             = 4'b1000;
+  parameter q1_clk_st         = 4'b1001;
+  parameter wait_dataready_st = 4'b1010;
+  parameter ss_release_st     = 4'b1011;
+  parameter state13           = 4'b1100;
+  parameter state14           = 4'b1101;
+  parameter state15           = 4'b1110;
+  parameter state16           = 4'b1111;
 
-	wire reset_counter;
-	reg ctr_restart;
-	reg bitcount_en;
-    reg [7:0] bitcounter;
+  parameter i0_sel            = 2'b00;
+  parameter i1_sel            = 2'b01;
+  parameter q0_sel            = 2'b10;
+  parameter q1_sel            = 2'b11;
 
-	assign reset_counter = ctr_restart | RESET;
-	
-    always @(posedge MCU_CLK_25_000)
-      if (reset_counter)
-         bitcounter <= 0xFF;
-      else if (bitcount_en)
-         bitcounter <= bitcounter - 1;
-   (* FSM_ENCODING="SEQUENTIAL", SAFE_IMPLEMENTATION="YES", SAFE_RECOVERY_STATE="reset_st" *) reg [3:0] state = reset_st;
+  wire reset_counter;
 
-   always@(posedge MCU_CLK_25_000)
-      if (RESET) begin
-         state    <= reset_st;
-         MCU_SCK  <= 1'b1 ;
-         MCU_SS   <= 1'b1 ;
-         MCU_MOSI <= 1'b1 ;
-      end
-      else
-         (* PARALLEL_CASE, FULL_CASE *) case (state)
-            reset_st : begin
-				ctr_restart <= 1'b1;
-                MCU_SCK     <= 1'b1 ;
-                MCU_SS      <= 1'b1 ;
-                MCU_MOSI    <= 1'b1 ;
-                bitcount_en <= 1'b0;
-                state       <= start_st;
-            end
-			start_st : begin
-				if (DATAREADY) begin
-					MCU_SS  <= 1'b0;       // assert SS here
-					MCU_CLK <= 1'b1;       // Data will be clocked out of bridge on negative edge of MCU_CLK, into MCU on positive edge
-					state   <= i0_st;
-				end
-				else begin
-					state   <= start_st;
-				end
-				bitcount_en <= 1'b0;
-				ctr_restart <= 1'b0;
-			end
-            i0_st : begin
-               bitcount_en  <= 1'b1;
-               MCU_CLK      <= 1'b1;
-               state        <= i0_clk_st;
-            end
-            i0_clk_st: begin
-               bitcount_en  <= 1'b0;
-			   MCU_MOSI     <= GPS_I0;
-               MCU_CLK      <= 1'b0;
-               state        <= i1_st;
-            end
-            i1_st : begin
-               bitcount_en  <= 1'b1;
-               MCU_CLK      <= 1'b1;
-               state        <= i0_clk_st;
-            end
-            i1_clk_st : begin
-               bitcount_en  <= 1'b0;
-			   MCU_MOSI     <= GPS_I1;
-               MCU_CLK      <= 1'b0;
-               state        <= q0_st;
-            end
-            q0_st: begin
-               bitcount_en  <= 1'b1;
-               MCU_CLK      <= 1'b1;
-               state        <= q0_clk_st;
-            end
-            q0_clk_st : begin
-               bitcount_en  <= 1'b0;
-			   MCU_MOSI     <= GPS_Q0;
-               MCU_CLK      <= 1'b0;
-               state        <= q1_st;
-            end
-            q1_st : begin
-               bitcount_en  <= 1'b1;
-               MCU_CLK      <= 1'b1;
-               state        <= q1_clk_st;
-            end
-			q1_clk_st : begin
-				bitcount_en <= 1'b0;
-				MCU_MOSI    <= GPS_Q1;
-				MCU_CLK     <= 1'b0;
-				if(bitcounter == 0)  begin
-					state   <= ss_release_st;
-			    end 
-				else begin
-					state   <= wait_dataready_st;
-			    end
-			end
-            wait_dataready_st : begin
-			   if (DATAREADY) begin
-                  MCU_SS    <= 1'b0;       // assert SS here
-                  state     <= i0_st;
-		       end
-			   else begin
-                  MCU_SS    <= 1'b1;       // assert SS here
-                  state     <= wait_dataready_st;
-		       end
-               MCU_CLK     <= 1'b1;       
-               bitcount_en <= 1'b0;
-            end
-            ss_release_st : begin
-			   bitcount_en <= 1'b0;
-			   ctr_restart <= 1'b1;
-               MCU_CLK     <= 1'b1; 
-               MCU_SS      <= 1'b1;       // de-assert SS here
-               state       <= wait_dataready_st;
-            end
-            <state13> : begin
-               state <= reset_st;
-            end
-            <state14> : begin
-               state <= reset_st;
-            end
-            <state15> : begin
-               state <= reset_st;
-            end
-            <state16> : begin
-               state <= reset_st;
-            end
-            default : begin  // Fault Recovery
-               state <= reset_st;
-            end   
-         endcase
-							
+  reg ctr_restart;
+  reg bitcount_en;
+  reg [7:0] bitcounter;
+
+  reg [3:0] state = reset_st;
+
+  reg [1:0] mosi_sel = i0_sel;
+  wire  sck;
+  reg   sck_en;
+  reg ss;
+  reg mosi; 
+
+  assign gps_i0_in = GPS_I0;
+  assign gps_i1_in = GPS_I1;
+  assign gps_q0_in = GPS_Q0;
+  assign gps_q1_in = GPS_Q1;
+
+  assign sck       = MCU_CLK_25_000 & sck_en;
+
+  assign MCU_SS    = ss;
+  assign MCU_SCK   = sck;
+  assign MCU_MOSI  = mosi;
+
+  assign reset_n_in = RESET_N;
+
+  // Explicitly multiplex the output
+  always @(mosi_sel, gps_i0_in, gps_i1_in, gps_q0_in, gps_q1_in) begin
+	case (mosi_sel)
+	  i0_sel: mosi = gps_i0_in;
+	  i1_sel: mosi = gps_i1_in;
+	  q0_sel: mosi = gps_q0_in;
+	  q1_sel: mosi = gps_q1_in;
+	endcase 
+  end
+
+  assign reset_counter = ctr_restart | ~reset_n_in;
+
+  always @(posedge MCU_CLK_25_000) begin
+	if (reset_counter)
+	  bitcounter <= 8'b11111111;
+	else if (bitcount_en)
+	  bitcounter <= bitcounter - 1;
+  end
+
+  (* FSM_ENCODING="SEQUENTIAL", SAFE_IMPLEMENTATION="YES" *) 
+
+  always@(posedge MCU_CLK_25_000) begin
+	if (reset_n_in == 0) begin
+	  state    <= reset_st;
+	  sck_en   <= 1'b0 ;
+	  ss       <= 1'b1 ;
+	  mosi_sel <= i0_sel ;
+	end
+	else
+	 (* PARALLEL_CASE, FULL_CASE *)
+	case (state)
+	  reset_st : begin
+		ctr_restart <= 1'b1;
+		sck_en      <= 1'b0 ;
+		ss          <= 1'b1 ;
+		mosi_sel    <= i0_sel ;
+		bitcount_en <= 1'b0;
+		state       <= start_st;
+	  end
+	  start_st : begin
+		if (DATAREADY) begin
+		  ss           <= 1'b0;
+		  sck_en       <= 1'b1;
+		  bitcount_en  <= 1'b1;
+		  mosi_sel     <= i0_sel ;
+		  state        <= i0_st;
+		end
+		else begin
+		  ss           <= 1'b1;
+		  sck_en       <= 1'b0;
+		  bitcount_en  <= 1'b0;
+		  state        <= start_st;
+		end
+		bitcount_en <= 1'b0;
+		ctr_restart <= 1'b0;
+	  end
+
+	  i0_st : begin
+		mosi_sel     <= i1_sel ;
+		state        <= i1_st;
+	  end
+
+	  i1_st : begin
+		mosi_sel     <= q0_sel ;
+		state        <= q0_st;
+	  end
+
+	  q0_st: begin
+		mosi_sel     <= q1_sel;
+		state        <= q1_st;
+	  end
+
+	  q1_st : begin
+		bitcount_en  <= 1'b0;
+		sck_en       <= 1'b0;
+		bitcount_en  <= 1'b0;
+		mosi_sel     <= i0_sel ;
+		state        <= wait_dataready_st;
+	  end
+
+	  wait_dataready_st : begin
+		if(bitcounter == 0)  begin
+		  bitcount_en  <= 1'b0;
+		  ctr_restart  <= 1'b1;
+		  ss           <= 1'b1;
+		end 
+
+		if (DATAREADY) begin
+		  ss        <= 1'b0;
+		  sck_en       <= 1'b1;
+		  state     <= i0_st;
+		end
+		else begin
+		  state     <= wait_dataready_st;
+		end
+	  end
+
+	  default : begin  // Fault Recovery
+	  state <= reset_st;
+	end   
+  endcase
+end
 endmodule

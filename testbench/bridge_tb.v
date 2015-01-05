@@ -10,6 +10,8 @@ module bridge_tb;
 	
 	reg gps_clk_16_368;
 	reg mcu_clk_25_000;
+
+	reg reset;
 	
 	// outputs
 	wire mcu_sck;
@@ -20,11 +22,13 @@ module bridge_tb;
 		// Initialize Inputs
 		gps_clk_16_368  = 0;
 		mcu_clk_25_000  = 0;
-		gps_i0  = 0;
-		gps_i1  = 0;
-		gps_q0  = 1;
-		gps_q1  = 1;
+		reset           = 0;
+		gps_i0          = 0;
+		gps_i1          = 1;
+		gps_q0          = 0;
+		gps_q1          = 1;
 	end    
+
 	bridge uut (
 		.GPS_I0(gps_i0),
 		.GPS_I1(gps_i1),
@@ -32,11 +36,15 @@ module bridge_tb;
 		.GPS_Q1(gps_q1),
 		.GPS_CLK_16_368(gps_clk_16_368),
 		.MCU_CLK_25_000(mcu_clk_25_000),
+		.RESET_N(reset),
 		.MCU_SCK(mcu_sck),
 		.MCU_SS(mcu_ss),
 		.MCU_MOSI(mcu_mosi)
 	);
 	
+	always begin
+		#10   reset   = 1'b1;
+    end
 	always begin
 		#30 gps_clk_16_368 = ~gps_clk_16_368;
 	end
@@ -45,11 +53,16 @@ module bridge_tb;
 		#20 mcu_clk_25_000  = ~mcu_clk_25_000;
 	end
 
-   always begin
-	   #89 gps_q0  = ~gps_q0;
-		#123 gps_q1  = ~gps_q1;
-		#150 gps_i0 = ~gps_i0;
-		#190 gps_i1 = ~gps_i1;
+    always begin
+	    #150  gps_q0  = ~gps_q0;
+		#150  gps_q1  = ~gps_q1;
+		#150  gps_i0  = ~gps_i0;
+		#150  gps_i1  = ~gps_i1;
+	    #273  gps_q0  = ~gps_q0;
+		#273  gps_q1  = ~gps_q1;
+		#273  gps_i0  = ~gps_i0;
+		#273  gps_i1  = ~gps_i1;
+
 	end
 
 endmodule
