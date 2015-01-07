@@ -20,13 +20,20 @@ wire gps_q0_sync;
 wire gps_q1_sync;
 
 wire GPS_CLK_4_092;
+reg  GPS_DIV4_EDGE;
+wire GPS_DIV4_EDGE_INV;
+
+reg   gps_i0_sync_reg;
+reg   gps_i1_sync_reg;
+reg   gps_q0_sync_reg;
+reg   gps_q1_sync_reg;
 
 // Instantiate bridge state machine here
 bridge_sm bridge_sm_inst (
-.GPS_I0(gps_i0_sync),
-.GPS_I1(gps_i1_sync),
-.GPS_Q0(gps_q0_sync),
-.GPS_Q1(gps_q1_sync),
+.GPS_I0(gps_i0_sync_reg),
+.GPS_I1(gps_i1_sync_reg),
+.GPS_Q0(gps_q0_sync_reg),
+.GPS_Q1(gps_q1_sync_reg),
 .MCU_CLK_25_000(MCU_CLK_25_000),
 .RESET_N(RESET_N),
 .DATAREADY(datardy),
@@ -34,12 +41,34 @@ bridge_sm bridge_sm_inst (
 .MCU_SS(MCU_SS),
 .MCU_MOSI(MCU_MOSI)
 );
+
+// A divided clock can
+//   only drive the clock input of registers.
+always @(posedge GPS_CLK_4_092 or negedge GPS_CLK_4_092 or negedge RESET_N)
+      if (!RESET_N) begin
+         GPS_DIV4_EDGE <= 1'b0;
+      end else begin
+         GPS_DIV4_EDGE <= ~GPS_DIV4_EDGE;
+      end
+
+// Instantiate a T FF and negate the output to match the clock
+// Reset will be tricky...This will also add a 1 clock phase delay.
+						
 // Instantiate edge detection here
 asynch_edge_detect asynch_edge_detect_inst(
 		.SYNC_CLK_IN(MCU_CLK_25_000),
-		.ASYNC_IN(GPS_CLK_4_092),
+		.ASYNC_IN(GPS_DIV4_EDGE),
 		.DETECT_OUT(datardy)
 );
+
+// Need to match the phase of data due to the can't 
+//    use divided clock as an combinational input thing..
+always@(posedge MCU_CLK_25_000) begin
+   gps_i0_sync_reg <= gps_i0_sync;
+   gps_i1_sync_reg <= gps_i1_sync;
+   gps_q0_sync_reg <= gps_q1_sync;
+   gps_q1_sync_reg <= gps_q1_sync;
+end
 
 synchronizer synch_inst_q1 (
 	.asynch_input(GPS_Q1),

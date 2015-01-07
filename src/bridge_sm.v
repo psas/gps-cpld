@@ -136,7 +136,6 @@ module bridge_sm(
 	  end
 
 	  q1_st : begin
-		bitcount_en  <= 1'b0;
 		sck_en       <= 1'b0;
 		bitcount_en  <= 1'b0;
 		mosi_sel     <= i0_sel ;
