@@ -20,13 +20,13 @@ wire gps_q0_sync;
 wire gps_q1_sync;
 
 wire GPS_CLK_4_092;
-reg  GPS_DIV4_EDGE;
-wire GPS_DIV4_EDGE_INV;
 
 reg   gps_i0_sync_reg;
 reg   gps_i1_sync_reg;
 reg   gps_q0_sync_reg;
 reg   gps_q1_sync_reg;
+
+assign RESET_P = ~RESET_N;
 
 // Instantiate bridge state machine here
 bridge_sm bridge_sm_inst (
@@ -42,22 +42,18 @@ bridge_sm bridge_sm_inst (
 .MCU_MOSI(MCU_MOSI)
 );
 
-// A divided clock can
-//   only drive the clock input of registers.
-always @(posedge GPS_CLK_4_092 or negedge GPS_CLK_4_092 or negedge RESET_N)
-      if (!RESET_N) begin
-         GPS_DIV4_EDGE <= 1'b0;
-      end else begin
-         GPS_DIV4_EDGE <= ~GPS_DIV4_EDGE;
-      end
 
-// Instantiate a T FF and negate the output to match the clock
-// Reset will be tricky...This will also add a 1 clock phase delay.
+clkdiv4 clkdiv4_inst (
+	.clk(GPS_CLK_16_368),
+	.reset(RESET_P),
+	.div4clk(GPS_CLK_4_092)
+);
 						
+
 // Instantiate edge detection here
 asynch_edge_detect asynch_edge_detect_inst(
 		.SYNC_CLK_IN(MCU_CLK_25_000),
-		.ASYNC_IN(GPS_DIV4_EDGE),
+		.ASYNC_IN(GPS_CLK_4_092),
 		.DETECT_OUT(datardy)
 );
 
@@ -93,15 +89,6 @@ synchronizer synch_inst_q0 (
 	.synch_clk(MCU_CLK_25_000),
 	.synch_output(gps_q0_sync)
 );
-
-
-// CLK_DIV4: Simple clock Divide by 4  CoolRunner-II
-//    Xilinx HDL Language Template, version 14.7
-CLK_DIV4 CLK_DIV4_inst (
-		.CLKDV(GPS_CLK_4_092),    // Divided clock output
-		.CLKIN(GPS_CLK_16_368)     // Clock input
-);
-// End of CLK_DIV4_inst instantiation
 
 
 endmodule
