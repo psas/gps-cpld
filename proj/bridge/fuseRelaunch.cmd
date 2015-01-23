@@ -1,1 +1,1 @@
--intstyle "ise" -incremental -lib "uni9000_ver" -lib "aim_ver" -lib "cpld_ver" -lib "xilinxcorelib_ver" -o "/work/Projects/gps-cpld/proj/bridge/bridge_tb_isim_beh.exe" -prj "/work/Projects/gps-cpld/proj/bridge/bridge_tb_beh.prj" "work.bridge_tb" "work.glbl" 
+-intstyle "ise" -incremental -lib "uni9000_ver" -lib "aim_ver" -lib "cpld_ver" -lib "xilinxcorelib_ver" -o "C:/Users/kwilson/Desktop/gps-cpld/proj/bridge/bridge_tb_isim_beh.exe" -prj "C:/Users/kwilson/Desktop/gps-cpld/proj/bridge/bridge_tb_beh.prj" "work.bridge_tb" "work.glbl" 
