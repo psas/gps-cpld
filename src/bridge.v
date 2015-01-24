@@ -20,6 +20,7 @@ wire gps_i0_sync;
 wire gps_i1_sync;
 wire gps_q0_sync;
 wire gps_q1_sync;
+wire led_d1_out;
 
 wire GPS_CLK_4_092;
 
@@ -28,10 +29,9 @@ reg   gps_i1_sync_reg;
 reg   gps_q0_sync_reg;
 reg   gps_q1_sync_reg;
 
-reg   led_d1_out;
-
-assign RESET_P = ~RESET_N;
-assign LED_D1  = led_d1_out;
+assign RESET_P        = ~RESET_N;
+assign LED_D1         = led_d1_out;
+assign led_d1_out     = ~BUTTON_N;
 
 // Instantiate bridge state machine here
 bridge_sm bridge_sm_inst (
@@ -69,7 +69,7 @@ always@(posedge MCU_CLK_25_000) begin
    gps_i1_sync_reg <= gps_i1_sync;
    gps_q0_sync_reg <= gps_q1_sync;
    gps_q1_sync_reg <= gps_q1_sync;
-   led_d1_out      <= ~BUTTON_N;
+   
 end
 
 synchronizer synch_inst_q1 (
