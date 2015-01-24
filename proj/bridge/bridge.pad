@@ -1,0 +1,73 @@
+Release 8.1i - Fit P.20131013
+Copyright(c) 1995-2003 Xilinx Inc. All rights reserved
+
+ 1-24-2015  2:25PM
+
+NOTE: This file is designed to be imported into a spreadsheet program
+such as Microsoft Excel for viewing, printing and sorting. The pipe '|'
+character is used as the data field separator.
+This file is also designed to support parsing.
+
+Input file:  bridge.ngd
+output file: bridge.pad
+Part type:   xc2c64a
+Speed grade: -7
+Package:     vq44
+
+Pinout by Pin Number:
+
+-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|
+Pin Number|Signal Name|Pin Usage|Pin Name|Direction|IO Standard|IO Bank Number|{blank}|Slew Rate|Termination|{blank}|Voltage|Constraint|
+P1|PGND||I/O/GCK2|||1|||||||
+P2|PGND||I/O|||1|||||||
+P3|PGND||I/O|||1|||||||
+P4|GND||GND||||||||||
+P5|PGND||I/O|||1|||||||
+P6|PGND||I/O|||1|||||||
+P7||VCCIO-3.3|VCCIO|||1|||||||
+P8|PGND||I/O|||1|||||||
+P9|TDI||TDI||||||||||
+P10|TMS||TMS||||||||||
+P11|TCK||TCK||||||||||
+P12|MCU_SCK|O|I/O|OUTPUT|LVCMOS33|1||FAST||||
+P13|MCU_SS|O|I/O|OUTPUT|LVCMOS33|1||FAST||||
+P14|MCU_MOSI|O|I/O|OUTPUT|LVCMOS33|1||FAST||||
+P15||VCC|VCC||||||||||
+P16|MCU_CLK_25_000|I|I/O|INPUT|LVCMOS33|1||FAST||||
+P17|GND||GND||||||||||
+P18|BUTTON_N|I|I/O|INPUT|LVCMOS33|2||FAST||||
+P19|PGND||I/O|||2|||||||
+P20|PGND||I/O|||2|||||||
+P21|PGND||I/O|||2|||||||
+P22|PGND||I/O|||2|||||||
+P23|PGND||I/O|||2|||||||
+P24|TDO||TDO||||||||||
+P25|GND||GND||||||||||
+P26||VCCIO-3.3|VCCIO|||2|||||||
+P27|PGND||I/O|||2|||||||
+P28|PGND||I/O|||2|||||||
+P29|PGND||I/O|||2|||||||
+P30|RESET_N|GSR/I|I/O/GSR||LVCMOS33|2||FAST||||
+P31|PGND||I/O/GTS2|||2|||||||
+P32|PGND||I/O/GTS3|||2|||||||
+P33|PGND||I/O/GTS0|||2|||||||
+P34|PGND||I/O/GTS1|||2|||||||
+P35||VCCAUX|VAUX||||||||||
+P36|PGND||I/O|||2|||||||
+P37|GPS_CLK_16_368|I|I/O|INPUT|LVCMOS33|2||FAST||||
+P38|LED_D2|O|I/O|OUTPUT|LVCMOS33|2||FAST||||
+P39|LED_D1|O|I/O|OUTPUT|LVCMOS33|1||FAST||||
+P40|GPS_I0|I|I/O|INPUT|LVCMOS33|1||FAST||||
+P41|GPS_I1|I|I/O|INPUT|LVCMOS33|1||FAST||||
+P42|GPS_Q0|I|I/O|INPUT|LVCMOS33|1||FAST||||
+P43|GPS_Q1|I|I/O/GCK0|INPUT|LVCMOS33|1||FAST||||
+P44|PGND||I/O/GCK1|||1|||||||
+
+To preserve the pinout above for future design iterations in
+Project Navigator simply execute the (Lock Pins) process
+located under the (Implement Design) process in a toolbox named
+(Optional Implementation Tools) or invoke PIN2UCF from the
+command line. The location constraints will be written into your
+specified UCF file
+
+

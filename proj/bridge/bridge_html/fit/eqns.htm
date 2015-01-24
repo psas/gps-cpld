@@ -1,0 +1,373 @@
+<html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script src="paths.js"></script><script src="eqns.js"></script><script>
+      var design = "bridge";
+      var device = "XC2C64A";
+      signals = new Array("GPS_CLK_4_092","LED_D1","LED_D2","MCU_MOSI","MCU_SCK","MCU_SS","asynch_edge_detect_instsignal_in_SPECSIG","asynch_edge_detect_instsignal_in_prev_SPECSIG","asynch_edge_detect_instsynch_instsynch_a_SPECSIG","bridge_sm_instbitcounter7_SPECSIG","bridge_sm_instctr_restart_SPECSIG","bridge_sm_instmosi_sel0_SPECSIG","bridge_sm_instmosi_sel1_SPECSIG","bridge_sm_instsck_en_SPECSIG","bridge_sm_inststate_FSM_FFd1_SPECSIG","bridge_sm_inststate_FSM_FFd2_SPECSIG","bridge_sm_inststate_FSM_FFd3_SPECSIG","bridge_sm_inststate_FSM_FFd4_SPECSIG","bridge_sm_inststate_FSM_FFd5_SPECSIG","bridge_sm_inststate_FSM_FFd6_SPECSIG","bridge_sm_inststate_FSM_FFd7_SPECSIG","clkdiv4_instclkdiv0_SPECSIG","gps_i0_sync","gps_i0_sync_reg","gps_i1_sync","gps_i1_sync_reg","gps_q0_sync","gps_q0_sync_reg","gps_q1_sync","gps_q1_sync_reg","synch_inst_i0synch_a_SPECSIG","synch_inst_i1synch_a_SPECSIG","synch_inst_q0synch_a_SPECSIG","synch_inst_q1synch_a_SPECSIG");
+      sigNegs = new Array("ON","OFF","OFF","OFF","OFF","ON","OFF","OFF","OFF","ON","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","ON","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF");
+      sigTypes = new Array("TFF","","","","","DFF","DFF","DFF","DFF","DFF","TFF","DFF","DFF","DFF","DFF","DFF","DFF","DFF","DFF","DFF","DFFS_SPECSIG","TFF","DFF","DFF","DFF","DFF","DFF","DFF","DFF","DFF","DFF","DFF","DFF","DFF");
+
+      
+           iostyle["GPS_CLK_16_368"]=new Array("S");
+        
+           iostyle["RESET_N"]=new Array("SPU_SPECSIG");
+        
+           iostyle["GPS_I0"]=new Array("S");
+        
+           iostyle["GPS_I1"]=new Array("S");
+        
+           iostyle["GPS_Q0"]=new Array("S");
+        
+           iostyle["GPS_Q1"]=new Array("S");
+        
+           iostyle["BUTTON_N"]=new Array("SPU_SPECSIG");
+        
+           iostyle["MCU_CLK_25_000"]=new Array("S");
+        
+        specSig["b_SPECSIG"]=new Array("(b)");
+      
+        specSig["bridge_sm_inststate_FSM_FFd3_SPECSIG"]=new Array("bridge_sm_inst/state_FSM_FFd3");
+      
+        specSig["bridge_sm_inststate_FSM_FFd2_SPECSIG"]=new Array("bridge_sm_inst/state_FSM_FFd2");
+      
+        specSig["bridge_sm_instbitcounter7_SPECSIG"]=new Array("bridge_sm_inst/bitcounter<7>");
+      
+        specSig["bridge_sm_instctr_restart_SPECSIG"]=new Array("bridge_sm_inst/ctr_restart");
+      
+        specSig["bridge_sm_inststate_FSM_FFd6_SPECSIG"]=new Array("bridge_sm_inst/state_FSM_FFd6");
+      
+        specSig["GSRI_SPECSIG"]=new Array("GSR/I");
+      
+        specSig["SPU_SPECSIG"]=new Array("S/PU");
+      
+        specSig["bridge_sm_inststate_FSM_FFd4_SPECSIG"]=new Array("bridge_sm_inst/state_FSM_FFd4");
+      
+        specSig["bridge_sm_instmosi_sel1_SPECSIG"]=new Array("bridge_sm_inst/mosi_sel<1>");
+      
+        specSig["bridge_sm_instmosi_sel0_SPECSIG"]=new Array("bridge_sm_inst/mosi_sel<0>");
+      
+        specSig["bridge_sm_instsck_en_SPECSIG"]=new Array("bridge_sm_inst/sck_en");
+      
+        specSig["bridge_sm_inststate_FSM_FFd5_SPECSIG"]=new Array("bridge_sm_inst/state_FSM_FFd5");
+      
+        specSig["asynch_edge_detect_instsignal_in_prev_SPECSIG"]=new Array("asynch_edge_detect_inst/signal_in_prev");
+      
+        specSig["bridge_sm_inststate_FSM_FFd1_SPECSIG"]=new Array("bridge_sm_inst/state_FSM_FFd1");
+      
+        specSig["asynch_edge_detect_instsignal_in_SPECSIG"]=new Array("asynch_edge_detect_inst/signal_in");
+      
+        specSig["clkdiv4_instclkdiv0_SPECSIG"]=new Array("clkdiv4_inst/clkdiv<0>");
+      
+        specSig["asynch_edge_detect_instsynch_instsynch_a_SPECSIG"]=new Array("asynch_edge_detect_inst/synch_inst/synch_a");
+      
+        specSig["bridge_sm_inststate_FSM_FFd7_SPECSIG"]=new Array("bridge_sm_inst/state_FSM_FFd7");
+      
+        specSig["synch_inst_i0synch_a_SPECSIG"]=new Array("synch_inst_i0/synch_a");
+      
+        specSig["synch_inst_i1synch_a_SPECSIG"]=new Array("synch_inst_i1/synch_a");
+      
+        specSig["synch_inst_q0synch_a_SPECSIG"]=new Array("synch_inst_q0/synch_a");
+      
+        specSig["synch_inst_q1synch_a_SPECSIG"]=new Array("synch_inst_q1/synch_a");
+      
+        specSig["DFFS_SPECSIG"]=new Array("DFF/S");
+      
+            pterms["FB1_0"]=new Array("RESET_N","bridge_sm_inststate_FSM_FFd6_SPECSIG","asynch_edge_detect_instsignal_in_SPECSIG","/asynch_edge_detect_instsignal_in_prev_SPECSIG");
+          
+            pterms["FB1_1"]=new Array("RESET_N","asynch_edge_detect_instsignal_in_SPECSIG","/asynch_edge_detect_instsignal_in_prev_SPECSIG","bridge_sm_inststate_FSM_FFd1_SPECSIG");
+          
+            pterms["FB1_2"]=new Array("RESET_N","bridge_sm_inststate_FSM_FFd1_SPECSIG","bridge_sm_instsck_en_SPECSIG");
+          
+            pterms["FB1_3"]=new Array("RESET_N","/bridge_sm_inststate_FSM_FFd6_SPECSIG","/bridge_sm_inststate_FSM_FFd7_SPECSIG","/bridge_sm_inststate_FSM_FFd2_SPECSIG","bridge_sm_instsck_en_SPECSIG");
+          
+            pterms["FB1_4"]=new Array("MCU_CLK_25_000");
+          
+            pterms["FB1_5"]=new Array("RESET_N","/bridge_sm_inststate_FSM_FFd4_SPECSIG","/bridge_sm_inststate_FSM_FFd6_SPECSIG","/bridge_sm_inststate_FSM_FFd7_SPECSIG","/bridge_sm_inststate_FSM_FFd2_SPECSIG","bridge_sm_instmosi_sel0_SPECSIG");
+          
+            pterms["FB1_6"]=new Array("RESET_N","bridge_sm_inststate_FSM_FFd6_SPECSIG","/asynch_edge_detect_instsignal_in_SPECSIG","bridge_sm_instmosi_sel0_SPECSIG");
+          
+            pterms["FB1_7"]=new Array("RESET_N","bridge_sm_inststate_FSM_FFd6_SPECSIG","asynch_edge_detect_instsignal_in_prev_SPECSIG","bridge_sm_instmosi_sel0_SPECSIG");
+          
+            pterms["FB1_8"]=new Array("bridge_sm_instmosi_sel1_SPECSIG","RESET_N","/bridge_sm_inststate_FSM_FFd5_SPECSIG","/bridge_sm_inststate_FSM_FFd6_SPECSIG","/bridge_sm_inststate_FSM_FFd7_SPECSIG","/bridge_sm_inststate_FSM_FFd2_SPECSIG");
+          
+            pterms["FB1_9"]=new Array("bridge_sm_instmosi_sel1_SPECSIG","RESET_N","bridge_sm_inststate_FSM_FFd6_SPECSIG","/asynch_edge_detect_instsignal_in_SPECSIG");
+          
+            pterms["FB1_10"]=new Array("BUTTON_N");
+          
+            pterms["FB1_11"]=new Array("bridge_sm_instmosi_sel1_SPECSIG","RESET_N","bridge_sm_inststate_FSM_FFd6_SPECSIG","asynch_edge_detect_instsignal_in_prev_SPECSIG");
+          
+            pterms["FB1_12"]=new Array("RESET_N","bridge_sm_inststate_FSM_FFd2_SPECSIG");
+          
+            pterms["FB1_13"]=new Array("RESET_N","bridge_sm_inststate_FSM_FFd5_SPECSIG");
+          
+            pterms["FB1_14"]=new Array("RESET_N","/asynch_edge_detect_instsignal_in_SPECSIG","bridge_sm_inststate_FSM_FFd1_SPECSIG");
+          
+            pterms["FB1_15"]=new Array("RESET_N","asynch_edge_detect_instsignal_in_prev_SPECSIG","bridge_sm_inststate_FSM_FFd1_SPECSIG");
+          
+            pterms["FB1_16"]=new Array("RESET_N","bridge_sm_inststate_FSM_FFd4_SPECSIG");
+          
+            pterms["FB1_17"]=new Array("RESET_N","bridge_sm_inststate_FSM_FFd7_SPECSIG");
+          
+            pterms["FB1_18"]=new Array("RESET_N","bridge_sm_inststate_FSM_FFd6_SPECSIG","/asynch_edge_detect_instsignal_in_SPECSIG");
+          
+            pterms["FB1_19"]=new Array("RESET_N","bridge_sm_inststate_FSM_FFd6_SPECSIG","asynch_edge_detect_instsignal_in_prev_SPECSIG");
+          
+            pterms["FB1_20"]=new Array("RESET_N","bridge_sm_inststate_FSM_FFd7_SPECSIG","/bridge_sm_instctr_restart_SPECSIG");
+          
+            pterms["FB1_21"]=new Array("RESET_N","bridge_sm_inststate_FSM_FFd6_SPECSIG","/bridge_sm_inststate_FSM_FFd7_SPECSIG","/bridge_sm_inststate_FSM_FFd1_SPECSIG","bridge_sm_instctr_restart_SPECSIG");
+          
+            pterms["FB1_22"]=new Array("RESET_N","bridge_sm_inststate_FSM_FFd1_SPECSIG","/bridge_sm_instbitcounter7_SPECSIG","/bridge_sm_instctr_restart_SPECSIG");
+          
+            pterms["FB1_31"]=new Array("asynch_edge_detect_instsignal_in_SPECSIG");
+          
+            pterms["FB1_34"]=new Array("RESET_N","bridge_sm_inststate_FSM_FFd3_SPECSIG");
+          
+            pterms["FB1_37"]=new Array("RESET_N","/bridge_sm_instbitcounter7_SPECSIG","/bridge_sm_instctr_restart_SPECSIG");
+          
+            pterms["FB1_49"]=new Array("asynch_edge_detect_instsynch_instsynch_a_SPECSIG");
+          
+            pterms["FB1_52"]=new Array("GPS_CLK_16_368");
+          
+            pterms["FB1_55"]=new Array("clkdiv4_instclkdiv0_SPECSIG");
+          
+            pterms["FB2_4"]=new Array("MCU_CLK_25_000");
+          
+            pterms["FB2_10"]=new Array("/BUTTON_N");
+          
+            pterms["FB2_16"]=new Array("synch_inst_q0synch_a_SPECSIG");
+          
+            pterms["FB2_19"]=new Array("gps_i1_sync");
+          
+            pterms["FB2_34"]=new Array("synch_inst_i1synch_a_SPECSIG");
+          
+            pterms["FB2_37"]=new Array("gps_q1_sync");
+          
+            pterms["FB2_40"]=new Array("gps_i0_sync");
+          
+            pterms["FB2_43"]=new Array("synch_inst_q1synch_a_SPECSIG");
+          
+            pterms["FB2_46"]=new Array("gps_q0_sync");
+          
+            pterms["FB2_49"]=new Array("synch_inst_i0synch_a_SPECSIG");
+          
+            pterms["FB2_52"]=new Array("/RESET_N");
+          
+            pterms["FB2_55"]=new Array("GPS_CLK_4_092");
+          
+            pterms["FB4_0"]=new Array("RESET_N","/bridge_sm_inststate_FSM_FFd6_SPECSIG","/bridge_sm_inststate_FSM_FFd7_SPECSIG","/bridge_sm_inststate_FSM_FFd1_SPECSIG","/MCU_SS");
+          
+            pterms["FB4_1"]=new Array("RESET_N","/bridge_sm_inststate_FSM_FFd6_SPECSIG","/bridge_sm_inststate_FSM_FFd7_SPECSIG","/MCU_SS","bridge_sm_instbitcounter7_SPECSIG");
+          
+            pterms["FB4_2"]=new Array("RESET_N","bridge_sm_inststate_FSM_FFd6_SPECSIG","/bridge_sm_inststate_FSM_FFd7_SPECSIG","asynch_edge_detect_instsignal_in_SPECSIG","/asynch_edge_detect_instsignal_in_prev_SPECSIG");
+          
+            pterms["FB4_3"]=new Array("RESET_N","/bridge_sm_inststate_FSM_FFd7_SPECSIG","asynch_edge_detect_instsignal_in_SPECSIG","/asynch_edge_detect_instsignal_in_prev_SPECSIG","bridge_sm_inststate_FSM_FFd1_SPECSIG");
+          
+            pterms["FB4_4"]=new Array("MCU_CLK_25_000");
+          
+            pterms["FB4_5"]=new Array("/bridge_sm_instmosi_sel1_SPECSIG","/bridge_sm_instmosi_sel0_SPECSIG","gps_i0_sync_reg");
+          
+            pterms["FB4_6"]=new Array("/bridge_sm_instmosi_sel1_SPECSIG","bridge_sm_instmosi_sel0_SPECSIG","gps_i1_sync_reg");
+          
+            pterms["FB4_7"]=new Array("bridge_sm_instmosi_sel1_SPECSIG","/bridge_sm_instmosi_sel0_SPECSIG","gps_q0_sync_reg");
+          
+            pterms["FB4_8"]=new Array("bridge_sm_instmosi_sel1_SPECSIG","bridge_sm_instmosi_sel0_SPECSIG","gps_q1_sync_reg");
+          
+            pterms["FB4_40"]=new Array("MCU_CLK_25_000","bridge_sm_instsck_en_SPECSIG");
+          
+          d1["LED_D2"]=new Array("FB1_10");
+          
+          d1["bridge_sm_inststate_FSM_FFd4_SPECSIG"]=new Array("FB1_13");
+          
+              clk["bridge_sm_inststate_FSM_FFd4_SPECSIG"]=new Array("FB1_4");
+              prld["bridge_sm_inststate_FSM_FFd4_SPECSIG"]="GND";
+          d1["bridge_sm_inststate_FSM_FFd3_SPECSIG"]=new Array("FB1_16");
+          
+              clk["bridge_sm_inststate_FSM_FFd3_SPECSIG"]=new Array("FB1_4");
+              prld["bridge_sm_inststate_FSM_FFd3_SPECSIG"]="GND";
+          d2["bridge_sm_instmosi_sel1_SPECSIG"]=new Array("FB1_34","FB1_16","FB1_9","FB1_11","FB1_8");
+          
+              clk["bridge_sm_instmosi_sel1_SPECSIG"]=new Array("FB1_4");
+              prld["bridge_sm_instmosi_sel1_SPECSIG"]="GND";
+          d2["bridge_sm_instmosi_sel0_SPECSIG"]=new Array("FB1_34","FB1_13","FB1_6","FB1_7","FB1_5");
+          
+              clk["bridge_sm_instmosi_sel0_SPECSIG"]=new Array("FB1_4");
+              prld["bridge_sm_instmosi_sel0_SPECSIG"]="GND";
+          d2["bridge_sm_instsck_en_SPECSIG"]=new Array("FB1_2","FB1_0","FB1_1","FB1_3");
+          
+              clk["bridge_sm_instsck_en_SPECSIG"]=new Array("FB1_4");
+              prld["bridge_sm_instsck_en_SPECSIG"]="GND";
+          d2["bridge_sm_inststate_FSM_FFd5_SPECSIG"]=new Array("FB1_0","FB1_1");
+          
+              clk["bridge_sm_inststate_FSM_FFd5_SPECSIG"]=new Array("FB1_4");
+              prld["bridge_sm_inststate_FSM_FFd5_SPECSIG"]="GND";
+          d1["asynch_edge_detect_instsignal_in_prev_SPECSIG"]=new Array("FB1_31");
+          
+              clk["asynch_edge_detect_instsignal_in_prev_SPECSIG"]=new Array("FB1_4");
+              prld["asynch_edge_detect_instsignal_in_prev_SPECSIG"]="GND";
+          d1["bridge_sm_inststate_FSM_FFd2_SPECSIG"]=new Array("FB1_34");
+          
+              clk["bridge_sm_inststate_FSM_FFd2_SPECSIG"]=new Array("FB1_4");
+              prld["bridge_sm_inststate_FSM_FFd2_SPECSIG"]="GND";
+          d1["bridge_sm_instbitcounter7_SPECSIG"]=new Array("FB1_37");
+          
+              clk["bridge_sm_instbitcounter7_SPECSIG"]=new Array("FB1_4");
+              prld["bridge_sm_instbitcounter7_SPECSIG"]="GND";
+          d2["bridge_sm_instctr_restart_SPECSIG"]=new Array("FB1_20","FB1_22","FB1_21");
+          
+              clk["bridge_sm_instctr_restart_SPECSIG"]=new Array("FB1_4");
+              prld["bridge_sm_instctr_restart_SPECSIG"]="GND";
+          d2["bridge_sm_inststate_FSM_FFd6_SPECSIG"]=new Array("FB1_17","FB1_18","FB1_19");
+          
+              clk["bridge_sm_inststate_FSM_FFd6_SPECSIG"]=new Array("FB1_4");
+              prld["bridge_sm_inststate_FSM_FFd6_SPECSIG"]="GND";
+          d2["bridge_sm_inststate_FSM_FFd1_SPECSIG"]=new Array("FB1_12","FB1_14","FB1_15");
+          
+              clk["bridge_sm_inststate_FSM_FFd1_SPECSIG"]=new Array("FB1_4");
+              prld["bridge_sm_inststate_FSM_FFd1_SPECSIG"]="GND";
+          d1["asynch_edge_detect_instsignal_in_SPECSIG"]=new Array("FB1_49");
+          clkNegs["asynch_edge_detect_instsignal_in_SPECSIG"]=1;
+              clk["asynch_edge_detect_instsignal_in_SPECSIG"]=new Array("FB1_4");
+              prld["asynch_edge_detect_instsignal_in_SPECSIG"]="GND";
+          d2["clkdiv4_instclkdiv0_SPECSIG"]=new Array("GND");
+          
+              clk["clkdiv4_instclkdiv0_SPECSIG"]=new Array("FB1_52");
+              rstNegs["clkdiv4_instclkdiv0_SPECSIG"]=1;
+              gblrst["clkdiv4_instclkdiv0_SPECSIG"]=new Array("RESET_N");
+            prld["clkdiv4_instclkdiv0_SPECSIG"]="GND";
+          d2["GPS_CLK_4_092"]=new Array("GND");
+          
+              clk["GPS_CLK_4_092"]=new Array("FB1_55");
+              rstNegs["GPS_CLK_4_092"]=1;
+              gblrst["GPS_CLK_4_092"]=new Array("RESET_N");
+            prld["GPS_CLK_4_092"]="GND";
+          d1["LED_D1"]=new Array("FB2_10");
+          
+              clk["synch_inst_i0synch_a_SPECSIG"]=new Array("FB2_4");
+              prld["synch_inst_i0synch_a_SPECSIG"]="GND";
+          inreg["synch_inst_i0synch_a_SPECSIG"]=new Array("GPS_I0");
+        
+          d1["gps_q0_sync"]=new Array("FB2_16");
+          clkNegs["gps_q0_sync"]=1;
+              clk["gps_q0_sync"]=new Array("FB2_4");
+              prld["gps_q0_sync"]="GND";
+          d1["gps_i1_sync_reg"]=new Array("FB2_19");
+          
+              clk["gps_i1_sync_reg"]=new Array("FB2_4");
+              prld["gps_i1_sync_reg"]="GND";
+              clk["synch_inst_i1synch_a_SPECSIG"]=new Array("FB2_4");
+              prld["synch_inst_i1synch_a_SPECSIG"]="GND";
+          inreg["synch_inst_i1synch_a_SPECSIG"]=new Array("GPS_I1");
+        
+              clk["synch_inst_q0synch_a_SPECSIG"]=new Array("FB2_4");
+              prld["synch_inst_q0synch_a_SPECSIG"]="GND";
+          inreg["synch_inst_q0synch_a_SPECSIG"]=new Array("GPS_Q0");
+        
+              clk["synch_inst_q1synch_a_SPECSIG"]=new Array("FB2_4");
+              prld["synch_inst_q1synch_a_SPECSIG"]="GND";
+          inreg["synch_inst_q1synch_a_SPECSIG"]=new Array("GPS_Q1");
+        
+          d1["gps_i1_sync"]=new Array("FB2_34");
+          clkNegs["gps_i1_sync"]=1;
+              clk["gps_i1_sync"]=new Array("FB2_4");
+              prld["gps_i1_sync"]="GND";
+          d1["gps_q1_sync_reg"]=new Array("FB2_37");
+          
+              clk["gps_q1_sync_reg"]=new Array("FB2_4");
+              prld["gps_q1_sync_reg"]="GND";
+          d1["gps_i0_sync_reg"]=new Array("FB2_40");
+          
+              clk["gps_i0_sync_reg"]=new Array("FB2_4");
+              prld["gps_i0_sync_reg"]="GND";
+          d1["gps_q1_sync"]=new Array("FB2_43");
+          clkNegs["gps_q1_sync"]=1;
+              clk["gps_q1_sync"]=new Array("FB2_4");
+              prld["gps_q1_sync"]="GND";
+          d1["gps_q0_sync_reg"]=new Array("FB2_46");
+          
+              clk["gps_q0_sync_reg"]=new Array("FB2_4");
+              prld["gps_q0_sync_reg"]="GND";
+          d1["gps_i0_sync"]=new Array("FB2_49");
+          clkNegs["gps_i0_sync"]=1;
+              clk["gps_i0_sync"]=new Array("FB2_4");
+              prld["gps_i0_sync"]="GND";
+          d1["bridge_sm_inststate_FSM_FFd7_SPECSIG"]=new Array("FB2_52");
+          
+              clk["bridge_sm_inststate_FSM_FFd7_SPECSIG"]=new Array("FB2_4");
+              prld["bridge_sm_inststate_FSM_FFd7_SPECSIG"]="VCC";
+          d1["asynch_edge_detect_instsynch_instsynch_a_SPECSIG"]=new Array("FB2_55");
+          
+              clk["asynch_edge_detect_instsynch_instsynch_a_SPECSIG"]=new Array("FB2_4");
+              prld["asynch_edge_detect_instsynch_instsynch_a_SPECSIG"]="GND";
+          d1["MCU_SCK"]=new Array("FB4_40");
+          
+          d2["MCU_SS"]=new Array("FB4_2","FB4_0","FB4_1","FB4_3");
+          
+              clk["MCU_SS"]=new Array("FB4_4");
+              prld["MCU_SS"]="GND";
+          d2["MCU_MOSI"]=new Array("FB4_8","FB4_7","FB4_6","FB4_5");
+          
+
+      uimSignals = new Array();
+
+      uimSigNegs = new Array();
+
+      uimPterms = new Array();
+      
+
+      
+        function getEqnList() {
+          var str = "<html><head><link type='text/css' href='style.css' rel='stylesheet'></head><body class='pgBgnd'>";
+          str += "<center><h3>Equations</h3></center>";
+          str += "<table width='90%' align='center' border='1' cellpadding='0' cellspacing='0'>";
+          for (s=0; s<uimSignals.length; s++) {
+            str += "<tr><td>";
+            str += retUimEqn(uimSignals[s]);
+            str += "</td></tr>";
+          }
+          for (s=0; s<signals.length; s++) {
+            str += "<tr><td>";
+            str += retEqn(signals[s]);
+            str += "</td></tr>";
+          }
+
+          var legend = retLegend();
+		      if (legend != "") {
+		        str += "<tr><td>" + legend + "</td></tr>";
+		      }
+
+          str += "</table>";
+          str += "<form><span class='pgRef'>";
+
+          if (!parent.leftnav.IsNS()) {
+            str += "<table width='90%' align='center'>";
+            str += "<tr><td align='left'><input type='button' value='back to top' ";
+            str += "onclick='javascript:parent.leftnav.showEqnAll()' ";
+            str += "onmouseover=\"window.status='goto top of page'; return true;\" ";
+            str += "onmouseout=\"window.status=''\">";
+            str += "</td>";
+            str += "<td align='right'>";
+            str += "<input type='button' value='print page' ";
+            str += "onclick='javascript:window.print()' ";
+            str += "onmouseover=\"window.status='print page'; return true;\" ";
+            str += "onmouseout=\"window.status=''\">";
+            str += "</td>";
+            str += "</tr></table>";
+          }
+          else {
+            str += "<table width='90%' align='center'>";
+            str += "<tr><td align='left'><a href='javascript:parent.leftnav.showEqnAll()'>back to top</a>";
+            str += "</td>";
+            str += "<td align='right'>";
+            str += "<a href='javascript:window.print()'>";
+            str += "print page</a>";
+            str += "</td>";
+            str += "</tr></table>";
+          }
+
+          str += "</span></form>";
+          str += "</body></html>";
+          return str;
+        }
+      
+    </script>
+</head></html>

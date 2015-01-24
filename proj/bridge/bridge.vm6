@@ -1,0 +1,1469 @@
+NDS Database:  version P.20131013
+
+NDS_INFO | xbr | 2C64A44VQ | XC2C64A-7-VQ44
+
+DEVICE | 2C64A | 2C64A44VQ | 
+
+NETWORK | bridge | 0 | 0 | 49158 | 0
+
+INPUT_INSTANCE | 0 | 0 | NULL | BUTTON_N_II | bridge_COPY_0_COPY_0 | 12 | 1 | 1
+INPUT_NODE_TYPE | 0 | 5 | II_IN
+NODE | BUTTON_N | 2937 | PI | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | NULL | NULL | 0 | 100 | NOTYPE
+OUTPUT_NODE_TYPE | 0 | 5 | II_IMUX
+NODE | BUTTON_N_II/UIM | 2942 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | NULL | BUTTON_N_II | 0 | 5 | II_IMUX
+
+INPUT_INSTANCE | 0 | 0 | NULL | GPS_CLK_16_368_II | bridge_COPY_0_COPY_0 | 4 | 1 | 1
+INPUT_NODE_TYPE | 0 | 5 | II_IN
+NODE | GPS_CLK_16_368 | 2938 | PI | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | NULL | NULL | 0 | 100 | NOTYPE
+OUTPUT_NODE_TYPE | 0 | 5 | II_IMUX
+NODE | GPS_CLK_16_368_II/UIM | 3012 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | NULL | GPS_CLK_16_368_II | 0 | 5 | II_IMUX
+
+MACROCELL_INSTANCE | NULL | LED_D1_MC | bridge_COPY_0_COPY_0 | 0 | 1 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | BUTTON_N_II/UIM | 2942 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | NULL | BUTTON_N_II | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 0 | 0 | MC_Q
+NODE | LED_D1_MC.Q | 2944 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | LED_D1_MC.Q | LED_D1_MC | 0 | 0 | MC_Q
+
+SIGNAL_INSTANCE | LED_D1_MC.SI | LED_D1_MC | 0 | 1 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | BUTTON_N_II/UIM | 2942 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | NULL | BUTTON_N_II | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | LED_D1_MC.D1 | 2940 | ? | 0 | 0 | LED_D1_MC | NULL | NULL | LED_D1_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 1 | IV_FALSE | BUTTON_N_II/UIM
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | LED_D1_MC.D2 | 2941 | ? | 0 | 0 | LED_D1_MC | NULL | NULL | LED_D1_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 0 | IV_ZERO
+
+SRFF_INSTANCE | LED_D1_MC.REG | LED_D1_MC | 0 | 1 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | LED_D1_MC.D | 2939 | ? | 0 | 0 | LED_D1_MC | NULL | NULL | LED_D1_MC.XOR | 0 | 7 | ALU_F
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | LED_D1_MC.Q | 2943 | ? | 0 | 0 | LED_D1_MC | NULL | NULL | LED_D1_MC.REG | 0 | 8 | SRFF_Q
+
+OUTPUT_INSTANCE | 0 | LED_D1 | bridge_COPY_0_COPY_0 | 3 | 1 | 1
+INPUT_NODE_TYPE | 0 | 6 | OI_IN
+NODE | LED_D1_MC.Q | 2944 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | LED_D1_MC.Q | LED_D1_MC | 0 | 0 | MC_Q
+OUTPUT_NODE_TYPE | 0 | 6 | OI_OUT
+NODE | LED_D1 | 2945 | PO | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | NULL | LED_D1 | 0 | 6 | OI_OUT
+
+MACROCELL_INSTANCE | NULL | LED_D2_MC | bridge_COPY_0_COPY_0 | 0 | 1 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | BUTTON_N_II/UIM | 2942 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | NULL | BUTTON_N_II | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 0 | 0 | MC_Q
+NODE | LED_D2_MC.Q | 2950 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | LED_D2_MC.Q | LED_D2_MC | 0 | 0 | MC_Q
+
+SIGNAL_INSTANCE | LED_D2_MC.SI | LED_D2_MC | 0 | 1 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | BUTTON_N_II/UIM | 2942 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | NULL | BUTTON_N_II | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | LED_D2_MC.D1 | 2947 | ? | 0 | 0 | LED_D2_MC | NULL | NULL | LED_D2_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 1 | IV_TRUE | BUTTON_N_II/UIM
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | LED_D2_MC.D2 | 2948 | ? | 0 | 0 | LED_D2_MC | NULL | NULL | LED_D2_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 0 | IV_ZERO
+
+SRFF_INSTANCE | LED_D2_MC.REG | LED_D2_MC | 0 | 1 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | LED_D2_MC.D | 2946 | ? | 0 | 0 | LED_D2_MC | NULL | NULL | LED_D2_MC.XOR | 0 | 7 | ALU_F
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | LED_D2_MC.Q | 2949 | ? | 0 | 0 | LED_D2_MC | NULL | NULL | LED_D2_MC.REG | 0 | 8 | SRFF_Q
+
+OUTPUT_INSTANCE | 0 | LED_D2 | bridge_COPY_0_COPY_0 | 3 | 1 | 1
+INPUT_NODE_TYPE | 0 | 6 | OI_IN
+NODE | LED_D2_MC.Q | 2950 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | LED_D2_MC.Q | LED_D2_MC | 0 | 0 | MC_Q
+OUTPUT_NODE_TYPE | 0 | 6 | OI_OUT
+NODE | LED_D2 | 2951 | PO | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | NULL | LED_D2 | 0 | 6 | OI_OUT
+
+INPUT_INSTANCE | 0 | 0 | NULL | MCU_CLK_25_000_II | bridge_COPY_0_COPY_0 | 4 | 1 | 1
+INPUT_NODE_TYPE | 0 | 5 | II_IN
+NODE | MCU_CLK_25_000 | 2952 | PI | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | NULL | NULL | 0 | 100 | NOTYPE
+OUTPUT_NODE_TYPE | 0 | 5 | II_IMUX
+NODE | MCU_CLK_25_000_II/UIM | 2989 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | NULL | MCU_CLK_25_000_II | 0 | 5 | II_IMUX
+
+MACROCELL_INSTANCE | NULL | MCU_MOSI_MC | bridge_COPY_0_COPY_0 | 0 | 6 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | bridge_sm_inst/mosi_sel<1> | 2956 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | bridge_sm_inst/mosi_sel<1>_MC.Q | bridge_sm_inst/mosi_sel<1>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | bridge_sm_inst/mosi_sel<0> | 3030 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | bridge_sm_inst/mosi_sel<0>_MC.Q | bridge_sm_inst/mosi_sel<0>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | gps_q1_sync_reg | 3071 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | gps_q1_sync_reg_MC.Q | gps_q1_sync_reg_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | gps_q0_sync_reg | 3059 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | gps_q0_sync_reg_MC.Q | gps_q0_sync_reg_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | gps_i1_sync_reg | 3047 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | gps_i1_sync_reg_MC.Q | gps_i1_sync_reg_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | gps_i0_sync_reg | 3035 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | gps_i0_sync_reg_MC.Q | gps_i0_sync_reg_MC | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 0 | 0 | MC_Q
+NODE | MCU_MOSI_MC.Q | 3084 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | MCU_MOSI_MC.Q | MCU_MOSI_MC | 0 | 0 | MC_Q
+
+SIGNAL_INSTANCE | MCU_MOSI_MC.SI | MCU_MOSI_MC | 0 | 6 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | bridge_sm_inst/mosi_sel<1> | 2956 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | bridge_sm_inst/mosi_sel<1>_MC.Q | bridge_sm_inst/mosi_sel<1>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | bridge_sm_inst/mosi_sel<0> | 3030 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | bridge_sm_inst/mosi_sel<0>_MC.Q | bridge_sm_inst/mosi_sel<0>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | gps_q1_sync_reg | 3071 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | gps_q1_sync_reg_MC.Q | gps_q1_sync_reg_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | gps_q0_sync_reg | 3059 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | gps_q0_sync_reg_MC.Q | gps_q0_sync_reg_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | gps_i1_sync_reg | 3047 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | gps_i1_sync_reg_MC.Q | gps_i1_sync_reg_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | gps_i0_sync_reg | 3035 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | gps_i0_sync_reg_MC.Q | gps_i0_sync_reg_MC | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | MCU_MOSI_MC.D1 | 2955 | ? | 0 | 0 | MCU_MOSI_MC | NULL | NULL | MCU_MOSI_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | MCU_MOSI_MC.D2 | 2954 | ? | 0 | 0 | MCU_MOSI_MC | NULL | NULL | MCU_MOSI_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 3 | IV_TRUE | bridge_sm_inst/mosi_sel<1> | IV_TRUE | bridge_sm_inst/mosi_sel<0> | IV_TRUE | gps_q1_sync_reg
+SPPTERM | 3 | IV_TRUE | bridge_sm_inst/mosi_sel<1> | IV_FALSE | bridge_sm_inst/mosi_sel<0> | IV_TRUE | gps_q0_sync_reg
+SPPTERM | 3 | IV_FALSE | bridge_sm_inst/mosi_sel<1> | IV_TRUE | bridge_sm_inst/mosi_sel<0> | IV_TRUE | gps_i1_sync_reg
+SPPTERM | 3 | IV_FALSE | bridge_sm_inst/mosi_sel<1> | IV_FALSE | bridge_sm_inst/mosi_sel<0> | IV_TRUE | gps_i0_sync_reg
+
+SRFF_INSTANCE | MCU_MOSI_MC.REG | MCU_MOSI_MC | 0 | 1 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | MCU_MOSI_MC.D | 2953 | ? | 0 | 0 | MCU_MOSI_MC | NULL | NULL | MCU_MOSI_MC.XOR | 0 | 7 | ALU_F
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | MCU_MOSI_MC.Q | 3083 | ? | 0 | 0 | MCU_MOSI_MC | NULL | NULL | MCU_MOSI_MC.REG | 0 | 8 | SRFF_Q
+
+MACROCELL_INSTANCE | PrldLow | bridge_sm_inst/mosi_sel<1>_MC | bridge_COPY_0_COPY_0 | 1024 | 11 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | RESET_N_II/UIM | 2962 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | NULL | RESET_N_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | bridge_sm_inst/state_FSM_FFd3 | 2963 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | bridge_sm_inst/state_FSM_FFd3_MC.Q | bridge_sm_inst/state_FSM_FFd3_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | bridge_sm_inst/state_FSM_FFd4 | 2968 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | bridge_sm_inst/state_FSM_FFd4_MC.Q | bridge_sm_inst/state_FSM_FFd4_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | bridge_sm_inst/mosi_sel<1> | 2956 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | bridge_sm_inst/mosi_sel<1>_MC.Q | bridge_sm_inst/mosi_sel<1>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | bridge_sm_inst/state_FSM_FFd6 | 2978 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | bridge_sm_inst/state_FSM_FFd6_MC.Q | bridge_sm_inst/state_FSM_FFd6_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | asynch_edge_detect_inst/signal_in | 2990 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | asynch_edge_detect_inst/signal_in_MC.Q | asynch_edge_detect_inst/signal_in_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | asynch_edge_detect_inst/signal_in_prev | 3015 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | asynch_edge_detect_inst/signal_in_prev_MC.Q | asynch_edge_detect_inst/signal_in_prev_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | bridge_sm_inst/state_FSM_FFd5 | 2973 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | bridge_sm_inst/state_FSM_FFd5_MC.Q | bridge_sm_inst/state_FSM_FFd5_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | bridge_sm_inst/state_FSM_FFd7 | 2983 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | bridge_sm_inst/state_FSM_FFd7_MC.Q | bridge_sm_inst/state_FSM_FFd7_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | bridge_sm_inst/state_FSM_FFd2 | 3025 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | bridge_sm_inst/state_FSM_FFd2_MC.Q | bridge_sm_inst/state_FSM_FFd2_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+SIGNAL | NODE | FOOBAR1__ctinst/4 | 3014 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | NULL | FOOBAR1__ctinst | 4 | 12 | CT_SI4
+SPPTERM | 1 | IV_TRUE | MCU_CLK_25_000_II/UIM
+OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
+NODE | bridge_sm_inst/mosi_sel<1> | 2956 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | bridge_sm_inst/mosi_sel<1>_MC.Q | bridge_sm_inst/mosi_sel<1>_MC | 1 | 0 | MC_UIM
+
+SIGNAL_INSTANCE | bridge_sm_inst/mosi_sel<1>_MC.SI | bridge_sm_inst/mosi_sel<1>_MC | 0 | 10 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | RESET_N_II/UIM | 2962 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | NULL | RESET_N_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | bridge_sm_inst/state_FSM_FFd3 | 2963 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | bridge_sm_inst/state_FSM_FFd3_MC.Q | bridge_sm_inst/state_FSM_FFd3_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | bridge_sm_inst/state_FSM_FFd4 | 2968 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | bridge_sm_inst/state_FSM_FFd4_MC.Q | bridge_sm_inst/state_FSM_FFd4_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | bridge_sm_inst/mosi_sel<1> | 2956 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | bridge_sm_inst/mosi_sel<1>_MC.Q | bridge_sm_inst/mosi_sel<1>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | bridge_sm_inst/state_FSM_FFd6 | 2978 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | bridge_sm_inst/state_FSM_FFd6_MC.Q | bridge_sm_inst/state_FSM_FFd6_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | asynch_edge_detect_inst/signal_in | 2990 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | asynch_edge_detect_inst/signal_in_MC.Q | asynch_edge_detect_inst/signal_in_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | asynch_edge_detect_inst/signal_in_prev | 3015 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | asynch_edge_detect_inst/signal_in_prev_MC.Q | asynch_edge_detect_inst/signal_in_prev_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | bridge_sm_inst/state_FSM_FFd5 | 2973 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | bridge_sm_inst/state_FSM_FFd5_MC.Q | bridge_sm_inst/state_FSM_FFd5_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | bridge_sm_inst/state_FSM_FFd7 | 2983 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | bridge_sm_inst/state_FSM_FFd7_MC.Q | bridge_sm_inst/state_FSM_FFd7_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | bridge_sm_inst/state_FSM_FFd2 | 3025 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | bridge_sm_inst/state_FSM_FFd2_MC.Q | bridge_sm_inst/state_FSM_FFd2_MC | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | bridge_sm_inst/mosi_sel<1>_MC.D1 | 2960 | ? | 0 | 0 | bridge_sm_inst/mosi_sel<1>_MC | NULL | NULL | bridge_sm_inst/mosi_sel<1>_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | bridge_sm_inst/mosi_sel<1>_MC.D2 | 2959 | ? | 0 | 0 | bridge_sm_inst/mosi_sel<1>_MC | NULL | NULL | bridge_sm_inst/mosi_sel<1>_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 2 | IV_TRUE | RESET_N_II/UIM | IV_TRUE | bridge_sm_inst/state_FSM_FFd3
+SPPTERM | 2 | IV_TRUE | RESET_N_II/UIM | IV_TRUE | bridge_sm_inst/state_FSM_FFd4
+SPPTERM | 4 | IV_TRUE | bridge_sm_inst/mosi_sel<1> | IV_TRUE | RESET_N_II/UIM | IV_TRUE | bridge_sm_inst/state_FSM_FFd6 | IV_FALSE | asynch_edge_detect_inst/signal_in
+SPPTERM | 4 | IV_TRUE | bridge_sm_inst/mosi_sel<1> | IV_TRUE | RESET_N_II/UIM | IV_TRUE | bridge_sm_inst/state_FSM_FFd6 | IV_TRUE | asynch_edge_detect_inst/signal_in_prev
+SPPTERM | 6 | IV_TRUE | bridge_sm_inst/mosi_sel<1> | IV_TRUE | RESET_N_II/UIM | IV_FALSE | bridge_sm_inst/state_FSM_FFd5 | IV_FALSE | bridge_sm_inst/state_FSM_FFd6 | IV_FALSE | bridge_sm_inst/state_FSM_FFd7 | IV_FALSE | bridge_sm_inst/state_FSM_FFd2
+
+SRFF_INSTANCE | bridge_sm_inst/mosi_sel<1>_MC.REG | bridge_sm_inst/mosi_sel<1>_MC | 0 | 2 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | bridge_sm_inst/mosi_sel<1>_MC.D | 2958 | ? | 0 | 0 | bridge_sm_inst/mosi_sel<1>_MC | NULL | NULL | bridge_sm_inst/mosi_sel<1>_MC.XOR | 0 | 7 | ALU_F
+INPUT_NODE_TYPE | 1 | 8 | SRFF_C
+SIGNAL | NODE | FOOBAR1__ctinst/4 | 3014 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | NULL | FOOBAR1__ctinst | 4 | 12 | CT_SI4
+SPPTERM | 1 | IV_TRUE | MCU_CLK_25_000_II/UIM
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | bridge_sm_inst/mosi_sel<1>_MC.Q | 2957 | ? | 0 | 0 | bridge_sm_inst/mosi_sel<1>_MC | NULL | NULL | bridge_sm_inst/mosi_sel<1>_MC.REG | 0 | 8 | SRFF_Q
+
+INPUT_INSTANCE | 0 | 0 | NULL | RESET_N_II | bridge_COPY_0_COPY_0 | 12 | 1 | 2
+INPUT_NODE_TYPE | 0 | 5 | II_IN
+NODE | RESET_N | 2961 | PI | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | NULL | NULL | 0 | 100 | NOTYPE
+OUTPUT_NODE_TYPE | 0 | 5 | II_IMUX
+NODE | RESET_N_II/UIM | 2962 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | NULL | RESET_N_II | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 9 | 5 | II_FSRINV
+NODE | RESET_N_II/FSR- | 3013 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | NULL | RESET_N_II | 9 | 5 | II_FSRINV
+
+MACROCELL_INSTANCE | PrldLow | bridge_sm_inst/state_FSM_FFd3_MC | bridge_COPY_0_COPY_0 | 1024 | 3 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | RESET_N_II/UIM | 2962 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | NULL | RESET_N_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | bridge_sm_inst/state_FSM_FFd4 | 2968 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | bridge_sm_inst/state_FSM_FFd4_MC.Q | bridge_sm_inst/state_FSM_FFd4_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+SIGNAL | NODE | FOOBAR1__ctinst/4 | 3014 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | NULL | FOOBAR1__ctinst | 4 | 12 | CT_SI4
+SPPTERM | 1 | IV_TRUE | MCU_CLK_25_000_II/UIM
+OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
+NODE | bridge_sm_inst/state_FSM_FFd3 | 2963 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | bridge_sm_inst/state_FSM_FFd3_MC.Q | bridge_sm_inst/state_FSM_FFd3_MC | 1 | 0 | MC_UIM
+
+SIGNAL_INSTANCE | bridge_sm_inst/state_FSM_FFd3_MC.SI | bridge_sm_inst/state_FSM_FFd3_MC | 0 | 2 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | RESET_N_II/UIM | 2962 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | NULL | RESET_N_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | bridge_sm_inst/state_FSM_FFd4 | 2968 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | bridge_sm_inst/state_FSM_FFd4_MC.Q | bridge_sm_inst/state_FSM_FFd4_MC | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | bridge_sm_inst/state_FSM_FFd3_MC.D1 | 2966 | ? | 0 | 0 | bridge_sm_inst/state_FSM_FFd3_MC | NULL | NULL | bridge_sm_inst/state_FSM_FFd3_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 2 | IV_TRUE | RESET_N_II/UIM | IV_TRUE | bridge_sm_inst/state_FSM_FFd4
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | bridge_sm_inst/state_FSM_FFd3_MC.D2 | 2967 | ? | 0 | 0 | bridge_sm_inst/state_FSM_FFd3_MC | NULL | NULL | bridge_sm_inst/state_FSM_FFd3_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 0 | IV_ZERO
+
+SRFF_INSTANCE | bridge_sm_inst/state_FSM_FFd3_MC.REG | bridge_sm_inst/state_FSM_FFd3_MC | 0 | 2 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | bridge_sm_inst/state_FSM_FFd3_MC.D | 2965 | ? | 0 | 0 | bridge_sm_inst/state_FSM_FFd3_MC | NULL | NULL | bridge_sm_inst/state_FSM_FFd3_MC.XOR | 0 | 7 | ALU_F
+INPUT_NODE_TYPE | 1 | 8 | SRFF_C
+SIGNAL | NODE | FOOBAR1__ctinst/4 | 3014 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | NULL | FOOBAR1__ctinst | 4 | 12 | CT_SI4
+SPPTERM | 1 | IV_TRUE | MCU_CLK_25_000_II/UIM
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | bridge_sm_inst/state_FSM_FFd3_MC.Q | 2964 | ? | 0 | 0 | bridge_sm_inst/state_FSM_FFd3_MC | NULL | NULL | bridge_sm_inst/state_FSM_FFd3_MC.REG | 0 | 8 | SRFF_Q
+
+MACROCELL_INSTANCE | PrldLow | bridge_sm_inst/state_FSM_FFd4_MC | bridge_COPY_0_COPY_0 | 1024 | 3 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | RESET_N_II/UIM | 2962 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | NULL | RESET_N_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | bridge_sm_inst/state_FSM_FFd5 | 2973 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | bridge_sm_inst/state_FSM_FFd5_MC.Q | bridge_sm_inst/state_FSM_FFd5_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+SIGNAL | NODE | FOOBAR1__ctinst/4 | 3014 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | NULL | FOOBAR1__ctinst | 4 | 12 | CT_SI4
+SPPTERM | 1 | IV_TRUE | MCU_CLK_25_000_II/UIM
+OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
+NODE | bridge_sm_inst/state_FSM_FFd4 | 2968 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | bridge_sm_inst/state_FSM_FFd4_MC.Q | bridge_sm_inst/state_FSM_FFd4_MC | 1 | 0 | MC_UIM
+
+SIGNAL_INSTANCE | bridge_sm_inst/state_FSM_FFd4_MC.SI | bridge_sm_inst/state_FSM_FFd4_MC | 0 | 2 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | RESET_N_II/UIM | 2962 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | NULL | RESET_N_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | bridge_sm_inst/state_FSM_FFd5 | 2973 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | bridge_sm_inst/state_FSM_FFd5_MC.Q | bridge_sm_inst/state_FSM_FFd5_MC | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | bridge_sm_inst/state_FSM_FFd4_MC.D1 | 2971 | ? | 0 | 0 | bridge_sm_inst/state_FSM_FFd4_MC | NULL | NULL | bridge_sm_inst/state_FSM_FFd4_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 2 | IV_TRUE | RESET_N_II/UIM | IV_TRUE | bridge_sm_inst/state_FSM_FFd5
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | bridge_sm_inst/state_FSM_FFd4_MC.D2 | 2972 | ? | 0 | 0 | bridge_sm_inst/state_FSM_FFd4_MC | NULL | NULL | bridge_sm_inst/state_FSM_FFd4_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 0 | IV_ZERO
+
+SRFF_INSTANCE | bridge_sm_inst/state_FSM_FFd4_MC.REG | bridge_sm_inst/state_FSM_FFd4_MC | 0 | 2 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | bridge_sm_inst/state_FSM_FFd4_MC.D | 2970 | ? | 0 | 0 | bridge_sm_inst/state_FSM_FFd4_MC | NULL | NULL | bridge_sm_inst/state_FSM_FFd4_MC.XOR | 0 | 7 | ALU_F
+INPUT_NODE_TYPE | 1 | 8 | SRFF_C
+SIGNAL | NODE | FOOBAR1__ctinst/4 | 3014 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | NULL | FOOBAR1__ctinst | 4 | 12 | CT_SI4
+SPPTERM | 1 | IV_TRUE | MCU_CLK_25_000_II/UIM
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | bridge_sm_inst/state_FSM_FFd4_MC.Q | 2969 | ? | 0 | 0 | bridge_sm_inst/state_FSM_FFd4_MC | NULL | NULL | bridge_sm_inst/state_FSM_FFd4_MC.REG | 0 | 8 | SRFF_Q
+
+MACROCELL_INSTANCE | PrldLow | bridge_sm_inst/state_FSM_FFd5_MC | bridge_COPY_0_COPY_0 | 1024 | 6 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | RESET_N_II/UIM | 2962 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | NULL | RESET_N_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | bridge_sm_inst/state_FSM_FFd6 | 2978 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | bridge_sm_inst/state_FSM_FFd6_MC.Q | bridge_sm_inst/state_FSM_FFd6_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | asynch_edge_detect_inst/signal_in | 2990 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | asynch_edge_detect_inst/signal_in_MC.Q | asynch_edge_detect_inst/signal_in_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | asynch_edge_detect_inst/signal_in_prev | 3015 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | asynch_edge_detect_inst/signal_in_prev_MC.Q | asynch_edge_detect_inst/signal_in_prev_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | bridge_sm_inst/state_FSM_FFd1 | 3020 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | bridge_sm_inst/state_FSM_FFd1_MC.Q | bridge_sm_inst/state_FSM_FFd1_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+SIGNAL | NODE | FOOBAR1__ctinst/4 | 3014 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | NULL | FOOBAR1__ctinst | 4 | 12 | CT_SI4
+SPPTERM | 1 | IV_TRUE | MCU_CLK_25_000_II/UIM
+OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
+NODE | bridge_sm_inst/state_FSM_FFd5 | 2973 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | bridge_sm_inst/state_FSM_FFd5_MC.Q | bridge_sm_inst/state_FSM_FFd5_MC | 1 | 0 | MC_UIM
+
+SIGNAL_INSTANCE | bridge_sm_inst/state_FSM_FFd5_MC.SI | bridge_sm_inst/state_FSM_FFd5_MC | 0 | 5 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | RESET_N_II/UIM | 2962 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | NULL | RESET_N_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | bridge_sm_inst/state_FSM_FFd6 | 2978 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | bridge_sm_inst/state_FSM_FFd6_MC.Q | bridge_sm_inst/state_FSM_FFd6_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | asynch_edge_detect_inst/signal_in | 2990 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | asynch_edge_detect_inst/signal_in_MC.Q | asynch_edge_detect_inst/signal_in_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | asynch_edge_detect_inst/signal_in_prev | 3015 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | asynch_edge_detect_inst/signal_in_prev_MC.Q | asynch_edge_detect_inst/signal_in_prev_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | bridge_sm_inst/state_FSM_FFd1 | 3020 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | bridge_sm_inst/state_FSM_FFd1_MC.Q | bridge_sm_inst/state_FSM_FFd1_MC | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | bridge_sm_inst/state_FSM_FFd5_MC.D1 | 2977 | ? | 0 | 0 | bridge_sm_inst/state_FSM_FFd5_MC | NULL | NULL | bridge_sm_inst/state_FSM_FFd5_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | bridge_sm_inst/state_FSM_FFd5_MC.D2 | 2976 | ? | 0 | 0 | bridge_sm_inst/state_FSM_FFd5_MC | NULL | NULL | bridge_sm_inst/state_FSM_FFd5_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 4 | IV_TRUE | RESET_N_II/UIM | IV_TRUE | bridge_sm_inst/state_FSM_FFd6 | IV_TRUE | asynch_edge_detect_inst/signal_in | IV_FALSE | asynch_edge_detect_inst/signal_in_prev
+SPPTERM | 4 | IV_TRUE | RESET_N_II/UIM | IV_TRUE | asynch_edge_detect_inst/signal_in | IV_FALSE | asynch_edge_detect_inst/signal_in_prev | IV_TRUE | bridge_sm_inst/state_FSM_FFd1
+
+SRFF_INSTANCE | bridge_sm_inst/state_FSM_FFd5_MC.REG | bridge_sm_inst/state_FSM_FFd5_MC | 0 | 2 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | bridge_sm_inst/state_FSM_FFd5_MC.D | 2975 | ? | 0 | 0 | bridge_sm_inst/state_FSM_FFd5_MC | NULL | NULL | bridge_sm_inst/state_FSM_FFd5_MC.XOR | 0 | 7 | ALU_F
+INPUT_NODE_TYPE | 1 | 8 | SRFF_C
+SIGNAL | NODE | FOOBAR1__ctinst/4 | 3014 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | NULL | FOOBAR1__ctinst | 4 | 12 | CT_SI4
+SPPTERM | 1 | IV_TRUE | MCU_CLK_25_000_II/UIM
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | bridge_sm_inst/state_FSM_FFd5_MC.Q | 2974 | ? | 0 | 0 | bridge_sm_inst/state_FSM_FFd5_MC | NULL | NULL | bridge_sm_inst/state_FSM_FFd5_MC.REG | 0 | 8 | SRFF_Q
+
+MACROCELL_INSTANCE | PrldLow | bridge_sm_inst/state_FSM_FFd6_MC | bridge_COPY_0_COPY_0 | 1024 | 6 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | RESET_N_II/UIM | 2962 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | NULL | RESET_N_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | bridge_sm_inst/state_FSM_FFd7 | 2983 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | bridge_sm_inst/state_FSM_FFd7_MC.Q | bridge_sm_inst/state_FSM_FFd7_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | bridge_sm_inst/state_FSM_FFd6 | 2978 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | bridge_sm_inst/state_FSM_FFd6_MC.Q | bridge_sm_inst/state_FSM_FFd6_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | asynch_edge_detect_inst/signal_in | 2990 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | asynch_edge_detect_inst/signal_in_MC.Q | asynch_edge_detect_inst/signal_in_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | asynch_edge_detect_inst/signal_in_prev | 3015 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | asynch_edge_detect_inst/signal_in_prev_MC.Q | asynch_edge_detect_inst/signal_in_prev_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+SIGNAL | NODE | FOOBAR1__ctinst/4 | 3014 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | NULL | FOOBAR1__ctinst | 4 | 12 | CT_SI4
+SPPTERM | 1 | IV_TRUE | MCU_CLK_25_000_II/UIM
+OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
+NODE | bridge_sm_inst/state_FSM_FFd6 | 2978 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | bridge_sm_inst/state_FSM_FFd6_MC.Q | bridge_sm_inst/state_FSM_FFd6_MC | 1 | 0 | MC_UIM
+
+SIGNAL_INSTANCE | bridge_sm_inst/state_FSM_FFd6_MC.SI | bridge_sm_inst/state_FSM_FFd6_MC | 0 | 5 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | RESET_N_II/UIM | 2962 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | NULL | RESET_N_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | bridge_sm_inst/state_FSM_FFd7 | 2983 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | bridge_sm_inst/state_FSM_FFd7_MC.Q | bridge_sm_inst/state_FSM_FFd7_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | bridge_sm_inst/state_FSM_FFd6 | 2978 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | bridge_sm_inst/state_FSM_FFd6_MC.Q | bridge_sm_inst/state_FSM_FFd6_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | asynch_edge_detect_inst/signal_in | 2990 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | asynch_edge_detect_inst/signal_in_MC.Q | asynch_edge_detect_inst/signal_in_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | asynch_edge_detect_inst/signal_in_prev | 3015 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | asynch_edge_detect_inst/signal_in_prev_MC.Q | asynch_edge_detect_inst/signal_in_prev_MC | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | bridge_sm_inst/state_FSM_FFd6_MC.D1 | 2982 | ? | 0 | 0 | bridge_sm_inst/state_FSM_FFd6_MC | NULL | NULL | bridge_sm_inst/state_FSM_FFd6_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | bridge_sm_inst/state_FSM_FFd6_MC.D2 | 2981 | ? | 0 | 0 | bridge_sm_inst/state_FSM_FFd6_MC | NULL | NULL | bridge_sm_inst/state_FSM_FFd6_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 2 | IV_TRUE | RESET_N_II/UIM | IV_TRUE | bridge_sm_inst/state_FSM_FFd7
+SPPTERM | 3 | IV_TRUE | RESET_N_II/UIM | IV_TRUE | bridge_sm_inst/state_FSM_FFd6 | IV_FALSE | asynch_edge_detect_inst/signal_in
+SPPTERM | 3 | IV_TRUE | RESET_N_II/UIM | IV_TRUE | bridge_sm_inst/state_FSM_FFd6 | IV_TRUE | asynch_edge_detect_inst/signal_in_prev
+
+SRFF_INSTANCE | bridge_sm_inst/state_FSM_FFd6_MC.REG | bridge_sm_inst/state_FSM_FFd6_MC | 0 | 2 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | bridge_sm_inst/state_FSM_FFd6_MC.D | 2980 | ? | 0 | 0 | bridge_sm_inst/state_FSM_FFd6_MC | NULL | NULL | bridge_sm_inst/state_FSM_FFd6_MC.XOR | 0 | 7 | ALU_F
+INPUT_NODE_TYPE | 1 | 8 | SRFF_C
+SIGNAL | NODE | FOOBAR1__ctinst/4 | 3014 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | NULL | FOOBAR1__ctinst | 4 | 12 | CT_SI4
+SPPTERM | 1 | IV_TRUE | MCU_CLK_25_000_II/UIM
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | bridge_sm_inst/state_FSM_FFd6_MC.Q | 2979 | ? | 0 | 0 | bridge_sm_inst/state_FSM_FFd6_MC | NULL | NULL | bridge_sm_inst/state_FSM_FFd6_MC.REG | 0 | 8 | SRFF_Q
+
+MACROCELL_INSTANCE | PrldHigh | bridge_sm_inst/state_FSM_FFd7_MC | bridge_COPY_0_COPY_0 | 512 | 2 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | RESET_N_II/UIM | 2962 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | NULL | RESET_N_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+SIGNAL | NODE | FOOBAR2__ctinst/4 | 2988 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | NULL | FOOBAR2__ctinst | 4 | 12 | CT_SI4
+SPPTERM | 1 | IV_TRUE | MCU_CLK_25_000_II/UIM
+OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
+NODE | bridge_sm_inst/state_FSM_FFd7 | 2983 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | bridge_sm_inst/state_FSM_FFd7_MC.Q | bridge_sm_inst/state_FSM_FFd7_MC | 1 | 0 | MC_UIM
+
+SIGNAL_INSTANCE | bridge_sm_inst/state_FSM_FFd7_MC.SI | bridge_sm_inst/state_FSM_FFd7_MC | 0 | 1 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | RESET_N_II/UIM | 2962 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | NULL | RESET_N_II | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | bridge_sm_inst/state_FSM_FFd7_MC.D1 | 2986 | ? | 0 | 0 | bridge_sm_inst/state_FSM_FFd7_MC | NULL | NULL | bridge_sm_inst/state_FSM_FFd7_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 1 | IV_FALSE | RESET_N_II/UIM
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | bridge_sm_inst/state_FSM_FFd7_MC.D2 | 2987 | ? | 0 | 0 | bridge_sm_inst/state_FSM_FFd7_MC | NULL | NULL | bridge_sm_inst/state_FSM_FFd7_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 0 | IV_ZERO
+
+SRFF_INSTANCE | bridge_sm_inst/state_FSM_FFd7_MC.REG | bridge_sm_inst/state_FSM_FFd7_MC | 0 | 2 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | bridge_sm_inst/state_FSM_FFd7_MC.D | 2985 | ? | 0 | 0 | bridge_sm_inst/state_FSM_FFd7_MC | NULL | NULL | bridge_sm_inst/state_FSM_FFd7_MC.XOR | 0 | 7 | ALU_F
+INPUT_NODE_TYPE | 1 | 8 | SRFF_C
+SIGNAL | NODE | FOOBAR2__ctinst/4 | 2988 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | NULL | FOOBAR2__ctinst | 4 | 12 | CT_SI4
+SPPTERM | 1 | IV_TRUE | MCU_CLK_25_000_II/UIM
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | bridge_sm_inst/state_FSM_FFd7_MC.Q | 2984 | ? | 0 | 0 | bridge_sm_inst/state_FSM_FFd7_MC | NULL | NULL | bridge_sm_inst/state_FSM_FFd7_MC.REG | 0 | 8 | SRFF_Q
+
+MACROCELL_INSTANCE | PrldLow+Ce | asynch_edge_detect_inst/signal_in_MC | bridge_COPY_0_COPY_0 | 268436480 | 2 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | asynch_edge_detect_inst/synch_inst/synch_a | 2995 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | asynch_edge_detect_inst/synch_inst/synch_a_MC.Q | asynch_edge_detect_inst/synch_inst/synch_a_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+SIGNAL | NODE | FOOBAR1__ctinst/4 | 3014 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | NULL | FOOBAR1__ctinst | 4 | 12 | CT_SI4
+SPPTERM | 1 | IV_TRUE | MCU_CLK_25_000_II/UIM
+OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
+NODE | asynch_edge_detect_inst/signal_in | 2990 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | asynch_edge_detect_inst/signal_in_MC.Q | asynch_edge_detect_inst/signal_in_MC | 1 | 0 | MC_UIM
+
+SIGNAL_INSTANCE | asynch_edge_detect_inst/signal_in_MC.SI | asynch_edge_detect_inst/signal_in_MC | 0 | 1 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | asynch_edge_detect_inst/synch_inst/synch_a | 2995 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | asynch_edge_detect_inst/synch_inst/synch_a_MC.Q | asynch_edge_detect_inst/synch_inst/synch_a_MC | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | asynch_edge_detect_inst/signal_in_MC.D1 | 2993 | ? | 0 | 0 | asynch_edge_detect_inst/signal_in_MC | NULL | NULL | asynch_edge_detect_inst/signal_in_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 1 | IV_TRUE | asynch_edge_detect_inst/synch_inst/synch_a
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | asynch_edge_detect_inst/signal_in_MC.D2 | 2994 | ? | 0 | 0 | asynch_edge_detect_inst/signal_in_MC | NULL | NULL | asynch_edge_detect_inst/signal_in_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 0 | IV_ZERO
+
+SRFF_INSTANCE | asynch_edge_detect_inst/signal_in_MC.REG | asynch_edge_detect_inst/signal_in_MC | 0 | 2 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | asynch_edge_detect_inst/signal_in_MC.D | 2992 | ? | 0 | 0 | asynch_edge_detect_inst/signal_in_MC | NULL | NULL | asynch_edge_detect_inst/signal_in_MC.XOR | 0 | 7 | ALU_F
+INPUT_NODE_TYPE | 1 | 8 | SRFF_C
+SIGNAL | NODE | FOOBAR1__ctinst/4 | 3014 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | NULL | FOOBAR1__ctinst | 4 | 12 | CT_SI4
+SPPTERM | 1 | IV_TRUE | MCU_CLK_25_000_II/UIM
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | asynch_edge_detect_inst/signal_in_MC.Q | 2991 | ? | 0 | 0 | asynch_edge_detect_inst/signal_in_MC | NULL | NULL | asynch_edge_detect_inst/signal_in_MC.REG | 0 | 8 | SRFF_Q
+
+MACROCELL_INSTANCE | PrldLow | asynch_edge_detect_inst/synch_inst/synch_a_MC | bridge_COPY_0_COPY_0 | 1024 | 2 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | GPS_CLK_4_092 | 3000 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | GPS_CLK_4_092_MC.Q | GPS_CLK_4_092_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+SIGNAL | NODE | FOOBAR2__ctinst/4 | 2988 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | NULL | FOOBAR2__ctinst | 4 | 12 | CT_SI4
+SPPTERM | 1 | IV_TRUE | MCU_CLK_25_000_II/UIM
+OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
+NODE | asynch_edge_detect_inst/synch_inst/synch_a | 2995 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | asynch_edge_detect_inst/synch_inst/synch_a_MC.Q | asynch_edge_detect_inst/synch_inst/synch_a_MC | 1 | 0 | MC_UIM
+
+SIGNAL_INSTANCE | asynch_edge_detect_inst/synch_inst/synch_a_MC.SI | asynch_edge_detect_inst/synch_inst/synch_a_MC | 0 | 1 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | GPS_CLK_4_092 | 3000 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | GPS_CLK_4_092_MC.Q | GPS_CLK_4_092_MC | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | asynch_edge_detect_inst/synch_inst/synch_a_MC.D1 | 2998 | ? | 0 | 0 | asynch_edge_detect_inst/synch_inst/synch_a_MC | NULL | NULL | asynch_edge_detect_inst/synch_inst/synch_a_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 1 | IV_TRUE | GPS_CLK_4_092
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | asynch_edge_detect_inst/synch_inst/synch_a_MC.D2 | 2999 | ? | 0 | 0 | asynch_edge_detect_inst/synch_inst/synch_a_MC | NULL | NULL | asynch_edge_detect_inst/synch_inst/synch_a_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 0 | IV_ZERO
+
+SRFF_INSTANCE | asynch_edge_detect_inst/synch_inst/synch_a_MC.REG | asynch_edge_detect_inst/synch_inst/synch_a_MC | 0 | 2 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | asynch_edge_detect_inst/synch_inst/synch_a_MC.D | 2997 | ? | 0 | 0 | asynch_edge_detect_inst/synch_inst/synch_a_MC | NULL | NULL | asynch_edge_detect_inst/synch_inst/synch_a_MC.XOR | 0 | 7 | ALU_F
+INPUT_NODE_TYPE | 1 | 8 | SRFF_C
+SIGNAL | NODE | FOOBAR2__ctinst/4 | 2988 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | NULL | FOOBAR2__ctinst | 4 | 12 | CT_SI4
+SPPTERM | 1 | IV_TRUE | MCU_CLK_25_000_II/UIM
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | asynch_edge_detect_inst/synch_inst/synch_a_MC.Q | 2996 | ? | 0 | 0 | asynch_edge_detect_inst/synch_inst/synch_a_MC | NULL | NULL | asynch_edge_detect_inst/synch_inst/synch_a_MC.REG | 0 | 8 | SRFF_Q
+
+MACROCELL_INSTANCE | Inv+PrldLow+Tff | GPS_CLK_4_092_MC | bridge_COPY_0_COPY_0 | 5376 | 2 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | clkdiv4_inst/clkdiv<0> | 3006 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | clkdiv4_inst/clkdiv<0>_MC.Q | clkdiv4_inst/clkdiv<0>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | RESET_N_II/FSR- | 3013 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | NULL | RESET_N_II | 9 | 5 | II_FSRINV
+OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
+NODE | GPS_CLK_4_092 | 3000 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | GPS_CLK_4_092_MC.Q | GPS_CLK_4_092_MC | 1 | 0 | MC_UIM
+
+SIGNAL_INSTANCE | GPS_CLK_4_092_MC.SI | GPS_CLK_4_092_MC | 0 | 1 | 3
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | clkdiv4_inst/clkdiv<0> | 3006 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | clkdiv4_inst/clkdiv<0>_MC.Q | clkdiv4_inst/clkdiv<0>_MC | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | GPS_CLK_4_092_MC.D1 | 3004 | ? | 0 | 0 | GPS_CLK_4_092_MC | NULL | NULL | GPS_CLK_4_092_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | GPS_CLK_4_092_MC.D2 | 3003 | ? | 0 | 0 | GPS_CLK_4_092_MC | NULL | NULL | GPS_CLK_4_092_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 3 | 9 | MC_SI_CLKF
+SIGNAL | NODE | GPS_CLK_4_092_MC.CLKF | 3005 | ? | 0 | 0 | GPS_CLK_4_092_MC | NULL | NULL | GPS_CLK_4_092_MC.SI | 3 | 9 | MC_SI_CLKF
+SPPTERM | 1 | IV_TRUE | clkdiv4_inst/clkdiv<0>
+
+SRFF_INSTANCE | GPS_CLK_4_092_MC.REG | GPS_CLK_4_092_MC | 0 | 3 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | GPS_CLK_4_092_MC.D | 3002 | ? | 0 | 0 | GPS_CLK_4_092_MC | NULL | NULL | GPS_CLK_4_092_MC.XOR | 0 | 7 | ALU_F
+INPUT_NODE_TYPE | 1 | 8 | SRFF_C
+SIGNAL | NODE | GPS_CLK_4_092_MC.CLKF | 3005 | ? | 0 | 0 | GPS_CLK_4_092_MC | NULL | NULL | GPS_CLK_4_092_MC.SI | 3 | 9 | MC_SI_CLKF
+SPPTERM | 1 | IV_TRUE | clkdiv4_inst/clkdiv<0>
+INPUT_NODE_TYPE | 3 | 8 | SRFF_R
+NODE | RESET_N_II/FSR- | 3013 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | NULL | RESET_N_II | 9 | 5 | II_FSRINV
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | GPS_CLK_4_092_MC.Q | 3001 | ? | 0 | 0 | GPS_CLK_4_092_MC | NULL | NULL | GPS_CLK_4_092_MC.REG | 0 | 8 | SRFF_Q
+
+MACROCELL_INSTANCE | Inv+PrldLow+Tff | clkdiv4_inst/clkdiv<0>_MC | bridge_COPY_0_COPY_0 | 5376 | 2 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | GPS_CLK_16_368_II/UIM | 3012 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | NULL | GPS_CLK_16_368_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | RESET_N_II/FSR- | 3013 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | NULL | RESET_N_II | 9 | 5 | II_FSRINV
+OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
+NODE | clkdiv4_inst/clkdiv<0> | 3006 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | clkdiv4_inst/clkdiv<0>_MC.Q | clkdiv4_inst/clkdiv<0>_MC | 1 | 0 | MC_UIM
+
+SIGNAL_INSTANCE | clkdiv4_inst/clkdiv<0>_MC.SI | clkdiv4_inst/clkdiv<0>_MC | 0 | 1 | 3
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | GPS_CLK_16_368_II/UIM | 3012 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | NULL | GPS_CLK_16_368_II | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | clkdiv4_inst/clkdiv<0>_MC.D1 | 3010 | ? | 0 | 0 | clkdiv4_inst/clkdiv<0>_MC | NULL | NULL | clkdiv4_inst/clkdiv<0>_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | clkdiv4_inst/clkdiv<0>_MC.D2 | 3009 | ? | 0 | 0 | clkdiv4_inst/clkdiv<0>_MC | NULL | NULL | clkdiv4_inst/clkdiv<0>_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 3 | 9 | MC_SI_CLKF
+SIGNAL | NODE | clkdiv4_inst/clkdiv<0>_MC.CLKF | 3011 | ? | 0 | 0 | clkdiv4_inst/clkdiv<0>_MC | NULL | NULL | clkdiv4_inst/clkdiv<0>_MC.SI | 3 | 9 | MC_SI_CLKF
+SPPTERM | 1 | IV_TRUE | GPS_CLK_16_368_II/UIM
+
+SRFF_INSTANCE | clkdiv4_inst/clkdiv<0>_MC.REG | clkdiv4_inst/clkdiv<0>_MC | 0 | 3 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | clkdiv4_inst/clkdiv<0>_MC.D | 3008 | ? | 0 | 0 | clkdiv4_inst/clkdiv<0>_MC | NULL | NULL | clkdiv4_inst/clkdiv<0>_MC.XOR | 0 | 7 | ALU_F
+INPUT_NODE_TYPE | 1 | 8 | SRFF_C
+SIGNAL | NODE | clkdiv4_inst/clkdiv<0>_MC.CLKF | 3011 | ? | 0 | 0 | clkdiv4_inst/clkdiv<0>_MC | NULL | NULL | clkdiv4_inst/clkdiv<0>_MC.SI | 3 | 9 | MC_SI_CLKF
+SPPTERM | 1 | IV_TRUE | GPS_CLK_16_368_II/UIM
+INPUT_NODE_TYPE | 3 | 8 | SRFF_R
+NODE | RESET_N_II/FSR- | 3013 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | NULL | RESET_N_II | 9 | 5 | II_FSRINV
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | clkdiv4_inst/clkdiv<0>_MC.Q | 3007 | ? | 0 | 0 | clkdiv4_inst/clkdiv<0>_MC | NULL | NULL | clkdiv4_inst/clkdiv<0>_MC.REG | 0 | 8 | SRFF_Q
+
+MACROCELL_INSTANCE | PrldLow | asynch_edge_detect_inst/signal_in_prev_MC | bridge_COPY_0_COPY_0 | 1024 | 2 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | asynch_edge_detect_inst/signal_in | 2990 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | asynch_edge_detect_inst/signal_in_MC.Q | asynch_edge_detect_inst/signal_in_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+SIGNAL | NODE | FOOBAR1__ctinst/4 | 3014 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | NULL | FOOBAR1__ctinst | 4 | 12 | CT_SI4
+SPPTERM | 1 | IV_TRUE | MCU_CLK_25_000_II/UIM
+OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
+NODE | asynch_edge_detect_inst/signal_in_prev | 3015 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | asynch_edge_detect_inst/signal_in_prev_MC.Q | asynch_edge_detect_inst/signal_in_prev_MC | 1 | 0 | MC_UIM
+
+SIGNAL_INSTANCE | asynch_edge_detect_inst/signal_in_prev_MC.SI | asynch_edge_detect_inst/signal_in_prev_MC | 0 | 1 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | asynch_edge_detect_inst/signal_in | 2990 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | asynch_edge_detect_inst/signal_in_MC.Q | asynch_edge_detect_inst/signal_in_MC | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | asynch_edge_detect_inst/signal_in_prev_MC.D1 | 3018 | ? | 0 | 0 | asynch_edge_detect_inst/signal_in_prev_MC | NULL | NULL | asynch_edge_detect_inst/signal_in_prev_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 1 | IV_TRUE | asynch_edge_detect_inst/signal_in
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | asynch_edge_detect_inst/signal_in_prev_MC.D2 | 3019 | ? | 0 | 0 | asynch_edge_detect_inst/signal_in_prev_MC | NULL | NULL | asynch_edge_detect_inst/signal_in_prev_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 0 | IV_ZERO
+
+SRFF_INSTANCE | asynch_edge_detect_inst/signal_in_prev_MC.REG | asynch_edge_detect_inst/signal_in_prev_MC | 0 | 2 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | asynch_edge_detect_inst/signal_in_prev_MC.D | 3017 | ? | 0 | 0 | asynch_edge_detect_inst/signal_in_prev_MC | NULL | NULL | asynch_edge_detect_inst/signal_in_prev_MC.XOR | 0 | 7 | ALU_F
+INPUT_NODE_TYPE | 1 | 8 | SRFF_C
+SIGNAL | NODE | FOOBAR1__ctinst/4 | 3014 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | NULL | FOOBAR1__ctinst | 4 | 12 | CT_SI4
+SPPTERM | 1 | IV_TRUE | MCU_CLK_25_000_II/UIM
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | asynch_edge_detect_inst/signal_in_prev_MC.Q | 3016 | ? | 0 | 0 | asynch_edge_detect_inst/signal_in_prev_MC | NULL | NULL | asynch_edge_detect_inst/signal_in_prev_MC.REG | 0 | 8 | SRFF_Q
+
+MACROCELL_INSTANCE | PrldLow | bridge_sm_inst/state_FSM_FFd1_MC | bridge_COPY_0_COPY_0 | 1024 | 6 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | RESET_N_II/UIM | 2962 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | NULL | RESET_N_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | bridge_sm_inst/state_FSM_FFd2 | 3025 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | bridge_sm_inst/state_FSM_FFd2_MC.Q | bridge_sm_inst/state_FSM_FFd2_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | asynch_edge_detect_inst/signal_in | 2990 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | asynch_edge_detect_inst/signal_in_MC.Q | asynch_edge_detect_inst/signal_in_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | bridge_sm_inst/state_FSM_FFd1 | 3020 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | bridge_sm_inst/state_FSM_FFd1_MC.Q | bridge_sm_inst/state_FSM_FFd1_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | asynch_edge_detect_inst/signal_in_prev | 3015 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | asynch_edge_detect_inst/signal_in_prev_MC.Q | asynch_edge_detect_inst/signal_in_prev_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+SIGNAL | NODE | FOOBAR1__ctinst/4 | 3014 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | NULL | FOOBAR1__ctinst | 4 | 12 | CT_SI4
+SPPTERM | 1 | IV_TRUE | MCU_CLK_25_000_II/UIM
+OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
+NODE | bridge_sm_inst/state_FSM_FFd1 | 3020 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | bridge_sm_inst/state_FSM_FFd1_MC.Q | bridge_sm_inst/state_FSM_FFd1_MC | 1 | 0 | MC_UIM
+
+SIGNAL_INSTANCE | bridge_sm_inst/state_FSM_FFd1_MC.SI | bridge_sm_inst/state_FSM_FFd1_MC | 0 | 5 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | RESET_N_II/UIM | 2962 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | NULL | RESET_N_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | bridge_sm_inst/state_FSM_FFd2 | 3025 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | bridge_sm_inst/state_FSM_FFd2_MC.Q | bridge_sm_inst/state_FSM_FFd2_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | asynch_edge_detect_inst/signal_in | 2990 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | asynch_edge_detect_inst/signal_in_MC.Q | asynch_edge_detect_inst/signal_in_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | bridge_sm_inst/state_FSM_FFd1 | 3020 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | bridge_sm_inst/state_FSM_FFd1_MC.Q | bridge_sm_inst/state_FSM_FFd1_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | asynch_edge_detect_inst/signal_in_prev | 3015 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | asynch_edge_detect_inst/signal_in_prev_MC.Q | asynch_edge_detect_inst/signal_in_prev_MC | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | bridge_sm_inst/state_FSM_FFd1_MC.D1 | 3024 | ? | 0 | 0 | bridge_sm_inst/state_FSM_FFd1_MC | NULL | NULL | bridge_sm_inst/state_FSM_FFd1_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | bridge_sm_inst/state_FSM_FFd1_MC.D2 | 3023 | ? | 0 | 0 | bridge_sm_inst/state_FSM_FFd1_MC | NULL | NULL | bridge_sm_inst/state_FSM_FFd1_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 2 | IV_TRUE | RESET_N_II/UIM | IV_TRUE | bridge_sm_inst/state_FSM_FFd2
+SPPTERM | 3 | IV_TRUE | RESET_N_II/UIM | IV_FALSE | asynch_edge_detect_inst/signal_in | IV_TRUE | bridge_sm_inst/state_FSM_FFd1
+SPPTERM | 3 | IV_TRUE | RESET_N_II/UIM | IV_TRUE | asynch_edge_detect_inst/signal_in_prev | IV_TRUE | bridge_sm_inst/state_FSM_FFd1
+
+SRFF_INSTANCE | bridge_sm_inst/state_FSM_FFd1_MC.REG | bridge_sm_inst/state_FSM_FFd1_MC | 0 | 2 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | bridge_sm_inst/state_FSM_FFd1_MC.D | 3022 | ? | 0 | 0 | bridge_sm_inst/state_FSM_FFd1_MC | NULL | NULL | bridge_sm_inst/state_FSM_FFd1_MC.XOR | 0 | 7 | ALU_F
+INPUT_NODE_TYPE | 1 | 8 | SRFF_C
+SIGNAL | NODE | FOOBAR1__ctinst/4 | 3014 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | NULL | FOOBAR1__ctinst | 4 | 12 | CT_SI4
+SPPTERM | 1 | IV_TRUE | MCU_CLK_25_000_II/UIM
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | bridge_sm_inst/state_FSM_FFd1_MC.Q | 3021 | ? | 0 | 0 | bridge_sm_inst/state_FSM_FFd1_MC | NULL | NULL | bridge_sm_inst/state_FSM_FFd1_MC.REG | 0 | 8 | SRFF_Q
+
+MACROCELL_INSTANCE | PrldLow | bridge_sm_inst/state_FSM_FFd2_MC | bridge_COPY_0_COPY_0 | 1024 | 3 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | RESET_N_II/UIM | 2962 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | NULL | RESET_N_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | bridge_sm_inst/state_FSM_FFd3 | 2963 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | bridge_sm_inst/state_FSM_FFd3_MC.Q | bridge_sm_inst/state_FSM_FFd3_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+SIGNAL | NODE | FOOBAR1__ctinst/4 | 3014 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | NULL | FOOBAR1__ctinst | 4 | 12 | CT_SI4
+SPPTERM | 1 | IV_TRUE | MCU_CLK_25_000_II/UIM
+OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
+NODE | bridge_sm_inst/state_FSM_FFd2 | 3025 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | bridge_sm_inst/state_FSM_FFd2_MC.Q | bridge_sm_inst/state_FSM_FFd2_MC | 1 | 0 | MC_UIM
+
+SIGNAL_INSTANCE | bridge_sm_inst/state_FSM_FFd2_MC.SI | bridge_sm_inst/state_FSM_FFd2_MC | 0 | 2 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | RESET_N_II/UIM | 2962 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | NULL | RESET_N_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | bridge_sm_inst/state_FSM_FFd3 | 2963 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | bridge_sm_inst/state_FSM_FFd3_MC.Q | bridge_sm_inst/state_FSM_FFd3_MC | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | bridge_sm_inst/state_FSM_FFd2_MC.D1 | 3028 | ? | 0 | 0 | bridge_sm_inst/state_FSM_FFd2_MC | NULL | NULL | bridge_sm_inst/state_FSM_FFd2_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 2 | IV_TRUE | RESET_N_II/UIM | IV_TRUE | bridge_sm_inst/state_FSM_FFd3
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | bridge_sm_inst/state_FSM_FFd2_MC.D2 | 3029 | ? | 0 | 0 | bridge_sm_inst/state_FSM_FFd2_MC | NULL | NULL | bridge_sm_inst/state_FSM_FFd2_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 0 | IV_ZERO
+
+SRFF_INSTANCE | bridge_sm_inst/state_FSM_FFd2_MC.REG | bridge_sm_inst/state_FSM_FFd2_MC | 0 | 2 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | bridge_sm_inst/state_FSM_FFd2_MC.D | 3027 | ? | 0 | 0 | bridge_sm_inst/state_FSM_FFd2_MC | NULL | NULL | bridge_sm_inst/state_FSM_FFd2_MC.XOR | 0 | 7 | ALU_F
+INPUT_NODE_TYPE | 1 | 8 | SRFF_C
+SIGNAL | NODE | FOOBAR1__ctinst/4 | 3014 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | NULL | FOOBAR1__ctinst | 4 | 12 | CT_SI4
+SPPTERM | 1 | IV_TRUE | MCU_CLK_25_000_II/UIM
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | bridge_sm_inst/state_FSM_FFd2_MC.Q | 3026 | ? | 0 | 0 | bridge_sm_inst/state_FSM_FFd2_MC | NULL | NULL | bridge_sm_inst/state_FSM_FFd2_MC.REG | 0 | 8 | SRFF_Q
+
+MACROCELL_INSTANCE | PrldLow | bridge_sm_inst/mosi_sel<0>_MC | bridge_COPY_0_COPY_0 | 1024 | 11 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | RESET_N_II/UIM | 2962 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | NULL | RESET_N_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | bridge_sm_inst/state_FSM_FFd3 | 2963 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | bridge_sm_inst/state_FSM_FFd3_MC.Q | bridge_sm_inst/state_FSM_FFd3_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | bridge_sm_inst/state_FSM_FFd5 | 2973 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | bridge_sm_inst/state_FSM_FFd5_MC.Q | bridge_sm_inst/state_FSM_FFd5_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | bridge_sm_inst/state_FSM_FFd6 | 2978 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | bridge_sm_inst/state_FSM_FFd6_MC.Q | bridge_sm_inst/state_FSM_FFd6_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | asynch_edge_detect_inst/signal_in | 2990 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | asynch_edge_detect_inst/signal_in_MC.Q | asynch_edge_detect_inst/signal_in_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | bridge_sm_inst/mosi_sel<0> | 3030 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | bridge_sm_inst/mosi_sel<0>_MC.Q | bridge_sm_inst/mosi_sel<0>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | asynch_edge_detect_inst/signal_in_prev | 3015 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | asynch_edge_detect_inst/signal_in_prev_MC.Q | asynch_edge_detect_inst/signal_in_prev_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | bridge_sm_inst/state_FSM_FFd4 | 2968 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | bridge_sm_inst/state_FSM_FFd4_MC.Q | bridge_sm_inst/state_FSM_FFd4_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | bridge_sm_inst/state_FSM_FFd7 | 2983 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | bridge_sm_inst/state_FSM_FFd7_MC.Q | bridge_sm_inst/state_FSM_FFd7_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | bridge_sm_inst/state_FSM_FFd2 | 3025 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | bridge_sm_inst/state_FSM_FFd2_MC.Q | bridge_sm_inst/state_FSM_FFd2_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+SIGNAL | NODE | FOOBAR1__ctinst/4 | 3014 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | NULL | FOOBAR1__ctinst | 4 | 12 | CT_SI4
+SPPTERM | 1 | IV_TRUE | MCU_CLK_25_000_II/UIM
+OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
+NODE | bridge_sm_inst/mosi_sel<0> | 3030 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | bridge_sm_inst/mosi_sel<0>_MC.Q | bridge_sm_inst/mosi_sel<0>_MC | 1 | 0 | MC_UIM
+
+SIGNAL_INSTANCE | bridge_sm_inst/mosi_sel<0>_MC.SI | bridge_sm_inst/mosi_sel<0>_MC | 0 | 10 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | RESET_N_II/UIM | 2962 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | NULL | RESET_N_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | bridge_sm_inst/state_FSM_FFd3 | 2963 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | bridge_sm_inst/state_FSM_FFd3_MC.Q | bridge_sm_inst/state_FSM_FFd3_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | bridge_sm_inst/state_FSM_FFd5 | 2973 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | bridge_sm_inst/state_FSM_FFd5_MC.Q | bridge_sm_inst/state_FSM_FFd5_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | bridge_sm_inst/state_FSM_FFd6 | 2978 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | bridge_sm_inst/state_FSM_FFd6_MC.Q | bridge_sm_inst/state_FSM_FFd6_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | asynch_edge_detect_inst/signal_in | 2990 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | asynch_edge_detect_inst/signal_in_MC.Q | asynch_edge_detect_inst/signal_in_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | bridge_sm_inst/mosi_sel<0> | 3030 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | bridge_sm_inst/mosi_sel<0>_MC.Q | bridge_sm_inst/mosi_sel<0>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | asynch_edge_detect_inst/signal_in_prev | 3015 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | asynch_edge_detect_inst/signal_in_prev_MC.Q | asynch_edge_detect_inst/signal_in_prev_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | bridge_sm_inst/state_FSM_FFd4 | 2968 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | bridge_sm_inst/state_FSM_FFd4_MC.Q | bridge_sm_inst/state_FSM_FFd4_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | bridge_sm_inst/state_FSM_FFd7 | 2983 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | bridge_sm_inst/state_FSM_FFd7_MC.Q | bridge_sm_inst/state_FSM_FFd7_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | bridge_sm_inst/state_FSM_FFd2 | 3025 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | bridge_sm_inst/state_FSM_FFd2_MC.Q | bridge_sm_inst/state_FSM_FFd2_MC | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | bridge_sm_inst/mosi_sel<0>_MC.D1 | 3034 | ? | 0 | 0 | bridge_sm_inst/mosi_sel<0>_MC | NULL | NULL | bridge_sm_inst/mosi_sel<0>_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | bridge_sm_inst/mosi_sel<0>_MC.D2 | 3033 | ? | 0 | 0 | bridge_sm_inst/mosi_sel<0>_MC | NULL | NULL | bridge_sm_inst/mosi_sel<0>_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 2 | IV_TRUE | RESET_N_II/UIM | IV_TRUE | bridge_sm_inst/state_FSM_FFd3
+SPPTERM | 2 | IV_TRUE | RESET_N_II/UIM | IV_TRUE | bridge_sm_inst/state_FSM_FFd5
+SPPTERM | 4 | IV_TRUE | RESET_N_II/UIM | IV_TRUE | bridge_sm_inst/state_FSM_FFd6 | IV_FALSE | asynch_edge_detect_inst/signal_in | IV_TRUE | bridge_sm_inst/mosi_sel<0>
+SPPTERM | 4 | IV_TRUE | RESET_N_II/UIM | IV_TRUE | bridge_sm_inst/state_FSM_FFd6 | IV_TRUE | asynch_edge_detect_inst/signal_in_prev | IV_TRUE | bridge_sm_inst/mosi_sel<0>
+SPPTERM | 6 | IV_TRUE | RESET_N_II/UIM | IV_FALSE | bridge_sm_inst/state_FSM_FFd4 | IV_FALSE | bridge_sm_inst/state_FSM_FFd6 | IV_FALSE | bridge_sm_inst/state_FSM_FFd7 | IV_FALSE | bridge_sm_inst/state_FSM_FFd2 | IV_TRUE | bridge_sm_inst/mosi_sel<0>
+
+SRFF_INSTANCE | bridge_sm_inst/mosi_sel<0>_MC.REG | bridge_sm_inst/mosi_sel<0>_MC | 0 | 2 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | bridge_sm_inst/mosi_sel<0>_MC.D | 3032 | ? | 0 | 0 | bridge_sm_inst/mosi_sel<0>_MC | NULL | NULL | bridge_sm_inst/mosi_sel<0>_MC.XOR | 0 | 7 | ALU_F
+INPUT_NODE_TYPE | 1 | 8 | SRFF_C
+SIGNAL | NODE | FOOBAR1__ctinst/4 | 3014 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | NULL | FOOBAR1__ctinst | 4 | 12 | CT_SI4
+SPPTERM | 1 | IV_TRUE | MCU_CLK_25_000_II/UIM
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | bridge_sm_inst/mosi_sel<0>_MC.Q | 3031 | ? | 0 | 0 | bridge_sm_inst/mosi_sel<0>_MC | NULL | NULL | bridge_sm_inst/mosi_sel<0>_MC.REG | 0 | 8 | SRFF_Q
+
+MACROCELL_INSTANCE | PrldLow | gps_i0_sync_reg_MC | bridge_COPY_0_COPY_0 | 1024 | 2 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | gps_i0_sync | 3040 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | gps_i0_sync_MC.Q | gps_i0_sync_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+SIGNAL | NODE | FOOBAR2__ctinst/4 | 2988 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | NULL | FOOBAR2__ctinst | 4 | 12 | CT_SI4
+SPPTERM | 1 | IV_TRUE | MCU_CLK_25_000_II/UIM
+OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
+NODE | gps_i0_sync_reg | 3035 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | gps_i0_sync_reg_MC.Q | gps_i0_sync_reg_MC | 1 | 0 | MC_UIM
+
+SIGNAL_INSTANCE | gps_i0_sync_reg_MC.SI | gps_i0_sync_reg_MC | 0 | 1 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | gps_i0_sync | 3040 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | gps_i0_sync_MC.Q | gps_i0_sync_MC | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | gps_i0_sync_reg_MC.D1 | 3038 | ? | 0 | 0 | gps_i0_sync_reg_MC | NULL | NULL | gps_i0_sync_reg_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 1 | IV_TRUE | gps_i0_sync
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | gps_i0_sync_reg_MC.D2 | 3039 | ? | 0 | 0 | gps_i0_sync_reg_MC | NULL | NULL | gps_i0_sync_reg_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 0 | IV_ZERO
+
+SRFF_INSTANCE | gps_i0_sync_reg_MC.REG | gps_i0_sync_reg_MC | 0 | 2 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | gps_i0_sync_reg_MC.D | 3037 | ? | 0 | 0 | gps_i0_sync_reg_MC | NULL | NULL | gps_i0_sync_reg_MC.XOR | 0 | 7 | ALU_F
+INPUT_NODE_TYPE | 1 | 8 | SRFF_C
+SIGNAL | NODE | FOOBAR2__ctinst/4 | 2988 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | NULL | FOOBAR2__ctinst | 4 | 12 | CT_SI4
+SPPTERM | 1 | IV_TRUE | MCU_CLK_25_000_II/UIM
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | gps_i0_sync_reg_MC.Q | 3036 | ? | 0 | 0 | gps_i0_sync_reg_MC | NULL | NULL | gps_i0_sync_reg_MC.REG | 0 | 8 | SRFF_Q
+
+MACROCELL_INSTANCE | PrldLow+Ce | gps_i0_sync_MC | bridge_COPY_0_COPY_0 | 268436480 | 2 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | synch_inst_i0/synch_a | 3045 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | synch_inst_i0/synch_a_MC.Q | synch_inst_i0/synch_a_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+SIGNAL | NODE | FOOBAR2__ctinst/4 | 2988 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | NULL | FOOBAR2__ctinst | 4 | 12 | CT_SI4
+SPPTERM | 1 | IV_TRUE | MCU_CLK_25_000_II/UIM
+OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
+NODE | gps_i0_sync | 3040 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | gps_i0_sync_MC.Q | gps_i0_sync_MC | 1 | 0 | MC_UIM
+
+SIGNAL_INSTANCE | gps_i0_sync_MC.SI | gps_i0_sync_MC | 0 | 1 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | synch_inst_i0/synch_a | 3045 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | synch_inst_i0/synch_a_MC.Q | synch_inst_i0/synch_a_MC | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | gps_i0_sync_MC.D1 | 3043 | ? | 0 | 0 | gps_i0_sync_MC | NULL | NULL | gps_i0_sync_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 1 | IV_TRUE | synch_inst_i0/synch_a
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | gps_i0_sync_MC.D2 | 3044 | ? | 0 | 0 | gps_i0_sync_MC | NULL | NULL | gps_i0_sync_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 0 | IV_ZERO
+
+SRFF_INSTANCE | gps_i0_sync_MC.REG | gps_i0_sync_MC | 0 | 2 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | gps_i0_sync_MC.D | 3042 | ? | 0 | 0 | gps_i0_sync_MC | NULL | NULL | gps_i0_sync_MC.XOR | 0 | 7 | ALU_F
+INPUT_NODE_TYPE | 1 | 8 | SRFF_C
+SIGNAL | NODE | FOOBAR2__ctinst/4 | 2988 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | NULL | FOOBAR2__ctinst | 4 | 12 | CT_SI4
+SPPTERM | 1 | IV_TRUE | MCU_CLK_25_000_II/UIM
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | gps_i0_sync_MC.Q | 3041 | ? | 0 | 0 | gps_i0_sync_MC | NULL | NULL | gps_i0_sync_MC.REG | 0 | 8 | SRFF_Q
+
+MACROCELL_INSTANCE | PrldLow | synch_inst_i0/synch_a_MC | bridge_COPY_0_COPY_0 | 1024 | 2 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+SIGNAL | NODE | FOOBAR2__ctinst/4 | 2988 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | NULL | FOOBAR2__ctinst | 4 | 12 | CT_SI4
+SPPTERM | 1 | IV_TRUE | MCU_CLK_25_000_II/UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | GPS_I0_II/IREG | 3116 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | NULL | GPS_I0_II | 10 | 5 | II_REG
+OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
+NODE | synch_inst_i0/synch_a | 3045 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | synch_inst_i0/synch_a_MC.Q | synch_inst_i0/synch_a_MC | 1 | 0 | MC_UIM
+
+SRFF_INSTANCE | synch_inst_i0/synch_a_MC.REG | synch_inst_i0/synch_a_MC | 0 | 2 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | GPS_I0_II/IREG | 3116 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | NULL | GPS_I0_II | 10 | 5 | II_REG
+INPUT_NODE_TYPE | 1 | 8 | SRFF_C
+SIGNAL | NODE | FOOBAR2__ctinst/4 | 2988 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | NULL | FOOBAR2__ctinst | 4 | 12 | CT_SI4
+SPPTERM | 1 | IV_TRUE | MCU_CLK_25_000_II/UIM
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | synch_inst_i0/synch_a_MC.Q | 3046 | ? | 0 | 0 | synch_inst_i0/synch_a_MC | NULL | NULL | synch_inst_i0/synch_a_MC.REG | 0 | 8 | SRFF_Q
+
+MACROCELL_INSTANCE | PrldLow | gps_i1_sync_reg_MC | bridge_COPY_0_COPY_0 | 1024 | 2 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | gps_i1_sync | 3052 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | gps_i1_sync_MC.Q | gps_i1_sync_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+SIGNAL | NODE | FOOBAR2__ctinst/4 | 2988 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | NULL | FOOBAR2__ctinst | 4 | 12 | CT_SI4
+SPPTERM | 1 | IV_TRUE | MCU_CLK_25_000_II/UIM
+OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
+NODE | gps_i1_sync_reg | 3047 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | gps_i1_sync_reg_MC.Q | gps_i1_sync_reg_MC | 1 | 0 | MC_UIM
+
+SIGNAL_INSTANCE | gps_i1_sync_reg_MC.SI | gps_i1_sync_reg_MC | 0 | 1 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | gps_i1_sync | 3052 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | gps_i1_sync_MC.Q | gps_i1_sync_MC | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | gps_i1_sync_reg_MC.D1 | 3050 | ? | 0 | 0 | gps_i1_sync_reg_MC | NULL | NULL | gps_i1_sync_reg_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 1 | IV_TRUE | gps_i1_sync
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | gps_i1_sync_reg_MC.D2 | 3051 | ? | 0 | 0 | gps_i1_sync_reg_MC | NULL | NULL | gps_i1_sync_reg_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 0 | IV_ZERO
+
+SRFF_INSTANCE | gps_i1_sync_reg_MC.REG | gps_i1_sync_reg_MC | 0 | 2 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | gps_i1_sync_reg_MC.D | 3049 | ? | 0 | 0 | gps_i1_sync_reg_MC | NULL | NULL | gps_i1_sync_reg_MC.XOR | 0 | 7 | ALU_F
+INPUT_NODE_TYPE | 1 | 8 | SRFF_C
+SIGNAL | NODE | FOOBAR2__ctinst/4 | 2988 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | NULL | FOOBAR2__ctinst | 4 | 12 | CT_SI4
+SPPTERM | 1 | IV_TRUE | MCU_CLK_25_000_II/UIM
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | gps_i1_sync_reg_MC.Q | 3048 | ? | 0 | 0 | gps_i1_sync_reg_MC | NULL | NULL | gps_i1_sync_reg_MC.REG | 0 | 8 | SRFF_Q
+
+MACROCELL_INSTANCE | PrldLow+Ce | gps_i1_sync_MC | bridge_COPY_0_COPY_0 | 268436480 | 2 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | synch_inst_i1/synch_a | 3057 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | synch_inst_i1/synch_a_MC.Q | synch_inst_i1/synch_a_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+SIGNAL | NODE | FOOBAR2__ctinst/4 | 2988 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | NULL | FOOBAR2__ctinst | 4 | 12 | CT_SI4
+SPPTERM | 1 | IV_TRUE | MCU_CLK_25_000_II/UIM
+OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
+NODE | gps_i1_sync | 3052 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | gps_i1_sync_MC.Q | gps_i1_sync_MC | 1 | 0 | MC_UIM
+
+SIGNAL_INSTANCE | gps_i1_sync_MC.SI | gps_i1_sync_MC | 0 | 1 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | synch_inst_i1/synch_a | 3057 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | synch_inst_i1/synch_a_MC.Q | synch_inst_i1/synch_a_MC | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | gps_i1_sync_MC.D1 | 3055 | ? | 0 | 0 | gps_i1_sync_MC | NULL | NULL | gps_i1_sync_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 1 | IV_TRUE | synch_inst_i1/synch_a
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | gps_i1_sync_MC.D2 | 3056 | ? | 0 | 0 | gps_i1_sync_MC | NULL | NULL | gps_i1_sync_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 0 | IV_ZERO
+
+SRFF_INSTANCE | gps_i1_sync_MC.REG | gps_i1_sync_MC | 0 | 2 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | gps_i1_sync_MC.D | 3054 | ? | 0 | 0 | gps_i1_sync_MC | NULL | NULL | gps_i1_sync_MC.XOR | 0 | 7 | ALU_F
+INPUT_NODE_TYPE | 1 | 8 | SRFF_C
+SIGNAL | NODE | FOOBAR2__ctinst/4 | 2988 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | NULL | FOOBAR2__ctinst | 4 | 12 | CT_SI4
+SPPTERM | 1 | IV_TRUE | MCU_CLK_25_000_II/UIM
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | gps_i1_sync_MC.Q | 3053 | ? | 0 | 0 | gps_i1_sync_MC | NULL | NULL | gps_i1_sync_MC.REG | 0 | 8 | SRFF_Q
+
+MACROCELL_INSTANCE | PrldLow | synch_inst_i1/synch_a_MC | bridge_COPY_0_COPY_0 | 1024 | 2 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+SIGNAL | NODE | FOOBAR2__ctinst/4 | 2988 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | NULL | FOOBAR2__ctinst | 4 | 12 | CT_SI4
+SPPTERM | 1 | IV_TRUE | MCU_CLK_25_000_II/UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | GPS_I1_II/IREG | 3118 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | NULL | GPS_I1_II | 10 | 5 | II_REG
+OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
+NODE | synch_inst_i1/synch_a | 3057 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | synch_inst_i1/synch_a_MC.Q | synch_inst_i1/synch_a_MC | 1 | 0 | MC_UIM
+
+SRFF_INSTANCE | synch_inst_i1/synch_a_MC.REG | synch_inst_i1/synch_a_MC | 0 | 2 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | GPS_I1_II/IREG | 3118 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | NULL | GPS_I1_II | 10 | 5 | II_REG
+INPUT_NODE_TYPE | 1 | 8 | SRFF_C
+SIGNAL | NODE | FOOBAR2__ctinst/4 | 2988 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | NULL | FOOBAR2__ctinst | 4 | 12 | CT_SI4
+SPPTERM | 1 | IV_TRUE | MCU_CLK_25_000_II/UIM
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | synch_inst_i1/synch_a_MC.Q | 3058 | ? | 0 | 0 | synch_inst_i1/synch_a_MC | NULL | NULL | synch_inst_i1/synch_a_MC.REG | 0 | 8 | SRFF_Q
+
+MACROCELL_INSTANCE | PrldLow | gps_q0_sync_reg_MC | bridge_COPY_0_COPY_0 | 1024 | 2 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | gps_q0_sync | 3064 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | gps_q0_sync_MC.Q | gps_q0_sync_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+SIGNAL | NODE | FOOBAR2__ctinst/4 | 2988 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | NULL | FOOBAR2__ctinst | 4 | 12 | CT_SI4
+SPPTERM | 1 | IV_TRUE | MCU_CLK_25_000_II/UIM
+OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
+NODE | gps_q0_sync_reg | 3059 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | gps_q0_sync_reg_MC.Q | gps_q0_sync_reg_MC | 1 | 0 | MC_UIM
+
+SIGNAL_INSTANCE | gps_q0_sync_reg_MC.SI | gps_q0_sync_reg_MC | 0 | 1 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | gps_q0_sync | 3064 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | gps_q0_sync_MC.Q | gps_q0_sync_MC | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | gps_q0_sync_reg_MC.D1 | 3062 | ? | 0 | 0 | gps_q0_sync_reg_MC | NULL | NULL | gps_q0_sync_reg_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 1 | IV_TRUE | gps_q0_sync
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | gps_q0_sync_reg_MC.D2 | 3063 | ? | 0 | 0 | gps_q0_sync_reg_MC | NULL | NULL | gps_q0_sync_reg_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 0 | IV_ZERO
+
+SRFF_INSTANCE | gps_q0_sync_reg_MC.REG | gps_q0_sync_reg_MC | 0 | 2 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | gps_q0_sync_reg_MC.D | 3061 | ? | 0 | 0 | gps_q0_sync_reg_MC | NULL | NULL | gps_q0_sync_reg_MC.XOR | 0 | 7 | ALU_F
+INPUT_NODE_TYPE | 1 | 8 | SRFF_C
+SIGNAL | NODE | FOOBAR2__ctinst/4 | 2988 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | NULL | FOOBAR2__ctinst | 4 | 12 | CT_SI4
+SPPTERM | 1 | IV_TRUE | MCU_CLK_25_000_II/UIM
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | gps_q0_sync_reg_MC.Q | 3060 | ? | 0 | 0 | gps_q0_sync_reg_MC | NULL | NULL | gps_q0_sync_reg_MC.REG | 0 | 8 | SRFF_Q
+
+MACROCELL_INSTANCE | PrldLow+Ce | gps_q0_sync_MC | bridge_COPY_0_COPY_0 | 268436480 | 2 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | synch_inst_q0/synch_a | 3069 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | synch_inst_q0/synch_a_MC.Q | synch_inst_q0/synch_a_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+SIGNAL | NODE | FOOBAR2__ctinst/4 | 2988 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | NULL | FOOBAR2__ctinst | 4 | 12 | CT_SI4
+SPPTERM | 1 | IV_TRUE | MCU_CLK_25_000_II/UIM
+OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
+NODE | gps_q0_sync | 3064 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | gps_q0_sync_MC.Q | gps_q0_sync_MC | 1 | 0 | MC_UIM
+
+SIGNAL_INSTANCE | gps_q0_sync_MC.SI | gps_q0_sync_MC | 0 | 1 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | synch_inst_q0/synch_a | 3069 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | synch_inst_q0/synch_a_MC.Q | synch_inst_q0/synch_a_MC | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | gps_q0_sync_MC.D1 | 3067 | ? | 0 | 0 | gps_q0_sync_MC | NULL | NULL | gps_q0_sync_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 1 | IV_TRUE | synch_inst_q0/synch_a
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | gps_q0_sync_MC.D2 | 3068 | ? | 0 | 0 | gps_q0_sync_MC | NULL | NULL | gps_q0_sync_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 0 | IV_ZERO
+
+SRFF_INSTANCE | gps_q0_sync_MC.REG | gps_q0_sync_MC | 0 | 2 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | gps_q0_sync_MC.D | 3066 | ? | 0 | 0 | gps_q0_sync_MC | NULL | NULL | gps_q0_sync_MC.XOR | 0 | 7 | ALU_F
+INPUT_NODE_TYPE | 1 | 8 | SRFF_C
+SIGNAL | NODE | FOOBAR2__ctinst/4 | 2988 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | NULL | FOOBAR2__ctinst | 4 | 12 | CT_SI4
+SPPTERM | 1 | IV_TRUE | MCU_CLK_25_000_II/UIM
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | gps_q0_sync_MC.Q | 3065 | ? | 0 | 0 | gps_q0_sync_MC | NULL | NULL | gps_q0_sync_MC.REG | 0 | 8 | SRFF_Q
+
+MACROCELL_INSTANCE | PrldLow | synch_inst_q0/synch_a_MC | bridge_COPY_0_COPY_0 | 1024 | 2 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+SIGNAL | NODE | FOOBAR2__ctinst/4 | 2988 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | NULL | FOOBAR2__ctinst | 4 | 12 | CT_SI4
+SPPTERM | 1 | IV_TRUE | MCU_CLK_25_000_II/UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | GPS_Q0_II/IREG | 3120 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | NULL | GPS_Q0_II | 10 | 5 | II_REG
+OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
+NODE | synch_inst_q0/synch_a | 3069 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | synch_inst_q0/synch_a_MC.Q | synch_inst_q0/synch_a_MC | 1 | 0 | MC_UIM
+
+SRFF_INSTANCE | synch_inst_q0/synch_a_MC.REG | synch_inst_q0/synch_a_MC | 0 | 2 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | GPS_Q0_II/IREG | 3120 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | NULL | GPS_Q0_II | 10 | 5 | II_REG
+INPUT_NODE_TYPE | 1 | 8 | SRFF_C
+SIGNAL | NODE | FOOBAR2__ctinst/4 | 2988 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | NULL | FOOBAR2__ctinst | 4 | 12 | CT_SI4
+SPPTERM | 1 | IV_TRUE | MCU_CLK_25_000_II/UIM
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | synch_inst_q0/synch_a_MC.Q | 3070 | ? | 0 | 0 | synch_inst_q0/synch_a_MC | NULL | NULL | synch_inst_q0/synch_a_MC.REG | 0 | 8 | SRFF_Q
+
+MACROCELL_INSTANCE | PrldLow | gps_q1_sync_reg_MC | bridge_COPY_0_COPY_0 | 1024 | 2 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | gps_q1_sync | 3076 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | gps_q1_sync_MC.Q | gps_q1_sync_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+SIGNAL | NODE | FOOBAR2__ctinst/4 | 2988 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | NULL | FOOBAR2__ctinst | 4 | 12 | CT_SI4
+SPPTERM | 1 | IV_TRUE | MCU_CLK_25_000_II/UIM
+OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
+NODE | gps_q1_sync_reg | 3071 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | gps_q1_sync_reg_MC.Q | gps_q1_sync_reg_MC | 1 | 0 | MC_UIM
+
+SIGNAL_INSTANCE | gps_q1_sync_reg_MC.SI | gps_q1_sync_reg_MC | 0 | 1 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | gps_q1_sync | 3076 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | gps_q1_sync_MC.Q | gps_q1_sync_MC | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | gps_q1_sync_reg_MC.D1 | 3074 | ? | 0 | 0 | gps_q1_sync_reg_MC | NULL | NULL | gps_q1_sync_reg_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 1 | IV_TRUE | gps_q1_sync
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | gps_q1_sync_reg_MC.D2 | 3075 | ? | 0 | 0 | gps_q1_sync_reg_MC | NULL | NULL | gps_q1_sync_reg_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 0 | IV_ZERO
+
+SRFF_INSTANCE | gps_q1_sync_reg_MC.REG | gps_q1_sync_reg_MC | 0 | 2 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | gps_q1_sync_reg_MC.D | 3073 | ? | 0 | 0 | gps_q1_sync_reg_MC | NULL | NULL | gps_q1_sync_reg_MC.XOR | 0 | 7 | ALU_F
+INPUT_NODE_TYPE | 1 | 8 | SRFF_C
+SIGNAL | NODE | FOOBAR2__ctinst/4 | 2988 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | NULL | FOOBAR2__ctinst | 4 | 12 | CT_SI4
+SPPTERM | 1 | IV_TRUE | MCU_CLK_25_000_II/UIM
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | gps_q1_sync_reg_MC.Q | 3072 | ? | 0 | 0 | gps_q1_sync_reg_MC | NULL | NULL | gps_q1_sync_reg_MC.REG | 0 | 8 | SRFF_Q
+
+MACROCELL_INSTANCE | PrldLow+Ce | gps_q1_sync_MC | bridge_COPY_0_COPY_0 | 268436480 | 2 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | synch_inst_q1/synch_a | 3081 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | synch_inst_q1/synch_a_MC.Q | synch_inst_q1/synch_a_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+SIGNAL | NODE | FOOBAR2__ctinst/4 | 2988 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | NULL | FOOBAR2__ctinst | 4 | 12 | CT_SI4
+SPPTERM | 1 | IV_TRUE | MCU_CLK_25_000_II/UIM
+OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
+NODE | gps_q1_sync | 3076 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | gps_q1_sync_MC.Q | gps_q1_sync_MC | 1 | 0 | MC_UIM
+
+SIGNAL_INSTANCE | gps_q1_sync_MC.SI | gps_q1_sync_MC | 0 | 1 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | synch_inst_q1/synch_a | 3081 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | synch_inst_q1/synch_a_MC.Q | synch_inst_q1/synch_a_MC | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | gps_q1_sync_MC.D1 | 3079 | ? | 0 | 0 | gps_q1_sync_MC | NULL | NULL | gps_q1_sync_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 1 | IV_TRUE | synch_inst_q1/synch_a
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | gps_q1_sync_MC.D2 | 3080 | ? | 0 | 0 | gps_q1_sync_MC | NULL | NULL | gps_q1_sync_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 0 | IV_ZERO
+
+SRFF_INSTANCE | gps_q1_sync_MC.REG | gps_q1_sync_MC | 0 | 2 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | gps_q1_sync_MC.D | 3078 | ? | 0 | 0 | gps_q1_sync_MC | NULL | NULL | gps_q1_sync_MC.XOR | 0 | 7 | ALU_F
+INPUT_NODE_TYPE | 1 | 8 | SRFF_C
+SIGNAL | NODE | FOOBAR2__ctinst/4 | 2988 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | NULL | FOOBAR2__ctinst | 4 | 12 | CT_SI4
+SPPTERM | 1 | IV_TRUE | MCU_CLK_25_000_II/UIM
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | gps_q1_sync_MC.Q | 3077 | ? | 0 | 0 | gps_q1_sync_MC | NULL | NULL | gps_q1_sync_MC.REG | 0 | 8 | SRFF_Q
+
+MACROCELL_INSTANCE | PrldLow | synch_inst_q1/synch_a_MC | bridge_COPY_0_COPY_0 | 1024 | 2 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+SIGNAL | NODE | FOOBAR2__ctinst/4 | 2988 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | NULL | FOOBAR2__ctinst | 4 | 12 | CT_SI4
+SPPTERM | 1 | IV_TRUE | MCU_CLK_25_000_II/UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | GPS_Q1_II/IREG | 3122 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | NULL | GPS_Q1_II | 10 | 5 | II_REG
+OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
+NODE | synch_inst_q1/synch_a | 3081 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | synch_inst_q1/synch_a_MC.Q | synch_inst_q1/synch_a_MC | 1 | 0 | MC_UIM
+
+SRFF_INSTANCE | synch_inst_q1/synch_a_MC.REG | synch_inst_q1/synch_a_MC | 0 | 2 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | GPS_Q1_II/IREG | 3122 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | NULL | GPS_Q1_II | 10 | 5 | II_REG
+INPUT_NODE_TYPE | 1 | 8 | SRFF_C
+SIGNAL | NODE | FOOBAR2__ctinst/4 | 2988 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | NULL | FOOBAR2__ctinst | 4 | 12 | CT_SI4
+SPPTERM | 1 | IV_TRUE | MCU_CLK_25_000_II/UIM
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | synch_inst_q1/synch_a_MC.Q | 3082 | ? | 0 | 0 | synch_inst_q1/synch_a_MC | NULL | NULL | synch_inst_q1/synch_a_MC.REG | 0 | 8 | SRFF_Q
+
+OUTPUT_INSTANCE | 0 | MCU_MOSI | bridge_COPY_0_COPY_0 | 3 | 1 | 1
+INPUT_NODE_TYPE | 0 | 6 | OI_IN
+NODE | MCU_MOSI_MC.Q | 3084 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | MCU_MOSI_MC.Q | MCU_MOSI_MC | 0 | 0 | MC_Q
+OUTPUT_NODE_TYPE | 0 | 6 | OI_OUT
+NODE | MCU_MOSI | 3085 | PO | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | NULL | MCU_MOSI | 0 | 6 | OI_OUT
+
+MACROCELL_INSTANCE | NULL | MCU_SCK_MC | bridge_COPY_0_COPY_0 | 0 | 2 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | MCU_CLK_25_000_II/UIM | 2989 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | NULL | MCU_CLK_25_000_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | bridge_sm_inst/sck_en | 3089 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | bridge_sm_inst/sck_en_MC.Q | bridge_sm_inst/sck_en_MC | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 0 | 0 | MC_Q
+NODE | MCU_SCK_MC.Q | 3095 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | MCU_SCK_MC.Q | MCU_SCK_MC | 0 | 0 | MC_Q
+
+SIGNAL_INSTANCE | MCU_SCK_MC.SI | MCU_SCK_MC | 0 | 2 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | MCU_CLK_25_000_II/UIM | 2989 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | NULL | MCU_CLK_25_000_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | bridge_sm_inst/sck_en | 3089 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | bridge_sm_inst/sck_en_MC.Q | bridge_sm_inst/sck_en_MC | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | MCU_SCK_MC.D1 | 3087 | ? | 0 | 0 | MCU_SCK_MC | NULL | NULL | MCU_SCK_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 2 | IV_TRUE | MCU_CLK_25_000_II/UIM | IV_TRUE | bridge_sm_inst/sck_en
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | MCU_SCK_MC.D2 | 3088 | ? | 0 | 0 | MCU_SCK_MC | NULL | NULL | MCU_SCK_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 0 | IV_ZERO
+
+SRFF_INSTANCE | MCU_SCK_MC.REG | MCU_SCK_MC | 0 | 1 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | MCU_SCK_MC.D | 3086 | ? | 0 | 0 | MCU_SCK_MC | NULL | NULL | MCU_SCK_MC.XOR | 0 | 7 | ALU_F
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | MCU_SCK_MC.Q | 3094 | ? | 0 | 0 | MCU_SCK_MC | NULL | NULL | MCU_SCK_MC.REG | 0 | 8 | SRFF_Q
+
+MACROCELL_INSTANCE | PrldLow | bridge_sm_inst/sck_en_MC | bridge_COPY_0_COPY_0 | 1024 | 9 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | RESET_N_II/UIM | 2962 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | NULL | RESET_N_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | bridge_sm_inst/state_FSM_FFd1 | 3020 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | bridge_sm_inst/state_FSM_FFd1_MC.Q | bridge_sm_inst/state_FSM_FFd1_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | bridge_sm_inst/sck_en | 3089 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | bridge_sm_inst/sck_en_MC.Q | bridge_sm_inst/sck_en_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | bridge_sm_inst/state_FSM_FFd6 | 2978 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | bridge_sm_inst/state_FSM_FFd6_MC.Q | bridge_sm_inst/state_FSM_FFd6_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | asynch_edge_detect_inst/signal_in | 2990 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | asynch_edge_detect_inst/signal_in_MC.Q | asynch_edge_detect_inst/signal_in_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | asynch_edge_detect_inst/signal_in_prev | 3015 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | asynch_edge_detect_inst/signal_in_prev_MC.Q | asynch_edge_detect_inst/signal_in_prev_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | bridge_sm_inst/state_FSM_FFd7 | 2983 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | bridge_sm_inst/state_FSM_FFd7_MC.Q | bridge_sm_inst/state_FSM_FFd7_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | bridge_sm_inst/state_FSM_FFd2 | 3025 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | bridge_sm_inst/state_FSM_FFd2_MC.Q | bridge_sm_inst/state_FSM_FFd2_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+SIGNAL | NODE | FOOBAR1__ctinst/4 | 3014 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | NULL | FOOBAR1__ctinst | 4 | 12 | CT_SI4
+SPPTERM | 1 | IV_TRUE | MCU_CLK_25_000_II/UIM
+OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
+NODE | bridge_sm_inst/sck_en | 3089 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | bridge_sm_inst/sck_en_MC.Q | bridge_sm_inst/sck_en_MC | 1 | 0 | MC_UIM
+
+SIGNAL_INSTANCE | bridge_sm_inst/sck_en_MC.SI | bridge_sm_inst/sck_en_MC | 0 | 8 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | RESET_N_II/UIM | 2962 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | NULL | RESET_N_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | bridge_sm_inst/state_FSM_FFd1 | 3020 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | bridge_sm_inst/state_FSM_FFd1_MC.Q | bridge_sm_inst/state_FSM_FFd1_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | bridge_sm_inst/sck_en | 3089 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | bridge_sm_inst/sck_en_MC.Q | bridge_sm_inst/sck_en_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | bridge_sm_inst/state_FSM_FFd6 | 2978 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | bridge_sm_inst/state_FSM_FFd6_MC.Q | bridge_sm_inst/state_FSM_FFd6_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | asynch_edge_detect_inst/signal_in | 2990 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | asynch_edge_detect_inst/signal_in_MC.Q | asynch_edge_detect_inst/signal_in_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | asynch_edge_detect_inst/signal_in_prev | 3015 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | asynch_edge_detect_inst/signal_in_prev_MC.Q | asynch_edge_detect_inst/signal_in_prev_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | bridge_sm_inst/state_FSM_FFd7 | 2983 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | bridge_sm_inst/state_FSM_FFd7_MC.Q | bridge_sm_inst/state_FSM_FFd7_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | bridge_sm_inst/state_FSM_FFd2 | 3025 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | bridge_sm_inst/state_FSM_FFd2_MC.Q | bridge_sm_inst/state_FSM_FFd2_MC | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | bridge_sm_inst/sck_en_MC.D1 | 3093 | ? | 0 | 0 | bridge_sm_inst/sck_en_MC | NULL | NULL | bridge_sm_inst/sck_en_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | bridge_sm_inst/sck_en_MC.D2 | 3092 | ? | 0 | 0 | bridge_sm_inst/sck_en_MC | NULL | NULL | bridge_sm_inst/sck_en_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 3 | IV_TRUE | RESET_N_II/UIM | IV_TRUE | bridge_sm_inst/state_FSM_FFd1 | IV_TRUE | bridge_sm_inst/sck_en
+SPPTERM | 4 | IV_TRUE | RESET_N_II/UIM | IV_TRUE | bridge_sm_inst/state_FSM_FFd6 | IV_TRUE | asynch_edge_detect_inst/signal_in | IV_FALSE | asynch_edge_detect_inst/signal_in_prev
+SPPTERM | 4 | IV_TRUE | RESET_N_II/UIM | IV_TRUE | asynch_edge_detect_inst/signal_in | IV_FALSE | asynch_edge_detect_inst/signal_in_prev | IV_TRUE | bridge_sm_inst/state_FSM_FFd1
+SPPTERM | 5 | IV_TRUE | RESET_N_II/UIM | IV_FALSE | bridge_sm_inst/state_FSM_FFd6 | IV_FALSE | bridge_sm_inst/state_FSM_FFd7 | IV_FALSE | bridge_sm_inst/state_FSM_FFd2 | IV_TRUE | bridge_sm_inst/sck_en
+
+SRFF_INSTANCE | bridge_sm_inst/sck_en_MC.REG | bridge_sm_inst/sck_en_MC | 0 | 2 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | bridge_sm_inst/sck_en_MC.D | 3091 | ? | 0 | 0 | bridge_sm_inst/sck_en_MC | NULL | NULL | bridge_sm_inst/sck_en_MC.XOR | 0 | 7 | ALU_F
+INPUT_NODE_TYPE | 1 | 8 | SRFF_C
+SIGNAL | NODE | FOOBAR1__ctinst/4 | 3014 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | NULL | FOOBAR1__ctinst | 4 | 12 | CT_SI4
+SPPTERM | 1 | IV_TRUE | MCU_CLK_25_000_II/UIM
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | bridge_sm_inst/sck_en_MC.Q | 3090 | ? | 0 | 0 | bridge_sm_inst/sck_en_MC | NULL | NULL | bridge_sm_inst/sck_en_MC.REG | 0 | 8 | SRFF_Q
+
+OUTPUT_INSTANCE | 0 | MCU_SCK | bridge_COPY_0_COPY_0 | 3 | 1 | 1
+INPUT_NODE_TYPE | 0 | 6 | OI_IN
+NODE | MCU_SCK_MC.Q | 3095 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | MCU_SCK_MC.Q | MCU_SCK_MC | 0 | 0 | MC_Q
+OUTPUT_NODE_TYPE | 0 | 6 | OI_OUT
+NODE | MCU_SCK | 3096 | PO | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | NULL | MCU_SCK | 0 | 6 | OI_OUT
+
+MACROCELL_INSTANCE | Inv+PrldLow | MCU_SS_MC | bridge_COPY_0_COPY_0 | 1280 | 9 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | RESET_N_II/UIM | 2962 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | NULL | RESET_N_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | bridge_sm_inst/state_FSM_FFd6 | 2978 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | bridge_sm_inst/state_FSM_FFd6_MC.Q | bridge_sm_inst/state_FSM_FFd6_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | bridge_sm_inst/state_FSM_FFd7 | 2983 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | bridge_sm_inst/state_FSM_FFd7_MC.Q | bridge_sm_inst/state_FSM_FFd7_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | asynch_edge_detect_inst/signal_in | 2990 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | asynch_edge_detect_inst/signal_in_MC.Q | asynch_edge_detect_inst/signal_in_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | asynch_edge_detect_inst/signal_in_prev | 3015 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | asynch_edge_detect_inst/signal_in_prev_MC.Q | asynch_edge_detect_inst/signal_in_prev_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | bridge_sm_inst/state_FSM_FFd1 | 3020 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | bridge_sm_inst/state_FSM_FFd1_MC.Q | bridge_sm_inst/state_FSM_FFd1_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | MCU_SS_MC.UIM | 3101 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | MCU_SS_MC.Q | MCU_SS_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | bridge_sm_inst/bitcounter<7> | 3102 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | bridge_sm_inst/bitcounter<7>_MC.Q | bridge_sm_inst/bitcounter<7>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+SIGNAL | NODE | FOOBAR4__ctinst/4 | 3112 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | NULL | FOOBAR4__ctinst | 4 | 12 | CT_SI4
+SPPTERM | 1 | IV_TRUE | MCU_CLK_25_000_II/UIM
+OUTPUT_NODE_TYPE | 0 | 0 | MC_Q
+NODE | MCU_SS_MC.Q | 3113 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | MCU_SS_MC.Q | MCU_SS_MC | 0 | 0 | MC_Q
+OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
+NODE | MCU_SS_MC.UIM | 3101 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | MCU_SS_MC.Q | MCU_SS_MC | 1 | 0 | MC_UIM
+
+SIGNAL_INSTANCE | MCU_SS_MC.SI | MCU_SS_MC | 0 | 8 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | RESET_N_II/UIM | 2962 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | NULL | RESET_N_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | bridge_sm_inst/state_FSM_FFd6 | 2978 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | bridge_sm_inst/state_FSM_FFd6_MC.Q | bridge_sm_inst/state_FSM_FFd6_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | bridge_sm_inst/state_FSM_FFd7 | 2983 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | bridge_sm_inst/state_FSM_FFd7_MC.Q | bridge_sm_inst/state_FSM_FFd7_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | asynch_edge_detect_inst/signal_in | 2990 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | asynch_edge_detect_inst/signal_in_MC.Q | asynch_edge_detect_inst/signal_in_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | asynch_edge_detect_inst/signal_in_prev | 3015 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | asynch_edge_detect_inst/signal_in_prev_MC.Q | asynch_edge_detect_inst/signal_in_prev_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | bridge_sm_inst/state_FSM_FFd1 | 3020 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | bridge_sm_inst/state_FSM_FFd1_MC.Q | bridge_sm_inst/state_FSM_FFd1_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | MCU_SS_MC.UIM | 3101 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | MCU_SS_MC.Q | MCU_SS_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | bridge_sm_inst/bitcounter<7> | 3102 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | bridge_sm_inst/bitcounter<7>_MC.Q | bridge_sm_inst/bitcounter<7>_MC | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | MCU_SS_MC.D1 | 3099 | ? | 0 | 0 | MCU_SS_MC | NULL | NULL | MCU_SS_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | MCU_SS_MC.D2 | 3098 | ? | 0 | 0 | MCU_SS_MC | NULL | NULL | MCU_SS_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 5 | IV_TRUE | RESET_N_II/UIM | IV_TRUE | bridge_sm_inst/state_FSM_FFd6 | IV_FALSE | bridge_sm_inst/state_FSM_FFd7 | IV_TRUE | asynch_edge_detect_inst/signal_in | IV_FALSE | asynch_edge_detect_inst/signal_in_prev
+SPPTERM | 5 | IV_TRUE | RESET_N_II/UIM | IV_FALSE | bridge_sm_inst/state_FSM_FFd6 | IV_FALSE | bridge_sm_inst/state_FSM_FFd7 | IV_FALSE | bridge_sm_inst/state_FSM_FFd1 | IV_FALSE | MCU_SS_MC.UIM
+SPPTERM | 5 | IV_TRUE | RESET_N_II/UIM | IV_FALSE | bridge_sm_inst/state_FSM_FFd6 | IV_FALSE | bridge_sm_inst/state_FSM_FFd7 | IV_FALSE | MCU_SS_MC.UIM | IV_TRUE | bridge_sm_inst/bitcounter<7>
+SPPTERM | 5 | IV_TRUE | RESET_N_II/UIM | IV_FALSE | bridge_sm_inst/state_FSM_FFd7 | IV_TRUE | asynch_edge_detect_inst/signal_in | IV_FALSE | asynch_edge_detect_inst/signal_in_prev | IV_TRUE | bridge_sm_inst/state_FSM_FFd1
+
+SRFF_INSTANCE | MCU_SS_MC.REG | MCU_SS_MC | 0 | 2 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | MCU_SS_MC.D | 3097 | ? | 0 | 0 | MCU_SS_MC | NULL | NULL | MCU_SS_MC.XOR | 0 | 7 | ALU_F
+INPUT_NODE_TYPE | 1 | 8 | SRFF_C
+SIGNAL | NODE | FOOBAR4__ctinst/4 | 3112 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | NULL | FOOBAR4__ctinst | 4 | 12 | CT_SI4
+SPPTERM | 1 | IV_TRUE | MCU_CLK_25_000_II/UIM
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | MCU_SS_MC.Q | 3100 | ? | 0 | 0 | MCU_SS_MC | NULL | NULL | MCU_SS_MC.REG | 0 | 8 | SRFF_Q
+
+MACROCELL_INSTANCE | Inv+PrldLow | bridge_sm_inst/bitcounter<7>_MC | bridge_COPY_0_COPY_0 | 1280 | 4 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | RESET_N_II/UIM | 2962 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | NULL | RESET_N_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | bridge_sm_inst/bitcounter<7> | 3102 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | bridge_sm_inst/bitcounter<7>_MC.Q | bridge_sm_inst/bitcounter<7>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | bridge_sm_inst/ctr_restart | 3107 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | bridge_sm_inst/ctr_restart_MC.Q | bridge_sm_inst/ctr_restart_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+SIGNAL | NODE | FOOBAR1__ctinst/4 | 3014 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | NULL | FOOBAR1__ctinst | 4 | 12 | CT_SI4
+SPPTERM | 1 | IV_TRUE | MCU_CLK_25_000_II/UIM
+OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
+NODE | bridge_sm_inst/bitcounter<7> | 3102 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | bridge_sm_inst/bitcounter<7>_MC.Q | bridge_sm_inst/bitcounter<7>_MC | 1 | 0 | MC_UIM
+
+SIGNAL_INSTANCE | bridge_sm_inst/bitcounter<7>_MC.SI | bridge_sm_inst/bitcounter<7>_MC | 0 | 3 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | RESET_N_II/UIM | 2962 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | NULL | RESET_N_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | bridge_sm_inst/bitcounter<7> | 3102 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | bridge_sm_inst/bitcounter<7>_MC.Q | bridge_sm_inst/bitcounter<7>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | bridge_sm_inst/ctr_restart | 3107 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | bridge_sm_inst/ctr_restart_MC.Q | bridge_sm_inst/ctr_restart_MC | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | bridge_sm_inst/bitcounter<7>_MC.D1 | 3105 | ? | 0 | 0 | bridge_sm_inst/bitcounter<7>_MC | NULL | NULL | bridge_sm_inst/bitcounter<7>_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 3 | IV_TRUE | RESET_N_II/UIM | IV_FALSE | bridge_sm_inst/bitcounter<7> | IV_FALSE | bridge_sm_inst/ctr_restart
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | bridge_sm_inst/bitcounter<7>_MC.D2 | 3106 | ? | 0 | 0 | bridge_sm_inst/bitcounter<7>_MC | NULL | NULL | bridge_sm_inst/bitcounter<7>_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 0 | IV_ZERO
+
+SRFF_INSTANCE | bridge_sm_inst/bitcounter<7>_MC.REG | bridge_sm_inst/bitcounter<7>_MC | 0 | 2 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | bridge_sm_inst/bitcounter<7>_MC.D | 3104 | ? | 0 | 0 | bridge_sm_inst/bitcounter<7>_MC | NULL | NULL | bridge_sm_inst/bitcounter<7>_MC.XOR | 0 | 7 | ALU_F
+INPUT_NODE_TYPE | 1 | 8 | SRFF_C
+SIGNAL | NODE | FOOBAR1__ctinst/4 | 3014 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | NULL | FOOBAR1__ctinst | 4 | 12 | CT_SI4
+SPPTERM | 1 | IV_TRUE | MCU_CLK_25_000_II/UIM
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | bridge_sm_inst/bitcounter<7>_MC.Q | 3103 | ? | 0 | 0 | bridge_sm_inst/bitcounter<7>_MC | NULL | NULL | bridge_sm_inst/bitcounter<7>_MC.REG | 0 | 8 | SRFF_Q
+
+MACROCELL_INSTANCE | PrldLow+Tff | bridge_sm_inst/ctr_restart_MC | bridge_COPY_0_COPY_0 | 5120 | 7 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | RESET_N_II/UIM | 2962 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | NULL | RESET_N_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | bridge_sm_inst/state_FSM_FFd7 | 2983 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | bridge_sm_inst/state_FSM_FFd7_MC.Q | bridge_sm_inst/state_FSM_FFd7_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | bridge_sm_inst/ctr_restart | 3107 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | bridge_sm_inst/ctr_restart_MC.Q | bridge_sm_inst/ctr_restart_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | bridge_sm_inst/state_FSM_FFd1 | 3020 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | bridge_sm_inst/state_FSM_FFd1_MC.Q | bridge_sm_inst/state_FSM_FFd1_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | bridge_sm_inst/bitcounter<7> | 3102 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | bridge_sm_inst/bitcounter<7>_MC.Q | bridge_sm_inst/bitcounter<7>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | bridge_sm_inst/state_FSM_FFd6 | 2978 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | bridge_sm_inst/state_FSM_FFd6_MC.Q | bridge_sm_inst/state_FSM_FFd6_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+SIGNAL | NODE | FOOBAR1__ctinst/4 | 3014 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | NULL | FOOBAR1__ctinst | 4 | 12 | CT_SI4
+SPPTERM | 1 | IV_TRUE | MCU_CLK_25_000_II/UIM
+OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
+NODE | bridge_sm_inst/ctr_restart | 3107 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | bridge_sm_inst/ctr_restart_MC.Q | bridge_sm_inst/ctr_restart_MC | 1 | 0 | MC_UIM
+
+SIGNAL_INSTANCE | bridge_sm_inst/ctr_restart_MC.SI | bridge_sm_inst/ctr_restart_MC | 0 | 6 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | RESET_N_II/UIM | 2962 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | NULL | RESET_N_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | bridge_sm_inst/state_FSM_FFd7 | 2983 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | bridge_sm_inst/state_FSM_FFd7_MC.Q | bridge_sm_inst/state_FSM_FFd7_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | bridge_sm_inst/ctr_restart | 3107 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | bridge_sm_inst/ctr_restart_MC.Q | bridge_sm_inst/ctr_restart_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | bridge_sm_inst/state_FSM_FFd1 | 3020 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | bridge_sm_inst/state_FSM_FFd1_MC.Q | bridge_sm_inst/state_FSM_FFd1_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | bridge_sm_inst/bitcounter<7> | 3102 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | bridge_sm_inst/bitcounter<7>_MC.Q | bridge_sm_inst/bitcounter<7>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | bridge_sm_inst/state_FSM_FFd6 | 2978 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | bridge_sm_inst/state_FSM_FFd6_MC.Q | bridge_sm_inst/state_FSM_FFd6_MC | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | bridge_sm_inst/ctr_restart_MC.D1 | 3111 | ? | 0 | 0 | bridge_sm_inst/ctr_restart_MC | NULL | NULL | bridge_sm_inst/ctr_restart_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | bridge_sm_inst/ctr_restart_MC.D2 | 3110 | ? | 0 | 0 | bridge_sm_inst/ctr_restart_MC | NULL | NULL | bridge_sm_inst/ctr_restart_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 3 | IV_TRUE | RESET_N_II/UIM | IV_TRUE | bridge_sm_inst/state_FSM_FFd7 | IV_FALSE | bridge_sm_inst/ctr_restart
+SPPTERM | 4 | IV_TRUE | RESET_N_II/UIM | IV_TRUE | bridge_sm_inst/state_FSM_FFd1 | IV_FALSE | bridge_sm_inst/bitcounter<7> | IV_FALSE | bridge_sm_inst/ctr_restart
+SPPTERM | 5 | IV_TRUE | RESET_N_II/UIM | IV_TRUE | bridge_sm_inst/state_FSM_FFd6 | IV_FALSE | bridge_sm_inst/state_FSM_FFd7 | IV_FALSE | bridge_sm_inst/state_FSM_FFd1 | IV_TRUE | bridge_sm_inst/ctr_restart
+
+SRFF_INSTANCE | bridge_sm_inst/ctr_restart_MC.REG | bridge_sm_inst/ctr_restart_MC | 0 | 2 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | bridge_sm_inst/ctr_restart_MC.D | 3109 | ? | 0 | 0 | bridge_sm_inst/ctr_restart_MC | NULL | NULL | bridge_sm_inst/ctr_restart_MC.XOR | 0 | 7 | ALU_F
+INPUT_NODE_TYPE | 1 | 8 | SRFF_C
+SIGNAL | NODE | FOOBAR1__ctinst/4 | 3014 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | NULL | FOOBAR1__ctinst | 4 | 12 | CT_SI4
+SPPTERM | 1 | IV_TRUE | MCU_CLK_25_000_II/UIM
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | bridge_sm_inst/ctr_restart_MC.Q | 3108 | ? | 0 | 0 | bridge_sm_inst/ctr_restart_MC | NULL | NULL | bridge_sm_inst/ctr_restart_MC.REG | 0 | 8 | SRFF_Q
+
+OUTPUT_INSTANCE | 0 | MCU_SS | bridge_COPY_0_COPY_0 | 3 | 1 | 1
+INPUT_NODE_TYPE | 0 | 6 | OI_IN
+NODE | MCU_SS_MC.Q | 3113 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | MCU_SS_MC.Q | MCU_SS_MC | 0 | 0 | MC_Q
+OUTPUT_NODE_TYPE | 0 | 6 | OI_OUT
+NODE | MCU_SS | 3114 | PO | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | NULL | MCU_SS | 0 | 6 | OI_OUT
+
+INPUT_INSTANCE | 0 | 0 | NULL | GPS_I0_II | bridge_COPY_0_COPY_0 | 4 | 1 | 1
+INPUT_NODE_TYPE | 0 | 5 | II_IN
+NODE | GPS_I0 | 3115 | PI | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | NULL | NULL | 0 | 100 | NOTYPE
+OUTPUT_NODE_TYPE | 10 | 5 | II_REG
+NODE | GPS_I0_II/IREG | 3116 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | NULL | GPS_I0_II | 10 | 5 | II_REG
+
+INPUT_INSTANCE | 0 | 0 | NULL | GPS_I1_II | bridge_COPY_0_COPY_0 | 4 | 1 | 1
+INPUT_NODE_TYPE | 0 | 5 | II_IN
+NODE | GPS_I1 | 3117 | PI | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | NULL | NULL | 0 | 100 | NOTYPE
+OUTPUT_NODE_TYPE | 10 | 5 | II_REG
+NODE | GPS_I1_II/IREG | 3118 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | NULL | GPS_I1_II | 10 | 5 | II_REG
+
+INPUT_INSTANCE | 0 | 0 | NULL | GPS_Q0_II | bridge_COPY_0_COPY_0 | 4 | 1 | 1
+INPUT_NODE_TYPE | 0 | 5 | II_IN
+NODE | GPS_Q0 | 3119 | PI | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | NULL | NULL | 0 | 100 | NOTYPE
+OUTPUT_NODE_TYPE | 10 | 5 | II_REG
+NODE | GPS_Q0_II/IREG | 3120 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | NULL | GPS_Q0_II | 10 | 5 | II_REG
+
+INPUT_INSTANCE | 0 | 0 | NULL | GPS_Q1_II | bridge_COPY_0_COPY_0 | 4 | 1 | 1
+INPUT_NODE_TYPE | 0 | 5 | II_IN
+NODE | GPS_Q1 | 3121 | PI | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | NULL | NULL | 0 | 100 | NOTYPE
+OUTPUT_NODE_TYPE | 10 | 5 | II_REG
+NODE | GPS_Q1_II/IREG | 3122 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | NULL | GPS_Q1_II | 10 | 5 | II_REG
+
+FB_INSTANCE | FOOBAR1_ | bridge_COPY_0_COPY_0 | 0 | 0 | 0
+FBPIN | 1 | LED_D2_MC | 1 | NULL | 0 | LED_D2 | 1 | 38 | 49152
+FBPIN | 2 | bridge_sm_inst/state_FSM_FFd4_MC | 1 | GPS_CLK_16_368_II | 1 | NULL | 0 | 37 | 49152
+FBPIN | 3 | bridge_sm_inst/state_FSM_FFd3_MC | 1 | NULL | 0 | NULL | 0 | 36 | 49152
+FBPIN | 4 | bridge_sm_inst/mosi_sel<1>_MC | 1 | NULL | 0 | NULL | 0
+FBPIN | 5 | bridge_sm_inst/mosi_sel<0>_MC | 1 | NULL | 0 | NULL | 0
+FBPIN | 6 | bridge_sm_inst/sck_en_MC | 1 | NULL | 0 | NULL | 0
+FBPIN | 7 | bridge_sm_inst/state_FSM_FFd5_MC | 1 | NULL | 0 | NULL | 0
+FBPIN | 8 | asynch_edge_detect_inst/signal_in_prev_MC | 1 | NULL | 0 | NULL | 0
+FBPIN | 9 | bridge_sm_inst/state_FSM_FFd2_MC | 1 | NULL | 0 | NULL | 0 | 34 | 53248
+FBPIN | 10 | bridge_sm_inst/bitcounter<7>_MC | 1 | NULL | 0 | NULL | 0 | 33 | 53248
+FBPIN | 11 | bridge_sm_inst/ctr_restart_MC | 1 | NULL | 0 | NULL | 0 | 32 | 53248
+FBPIN | 12 | bridge_sm_inst/state_FSM_FFd6_MC | 1 | NULL | 0 | NULL | 0 | 31 | 53248
+FBPIN | 13 | bridge_sm_inst/state_FSM_FFd1_MC | 1 | RESET_N_II | 1 | NULL | 0 | 30 | 51200
+FBPIN | 14 | asynch_edge_detect_inst/signal_in_MC | 1 | NULL | 0 | NULL | 0
+FBPIN | 15 | clkdiv4_inst/clkdiv<0>_MC | 1 | NULL | 0 | NULL | 0
+FBPIN | 16 | GPS_CLK_4_092_MC | 1 | NULL | 0 | NULL | 0
+
+FB_INSTANCE | FOOBAR2_ | bridge_COPY_0_COPY_0 | 0 | 0 | 0
+FBPIN | 1 | LED_D1_MC | 1 | NULL | 0 | LED_D1 | 1 | 39 | 49152
+FBPIN | 2 | synch_inst_i0/synch_a_MC | 1 | GPS_I0_II | 1 | NULL | 0 | 40 | 49152
+FBPIN | 3 | gps_q0_sync_MC | 1 | NULL | 0 | NULL | 0
+FBPIN | 4 | gps_i1_sync_reg_MC | 1 | NULL | 0 | NULL | 0
+FBPIN | 5 | synch_inst_i1/synch_a_MC | 1 | GPS_I1_II | 1 | NULL | 0 | 41 | 49152
+FBPIN | 6 | synch_inst_q0/synch_a_MC | 1 | GPS_Q0_II | 1 | NULL | 0 | 42 | 49152
+FBPIN | 7 | synch_inst_q1/synch_a_MC | 1 | GPS_Q1_II | 1 | NULL | 0 | 43 | 57344
+FBPIN | 9 | gps_i1_sync_MC | 1 | NULL | 0 | NULL | 0
+FBPIN | 10 | gps_q1_sync_reg_MC | 1 | NULL | 0 | NULL | 0 | 1 | 57344
+FBPIN | 11 | gps_i0_sync_reg_MC | 1 | NULL | 0 | NULL | 0
+FBPIN | 12 | gps_q1_sync_MC | 1 | NULL | 0 | NULL | 0 | 2 | 49152
+FBPIN | 13 | gps_q0_sync_reg_MC | 1 | NULL | 0 | NULL | 0 | 3 | 49152
+FBPIN | 14 | gps_i0_sync_MC | 1 | NULL | 0 | NULL | 0
+FBPIN | 15 | bridge_sm_inst/state_FSM_FFd7_MC | 1 | NULL | 0 | NULL | 0
+FBPIN | 16 | asynch_edge_detect_inst/synch_inst/synch_a_MC | 1 | NULL | 0 | NULL | 0
+
+FB_INSTANCE | FOOBAR3_ | bridge_COPY_0_COPY_0 | 0 | 0 | 0
+FBPIN | 15 | NULL | 0 | BUTTON_N_II | 1 | NULL | 0 | 18 | 49152
+
+FB_INSTANCE | FOOBAR4_ | bridge_COPY_0_COPY_0 | 0 | 0 | 0
+FBPIN | 11 | MCU_SCK_MC | 1 | NULL | 0 | MCU_SCK | 1 | 12 | 49152
+FBPIN | 13 | MCU_SS_MC | 1 | NULL | 0 | MCU_SS | 1 | 13 | 49152
+FBPIN | 14 | MCU_MOSI_MC | 1 | NULL | 0 | MCU_MOSI | 1 | 14 | 49152
+FBPIN | 15 | NULL | 0 | MCU_CLK_25_000_II | 1 | NULL | 0 | 16 | 49152
+
+FB_INSTANCE | INPUTPINS_FOOBAR5_ | bridge_COPY_0_COPY_0 | 0 | 0 | 0
+
+CT_INSTANCE | FOOBAR1_ | FOOBAR1__ctinst | bridge_COPY_0_COPY_0 | 0 | 1 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | MCU_CLK_25_000_II/UIM | 2989 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | NULL | MCU_CLK_25_000_II | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 4 | 12 | CT_SI4
+SIGNAL | NODE | FOOBAR1__ctinst/4 | 3014 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | NULL | FOOBAR1__ctinst | 4 | 12 | CT_SI4
+SPPTERM | 1 | IV_TRUE | MCU_CLK_25_000_II/UIM
+
+CT_INSTANCE | FOOBAR2_ | FOOBAR2__ctinst | bridge_COPY_0_COPY_0 | 0 | 1 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | MCU_CLK_25_000_II/UIM | 2989 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | NULL | MCU_CLK_25_000_II | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 4 | 12 | CT_SI4
+SIGNAL | NODE | FOOBAR2__ctinst/4 | 2988 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | NULL | FOOBAR2__ctinst | 4 | 12 | CT_SI4
+SPPTERM | 1 | IV_TRUE | MCU_CLK_25_000_II/UIM
+
+CT_INSTANCE | FOOBAR3_ | FOOBAR3__ctinst | bridge_COPY_0_COPY_0 | 0 | 0 | 0
+
+CT_INSTANCE | FOOBAR4_ | FOOBAR4__ctinst | bridge_COPY_0_COPY_0 | 0 | 1 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | MCU_CLK_25_000_II/UIM | 2989 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | NULL | MCU_CLK_25_000_II | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 4 | 12 | CT_SI4
+SIGNAL | NODE | FOOBAR4__ctinst/4 | 3112 | ? | 0 | 0 | bridge_COPY_0_COPY_0 | NULL | NULL | FOOBAR4__ctinst | 4 | 12 | CT_SI4
+SPPTERM | 1 | IV_TRUE | MCU_CLK_25_000_II/UIM
+
+PLA | FOOBAR1_ | 29
+PLA_TERM | 0 | 
+SPPTERM | 4 | IV_TRUE | RESET_N_II/UIM | IV_TRUE | bridge_sm_inst/state_FSM_FFd6 | IV_TRUE | asynch_edge_detect_inst/signal_in | IV_FALSE | asynch_edge_detect_inst/signal_in_prev
+PLA_TERM | 1 | 
+SPPTERM | 4 | IV_TRUE | RESET_N_II/UIM | IV_TRUE | asynch_edge_detect_inst/signal_in | IV_FALSE | asynch_edge_detect_inst/signal_in_prev | IV_TRUE | bridge_sm_inst/state_FSM_FFd1
+PLA_TERM | 2 | 
+SPPTERM | 3 | IV_TRUE | RESET_N_II/UIM | IV_TRUE | bridge_sm_inst/state_FSM_FFd1 | IV_TRUE | bridge_sm_inst/sck_en
+PLA_TERM | 3 | 
+SPPTERM | 5 | IV_TRUE | RESET_N_II/UIM | IV_FALSE | bridge_sm_inst/state_FSM_FFd6 | IV_FALSE | bridge_sm_inst/state_FSM_FFd7 | IV_FALSE | bridge_sm_inst/state_FSM_FFd2 | IV_TRUE | bridge_sm_inst/sck_en
+PLA_TERM | 4 | 
+SPPTERM | 1 | IV_TRUE | MCU_CLK_25_000_II/UIM
+PLA_TERM | 5 | 
+SPPTERM | 6 | IV_TRUE | RESET_N_II/UIM | IV_FALSE | bridge_sm_inst/state_FSM_FFd4 | IV_FALSE | bridge_sm_inst/state_FSM_FFd6 | IV_FALSE | bridge_sm_inst/state_FSM_FFd7 | IV_FALSE | bridge_sm_inst/state_FSM_FFd2 | IV_TRUE | bridge_sm_inst/mosi_sel<0>
+PLA_TERM | 6 | 
+SPPTERM | 4 | IV_TRUE | RESET_N_II/UIM | IV_TRUE | bridge_sm_inst/state_FSM_FFd6 | IV_FALSE | asynch_edge_detect_inst/signal_in | IV_TRUE | bridge_sm_inst/mosi_sel<0>
+PLA_TERM | 7 | 
+SPPTERM | 4 | IV_TRUE | RESET_N_II/UIM | IV_TRUE | bridge_sm_inst/state_FSM_FFd6 | IV_TRUE | asynch_edge_detect_inst/signal_in_prev | IV_TRUE | bridge_sm_inst/mosi_sel<0>
+PLA_TERM | 8 | 
+SPPTERM | 6 | IV_TRUE | bridge_sm_inst/mosi_sel<1> | IV_TRUE | RESET_N_II/UIM | IV_FALSE | bridge_sm_inst/state_FSM_FFd5 | IV_FALSE | bridge_sm_inst/state_FSM_FFd6 | IV_FALSE | bridge_sm_inst/state_FSM_FFd7 | IV_FALSE | bridge_sm_inst/state_FSM_FFd2
+PLA_TERM | 9 | 
+SPPTERM | 4 | IV_TRUE | bridge_sm_inst/mosi_sel<1> | IV_TRUE | RESET_N_II/UIM | IV_TRUE | bridge_sm_inst/state_FSM_FFd6 | IV_FALSE | asynch_edge_detect_inst/signal_in
+PLA_TERM | 10 | 
+SPPTERM | 1 | IV_TRUE | BUTTON_N_II/UIM
+PLA_TERM | 11 | 
+SPPTERM | 4 | IV_TRUE | bridge_sm_inst/mosi_sel<1> | IV_TRUE | RESET_N_II/UIM | IV_TRUE | bridge_sm_inst/state_FSM_FFd6 | IV_TRUE | asynch_edge_detect_inst/signal_in_prev
+PLA_TERM | 12 | 
+SPPTERM | 2 | IV_TRUE | RESET_N_II/UIM | IV_TRUE | bridge_sm_inst/state_FSM_FFd2
+PLA_TERM | 13 | 
+SPPTERM | 2 | IV_TRUE | RESET_N_II/UIM | IV_TRUE | bridge_sm_inst/state_FSM_FFd5
+PLA_TERM | 14 | 
+SPPTERM | 3 | IV_TRUE | RESET_N_II/UIM | IV_FALSE | asynch_edge_detect_inst/signal_in | IV_TRUE | bridge_sm_inst/state_FSM_FFd1
+PLA_TERM | 15 | 
+SPPTERM | 3 | IV_TRUE | RESET_N_II/UIM | IV_TRUE | asynch_edge_detect_inst/signal_in_prev | IV_TRUE | bridge_sm_inst/state_FSM_FFd1
+PLA_TERM | 16 | 
+SPPTERM | 2 | IV_TRUE | RESET_N_II/UIM | IV_TRUE | bridge_sm_inst/state_FSM_FFd4
+PLA_TERM | 17 | 
+SPPTERM | 2 | IV_TRUE | RESET_N_II/UIM | IV_TRUE | bridge_sm_inst/state_FSM_FFd7
+PLA_TERM | 18 | 
+SPPTERM | 3 | IV_TRUE | RESET_N_II/UIM | IV_TRUE | bridge_sm_inst/state_FSM_FFd6 | IV_FALSE | asynch_edge_detect_inst/signal_in
+PLA_TERM | 19 | 
+SPPTERM | 3 | IV_TRUE | RESET_N_II/UIM | IV_TRUE | bridge_sm_inst/state_FSM_FFd6 | IV_TRUE | asynch_edge_detect_inst/signal_in_prev
+PLA_TERM | 20 | 
+SPPTERM | 3 | IV_TRUE | RESET_N_II/UIM | IV_TRUE | bridge_sm_inst/state_FSM_FFd7 | IV_FALSE | bridge_sm_inst/ctr_restart
+PLA_TERM | 21 | 
+SPPTERM | 5 | IV_TRUE | RESET_N_II/UIM | IV_TRUE | bridge_sm_inst/state_FSM_FFd6 | IV_FALSE | bridge_sm_inst/state_FSM_FFd7 | IV_FALSE | bridge_sm_inst/state_FSM_FFd1 | IV_TRUE | bridge_sm_inst/ctr_restart
+PLA_TERM | 22 | 
+SPPTERM | 4 | IV_TRUE | RESET_N_II/UIM | IV_TRUE | bridge_sm_inst/state_FSM_FFd1 | IV_FALSE | bridge_sm_inst/bitcounter<7> | IV_FALSE | bridge_sm_inst/ctr_restart
+PLA_TERM | 31 | 
+SPPTERM | 1 | IV_TRUE | asynch_edge_detect_inst/signal_in
+PLA_TERM | 34 | 
+SPPTERM | 2 | IV_TRUE | RESET_N_II/UIM | IV_TRUE | bridge_sm_inst/state_FSM_FFd3
+PLA_TERM | 37 | 
+SPPTERM | 3 | IV_TRUE | RESET_N_II/UIM | IV_FALSE | bridge_sm_inst/bitcounter<7> | IV_FALSE | bridge_sm_inst/ctr_restart
+PLA_TERM | 49 | 
+SPPTERM | 1 | IV_TRUE | asynch_edge_detect_inst/synch_inst/synch_a
+PLA_TERM | 52 | 
+SPPTERM | 1 | IV_TRUE | GPS_CLK_16_368_II/UIM
+PLA_TERM | 55 | 
+SPPTERM | 1 | IV_TRUE | clkdiv4_inst/clkdiv<0>
+
+PLA | FOOBAR2_ | 12
+PLA_TERM | 4 | 
+SPPTERM | 1 | IV_TRUE | MCU_CLK_25_000_II/UIM
+PLA_TERM | 10 | 
+SPPTERM | 1 | IV_FALSE | BUTTON_N_II/UIM
+PLA_TERM | 16 | 
+SPPTERM | 1 | IV_TRUE | synch_inst_q0/synch_a
+PLA_TERM | 19 | 
+SPPTERM | 1 | IV_TRUE | gps_i1_sync
+PLA_TERM | 34 | 
+SPPTERM | 1 | IV_TRUE | synch_inst_i1/synch_a
+PLA_TERM | 37 | 
+SPPTERM | 1 | IV_TRUE | gps_q1_sync
+PLA_TERM | 40 | 
+SPPTERM | 1 | IV_TRUE | gps_i0_sync
+PLA_TERM | 43 | 
+SPPTERM | 1 | IV_TRUE | synch_inst_q1/synch_a
+PLA_TERM | 46 | 
+SPPTERM | 1 | IV_TRUE | gps_q0_sync
+PLA_TERM | 49 | 
+SPPTERM | 1 | IV_TRUE | synch_inst_i0/synch_a
+PLA_TERM | 52 | 
+SPPTERM | 1 | IV_FALSE | RESET_N_II/UIM
+PLA_TERM | 55 | 
+SPPTERM | 1 | IV_TRUE | GPS_CLK_4_092
+
+PLA | FOOBAR4_ | 10
+PLA_TERM | 0 | 
+SPPTERM | 5 | IV_TRUE | RESET_N_II/UIM | IV_FALSE | bridge_sm_inst/state_FSM_FFd6 | IV_FALSE | bridge_sm_inst/state_FSM_FFd7 | IV_FALSE | bridge_sm_inst/state_FSM_FFd1 | IV_FALSE | MCU_SS_MC.UIM
+PLA_TERM | 1 | 
+SPPTERM | 5 | IV_TRUE | RESET_N_II/UIM | IV_FALSE | bridge_sm_inst/state_FSM_FFd6 | IV_FALSE | bridge_sm_inst/state_FSM_FFd7 | IV_FALSE | MCU_SS_MC.UIM | IV_TRUE | bridge_sm_inst/bitcounter<7>
+PLA_TERM | 2 | 
+SPPTERM | 5 | IV_TRUE | RESET_N_II/UIM | IV_TRUE | bridge_sm_inst/state_FSM_FFd6 | IV_FALSE | bridge_sm_inst/state_FSM_FFd7 | IV_TRUE | asynch_edge_detect_inst/signal_in | IV_FALSE | asynch_edge_detect_inst/signal_in_prev
+PLA_TERM | 3 | 
+SPPTERM | 5 | IV_TRUE | RESET_N_II/UIM | IV_FALSE | bridge_sm_inst/state_FSM_FFd7 | IV_TRUE | asynch_edge_detect_inst/signal_in | IV_FALSE | asynch_edge_detect_inst/signal_in_prev | IV_TRUE | bridge_sm_inst/state_FSM_FFd1
+PLA_TERM | 4 | 
+SPPTERM | 1 | IV_TRUE | MCU_CLK_25_000_II/UIM
+PLA_TERM | 5 | 
+SPPTERM | 3 | IV_FALSE | bridge_sm_inst/mosi_sel<1> | IV_FALSE | bridge_sm_inst/mosi_sel<0> | IV_TRUE | gps_i0_sync_reg
+PLA_TERM | 6 | 
+SPPTERM | 3 | IV_FALSE | bridge_sm_inst/mosi_sel<1> | IV_TRUE | bridge_sm_inst/mosi_sel<0> | IV_TRUE | gps_i1_sync_reg
+PLA_TERM | 7 | 
+SPPTERM | 3 | IV_TRUE | bridge_sm_inst/mosi_sel<1> | IV_FALSE | bridge_sm_inst/mosi_sel<0> | IV_TRUE | gps_q0_sync_reg
+PLA_TERM | 8 | 
+SPPTERM | 3 | IV_TRUE | bridge_sm_inst/mosi_sel<1> | IV_TRUE | bridge_sm_inst/mosi_sel<0> | IV_TRUE | gps_q1_sync_reg
+PLA_TERM | 40 | 
+SPPTERM | 2 | IV_TRUE | MCU_CLK_25_000_II/UIM | IV_TRUE | bridge_sm_inst/sck_en
+
+
+IOSTD | LVCMOS33
+BUTTON_N | LVCMOS33
+GPS_CLK_16_368 | LVCMOS33
+LED_D1 | LVCMOS33
+LED_D2 | LVCMOS33
+MCU_CLK_25_000 | LVCMOS33
+RESET_N | LVCMOS33
+MCU_MOSI | LVCMOS33
+MCU_SCK | LVCMOS33
+MCU_SS | LVCMOS33
+GPS_I0 | LVCMOS33
+GPS_I1 | LVCMOS33
+GPS_Q0 | LVCMOS33
+GPS_Q1 | LVCMOS33
+
+
+FB_ORDER_OF_INPUTS | FOOBAR1_ | 0 | bridge_sm_inst/mosi_sel<0> | NULL | 1 | GPS_CLK_16_368 | 37 | 2 | bridge_sm_inst/bitcounter<7> | NULL | 3 | bridge_sm_inst/state_FSM_FFd6 | NULL | 4 | asynch_edge_detect_inst/synch_inst/synch_a | NULL
+FB_ORDER_OF_INPUTS | FOOBAR1_ | 5 | bridge_sm_inst/state_FSM_FFd4 | NULL | 6 | bridge_sm_inst/state_FSM_FFd7 | NULL | 7 | bridge_sm_inst/state_FSM_FFd3 | NULL | 8 | clkdiv4_inst/clkdiv<0> | NULL | 9 | bridge_sm_inst/ctr_restart | NULL
+FB_ORDER_OF_INPUTS | FOOBAR1_ | 10 | bridge_sm_inst/state_FSM_FFd1 | NULL | 13 | asynch_edge_detect_inst/signal_in_prev | NULL | 14 | bridge_sm_inst/mosi_sel<1> | NULL | 15 | bridge_sm_inst/sck_en | NULL | 16 | bridge_sm_inst/state_FSM_FFd2 | NULL
+FB_ORDER_OF_INPUTS | FOOBAR1_ | 17 | MCU_CLK_25_000 | 16 | 21 | asynch_edge_detect_inst/signal_in | NULL | 22 | RESET_N | 30 | 27 | BUTTON_N | 18 | 29 | bridge_sm_inst/state_FSM_FFd5 | NULL
+
+FB_IMUX_INDEX | FOOBAR1_ | 68 | 1 | 73 | 75 | 95 | 65 | 94 | 66 | 78 | 74 | 76 | -1 | -1 | 71 | 67 | 69 | 72 | 62 | -1 | -1 | -1 | 77 | 12 | -1 | -1 | -1 | -1 | 46 | -1 | 70 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1
+
+
+FB_ORDER_OF_INPUTS | FOOBAR2_ | 1 | gps_i1_sync | NULL | 2 | gps_q1_sync | NULL | 3 | synch_inst_i1/synch_a | NULL | 5 | synch_inst_q0/synch_a | NULL | 7 | synch_inst_i0/synch_a | NULL
+FB_ORDER_OF_INPUTS | FOOBAR2_ | 8 | gps_i0_sync | NULL | 10 | synch_inst_q1/synch_a | NULL | 12 | gps_q0_sync | NULL | 14 | BUTTON_N | 18 | 15 | GPS_CLK_4_092 | NULL
+FB_ORDER_OF_INPUTS | FOOBAR2_ | 17 | MCU_CLK_25_000 | 16 | 22 | RESET_N | 30
+
+FB_IMUX_INDEX | FOOBAR2_ | -1 | 88 | 91 | 84 | -1 | 85 | -1 | 81 | 93 | -1 | 86 | -1 | 82 | -1 | 46 | 79 | -1 | 62 | -1 | -1 | -1 | -1 | 12 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1
+
+
+FB_ORDER_OF_INPUTS | FOOBAR4_ | 0 | gps_q0_sync_reg | NULL | 1 | MCU_CLK_25_000 | 16 | 2 | bridge_sm_inst/bitcounter<7> | NULL | 3 | bridge_sm_inst/state_FSM_FFd6 | NULL | 4 | gps_i1_sync_reg | NULL
+FB_ORDER_OF_INPUTS | FOOBAR4_ | 5 | RESET_N | 30 | 6 | bridge_sm_inst/state_FSM_FFd7 | NULL | 7 | MCU_SS_MC.UIM | NULL | 9 | gps_i0_sync_reg | NULL | 10 | bridge_sm_inst/state_FSM_FFd1 | NULL
+FB_ORDER_OF_INPUTS | FOOBAR4_ | 12 | gps_q1_sync_reg | NULL | 13 | asynch_edge_detect_inst/signal_in_prev | NULL | 14 | bridge_sm_inst/mosi_sel<1> | NULL | 15 | bridge_sm_inst/sck_en | NULL | 18 | bridge_sm_inst/mosi_sel<0> | NULL
+FB_ORDER_OF_INPUTS | FOOBAR4_ | 21 | asynch_edge_detect_inst/signal_in | NULL
+
+FB_IMUX_INDEX | FOOBAR4_ | 92 | 62 | 73 | 75 | 83 | 12 | 94 | 124 | -1 | 90 | 76 | -1 | 89 | 71 | 67 | 69 | -1 | -1 | 68 | -1 | -1 | 77 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1
+
+
+
+GLOBAL_FSR | RESET_N | 0 | 0

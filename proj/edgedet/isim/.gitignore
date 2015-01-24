@@ -1,0 +1,6 @@
+*.sim
+temp
+work
+isim_usage_statistics.html
+lockfile
+pn_info

@@ -1,0 +1,98 @@
+
+----------------------------------------
+|  P a r t i t i o n    S u c c e e d  |
+----------------------------------------
+0 Group(s)
+
+GSET: 1=!RESET_N.p
+GRST: 1=!RESET_N.p
+----------------- B l o c k 0 ------------------
+PLApt(29/56), Fanin(20/38), Clk(0/3), Bct(1/4), Pin(3/8), Mcell(16/16)
+PLApts[29/56] 37 38 31 32 2 19 29 36 21 28 8 35 16 20 27 34 18 12 26 33 13 14 24 () () () () () () () () 25 
+              () () 17 () () 23 () () () () () () () () () () () 41 () () 3 () () 11
+Fanins[20] asynch_edge_detect_inst/signal_in.n asynch_edge_detect_inst/signal_in_prev.n 
+           asynch_edge_detect_inst/synch_inst/synch_a.n bridge_sm_inst/bitcounter<7>.n 
+           bridge_sm_inst/ctr_restart.n bridge_sm_inst/mosi_sel<0>.n bridge_sm_inst/mosi_sel<1>.n 
+           bridge_sm_inst/sck_en.n bridge_sm_inst/state_FSM_FFd1.n bridge_sm_inst/state_FSM_FFd2.n 
+           bridge_sm_inst/state_FSM_FFd3.n bridge_sm_inst/state_FSM_FFd4.n bridge_sm_inst/state_FSM_FFd5.n 
+           bridge_sm_inst/state_FSM_FFd6.n bridge_sm_inst/state_FSM_FFd7.n clkdiv4_inst/clkdiv<0>.n 
+           BUTTON_N.p GPS_CLK_16_368.p MCU_CLK_25_000.p RESET_N.p
+clk[0] 
+CTC: (pt=2) MCU_CLK_25_000 ;
+CTR: 
+CTS: 
+CTE: 
+vref: [0]
+Signal[18] [LED_D2(45),LED_D2(38)] [GPS_CLK_16_368(37)] [RESET_N(30)] [GPS_CLK_4_092(60)]  
+           [clkdiv4_inst/clkdiv<0>(59)] [asynch_edge_detect_inst/signal_in(58)]  
+           [asynch_edge_detect_inst/signal_in_prev(52)] [bridge_sm_inst/state_FSM_FFd5(51)]  
+           [bridge_sm_inst/sck_en(50)] [bridge_sm_inst/mosi_sel<0>(49)] [bridge_sm_inst/mosi_sel<1>(48)]  
+           [bridge_sm_inst/state_FSM_FFd1(57)] [bridge_sm_inst/state_FSM_FFd6(56)]  
+           [bridge_sm_inst/ctr_restart(55)] [bridge_sm_inst/bitcounter<7>(54)]  
+           [bridge_sm_inst/state_FSM_FFd2(53)] [bridge_sm_inst/state_FSM_FFd3(47)]  
+           [bridge_sm_inst/state_FSM_FFd4(46)] 
+Signal[18] [ 0: LED_D2(45) LED_D2(38)  ][ 1: bridge_sm_inst/state_FSM_FFd4(46) GPS_CLK_16_368(37)  ][ 2:  
+           bridge_sm_inst/state_FSM_FFd3(47) (36)  ][ 3: bridge_sm_inst/mosi_sel<1>(48)  ][ 4:  
+           bridge_sm_inst/mosi_sel<0>(49)  ][ 5: bridge_sm_inst/sck_en(50)  ][ 6:  
+           bridge_sm_inst/state_FSM_FFd5(51)  ][ 7: asynch_edge_detect_inst/signal_in_prev(52)  ][ 8:  
+           bridge_sm_inst/state_FSM_FFd2(53) (34)  ][ 9: bridge_sm_inst/bitcounter<7>(54) (33)  ][ 10:  
+           bridge_sm_inst/ctr_restart(55) (32)  ][ 11: bridge_sm_inst/state_FSM_FFd6(56) (31)  ][ 12:  
+           bridge_sm_inst/state_FSM_FFd1(57) RESET_N(30)  ][ 13: asynch_edge_detect_inst/signal_in(58)  ] 
+           [ 14: clkdiv4_inst/clkdiv<0>(59)  ][ 15: GPS_CLK_4_092(60)  ]
+----------------- B l o c k 1 ------------------
+PLApt(12/56), Fanin(12/38), Clk(0/3), Bct(1/4), Pin(5/9), Mcell(15/16)
+PLApts[12/56] () () () () 2 () () () () () 9 () () () () () 52 () () 44 () () () () () () () () () () () () 
+              () () 51 () () 48 () () 42 () () 53 () () 46 () () 50 () () 1 () () 10
+Fanins[12] GPS_CLK_4_092.n gps_i0_sync.n gps_i1_sync.n gps_q0_sync.n gps_q1_sync.n synch_inst_i0/synch_a.n 
+           synch_inst_i1/synch_a.n synch_inst_q0/synch_a.n synch_inst_q1/synch_a.n BUTTON_N.p 
+           MCU_CLK_25_000.p RESET_N.p
+clk[0] 
+CTC: (pt=2) MCU_CLK_25_000 ;
+CTR: 
+CTS: 
+CTE: 
+vref: [0]
+Signal[19] [LED_D1(61),LED_D1(39)] [synch_inst_i0/synch_a,GPS_I0(40)] [synch_inst_i1/synch_a,GPS_I1(41)]  
+           [synch_inst_q0/synch_a,GPS_Q0(42)] [synch_inst_q1/synch_a,GPS_Q1(43)]  
+           [asynch_edge_detect_inst/synch_inst/synch_a(76)] [bridge_sm_inst/state_FSM_FFd7(75)]  
+           [gps_i0_sync(74)] [gps_i0_sync_reg(71)] [gps_i1_sync(69)] [gps_i1_sync_reg(64)] [gps_q0_sync(63)]  
+           [gps_q0_sync_reg(73)] [gps_q1_sync(72)] [gps_q1_sync_reg(70)] 
+Signal[19] [ 0: LED_D1(61) LED_D1(39)  ][ 1: synch_inst_i0/synch_a(62) GPS_I0(40)  ][ 2: gps_q0_sync(63)  ] 
+           [ 3: gps_i1_sync_reg(64)  ][ 4: synch_inst_i1/synch_a(65) GPS_I1(41)  ][ 5:  
+           synch_inst_q0/synch_a(66) GPS_Q0(42)  ][ 6: synch_inst_q1/synch_a(67) GPS_Q1(43)  ][ 7: (44)  ] 
+           [ 8: gps_i1_sync(69)  ][ 9: gps_q1_sync_reg(70) (1)  ][ 10: gps_i0_sync_reg(71)  ][ 11:  
+           gps_q1_sync(72) (2)  ][ 12: gps_q0_sync_reg(73) (3)  ][ 13: gps_i0_sync(74)  ][ 14:  
+           bridge_sm_inst/state_FSM_FFd7(75)  ][ 15: asynch_edge_detect_inst/synch_inst/synch_a(76)  ]
+----------------- B l o c k 2 ------------------
+PLApt(0/56), Fanin(0/38), Clk(0/3), Bct(0/4), Pin(1/9), Mcell(0/16)
+PLApts[0/0]
+Fanins[ 0]
+clk[0] 
+CTC: 
+CTR: 
+CTS: 
+CTE: 
+vref: [0]
+Signal[ 1] [BUTTON_N(18)] 
+Signal[ 1] [ 0: (29)  ][ 1: (28)  ][ 2: (27)  ][ 3:  ][ 4:  ][ 5: (23)  ][ 6:  ][ 7:  ][ 8:  ][ 9: (22)  ] 
+           [ 10: (21)  ][ 11: (20)  ][ 12:  ][ 13: (19)  ][ 14: BUTTON_N(18)  ][ 15:  ]
+----------------- B l o c k 3 ------------------
+PLApt(10/56), Fanin(16/38), Clk(0/3), Bct(1/4), Pin(4/7), Mcell(3/16)
+PLApts[10/41] 15 22 39 40 2 43 45 47 49 () () () () () () () () () () () () () () () () () () () () () () () 
+              () () () () () () () () 30
+Fanins[16] MCU_SS.n asynch_edge_detect_inst/signal_in.n asynch_edge_detect_inst/signal_in_prev.n 
+           bridge_sm_inst/bitcounter<7>.n bridge_sm_inst/mosi_sel<0>.n bridge_sm_inst/mosi_sel<1>.n 
+           bridge_sm_inst/sck_en.n bridge_sm_inst/state_FSM_FFd1.n bridge_sm_inst/state_FSM_FFd6.n 
+           bridge_sm_inst/state_FSM_FFd7.n gps_i0_sync_reg.n gps_i1_sync_reg.n gps_q0_sync_reg.n 
+           gps_q1_sync_reg.n MCU_CLK_25_000.p RESET_N.p
+clk[0] 
+CTC: (pt=2) MCU_CLK_25_000 ;
+CTR: 
+CTS: 
+CTE: 
+vref: [0]
+Signal[ 4] [MCU_SS(105),MCU_SS(13)] [MCU_MOSI(106),MCU_MOSI(14)] [MCU_SCK(103),MCU_SCK(12)]  
+           [MCU_CLK_25_000(16)] 
+Signal[ 4] [ 0: (5)  ][ 1: (6)  ][ 2:  ][ 3:  ][ 4:  ][ 5:  ][ 6: (8)  ][ 7:  ][ 8:  ][ 9:  ][ 10:  
+           MCU_SCK(103) MCU_SCK(12)  ][ 11:  ][ 12: MCU_SS(105) MCU_SS(13)  ][ 13: MCU_MOSI(106)  
+           MCU_MOSI(14)  ][ 14: MCU_CLK_25_000(16)  ][ 15:  ]

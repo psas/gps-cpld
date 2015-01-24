@@ -1,0 +1,164 @@
+<html><head><link type='text/css' href='style.css' rel='stylesheet'></head><body class='pgBgnd'>
+<h3 align='center'>Equations</h3>
+<table width='90%' align='center' border='1' cellpadding='0' cellspacing='0'>
+<tr><td>
+</td></tr><tr><td>
+********** Mapped Logic **********
+</td></tr><tr><td>
+FTCPE_GPS_CLK_4_092: FTCPE port map (GPS_CLK_4_092,'0',clkdiv4_inst/clkdiv(0),NOT RESET_N,'0','1');
+</td></tr><tr><td>
+</td></tr><tr><td>
+LED_D1 <= NOT BUTTON_N;
+</td></tr><tr><td>
+</td></tr><tr><td>
+LED_D2 <= BUTTON_N;
+</td></tr><tr><td>
+</td></tr><tr><td>
+MCU_MOSI <= ((bridge_sm_inst/mosi_sel(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	bridge_sm_inst/mosi_sel(0) AND gps_q1_sync_reg)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (bridge_sm_inst/mosi_sel(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT bridge_sm_inst/mosi_sel(0) AND gps_q0_sync_reg)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT bridge_sm_inst/mosi_sel(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	bridge_sm_inst/mosi_sel(0) AND gps_i1_sync_reg)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT bridge_sm_inst/mosi_sel(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT bridge_sm_inst/mosi_sel(0) AND gps_i0_sync_reg));
+</td></tr><tr><td>
+</td></tr><tr><td>
+MCU_SCK <= (MCU_CLK_25_000 AND bridge_sm_inst/sck_en);
+</td></tr><tr><td>
+FDCPE_MCU_SS: FDCPE port map (MCU_SS,MCU_SS_D,MCU_CLK_25_000,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MCU_SS_D <= NOT (((RESET_N AND bridge_sm_inst/state_FSM_FFd6 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT bridge_sm_inst/state_FSM_FFd7 AND asynch_edge_detect_inst/signal_in AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT asynch_edge_detect_inst/signal_in_prev)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (RESET_N AND NOT bridge_sm_inst/state_FSM_FFd6 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT bridge_sm_inst/state_FSM_FFd7 AND NOT bridge_sm_inst/state_FSM_FFd1 AND NOT MCU_SS)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (RESET_N AND NOT bridge_sm_inst/state_FSM_FFd6 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT bridge_sm_inst/state_FSM_FFd7 AND NOT MCU_SS AND bridge_sm_inst/bitcounter(7))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (RESET_N AND NOT bridge_sm_inst/state_FSM_FFd7 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	asynch_edge_detect_inst/signal_in AND NOT asynch_edge_detect_inst/signal_in_prev AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	bridge_sm_inst/state_FSM_FFd1)));
+</td></tr><tr><td>
+FDCPE_asynch_edge_detect_inst/signal_in: FDCPE port map (asynch_edge_detect_inst/signal_in,asynch_edge_detect_inst/synch_inst/synch_a,MCU_CLK_25_000,'0','0','1');
+</td></tr><tr><td>
+FDCPE_asynch_edge_detect_inst/signal_in_prev: FDCPE port map (asynch_edge_detect_inst/signal_in_prev,asynch_edge_detect_inst/signal_in,MCU_CLK_25_000,'0','0','1');
+</td></tr><tr><td>
+FDCPE_asynch_edge_detect_inst/synch_inst/synch_a: FDCPE port map (asynch_edge_detect_inst/synch_inst/synch_a,GPS_CLK_4_092,MCU_CLK_25_000,'0','0','1');
+</td></tr><tr><td>
+FDCPE_bridge_sm_inst/bitcounter7: FDCPE port map (bridge_sm_inst/bitcounter(7),bridge_sm_inst/bitcounter_D(7),MCU_CLK_25_000,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;bridge_sm_inst/bitcounter_D(7) <= NOT ((RESET_N AND NOT bridge_sm_inst/bitcounter(7) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT bridge_sm_inst/ctr_restart));
+</td></tr><tr><td>
+FTCPE_bridge_sm_inst/ctr_restart: FTCPE port map (bridge_sm_inst/ctr_restart,bridge_sm_inst/ctr_restart_T,MCU_CLK_25_000,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;bridge_sm_inst/ctr_restart_T <= ((RESET_N AND bridge_sm_inst/state_FSM_FFd7 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT bridge_sm_inst/ctr_restart)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (RESET_N AND bridge_sm_inst/state_FSM_FFd1 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT bridge_sm_inst/bitcounter(7) AND NOT bridge_sm_inst/ctr_restart)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (RESET_N AND bridge_sm_inst/state_FSM_FFd6 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT bridge_sm_inst/state_FSM_FFd7 AND NOT bridge_sm_inst/state_FSM_FFd1 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	bridge_sm_inst/ctr_restart));
+</td></tr><tr><td>
+FDCPE_bridge_sm_inst/mosi_sel0: FDCPE port map (bridge_sm_inst/mosi_sel(0),bridge_sm_inst/mosi_sel_D(0),MCU_CLK_25_000,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;bridge_sm_inst/mosi_sel_D(0) <= ((RESET_N AND bridge_sm_inst/state_FSM_FFd3)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (RESET_N AND bridge_sm_inst/state_FSM_FFd5)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (RESET_N AND bridge_sm_inst/state_FSM_FFd6 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT asynch_edge_detect_inst/signal_in AND bridge_sm_inst/mosi_sel(0))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (RESET_N AND bridge_sm_inst/state_FSM_FFd6 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	asynch_edge_detect_inst/signal_in_prev AND bridge_sm_inst/mosi_sel(0))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (RESET_N AND NOT bridge_sm_inst/state_FSM_FFd4 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT bridge_sm_inst/state_FSM_FFd6 AND NOT bridge_sm_inst/state_FSM_FFd7 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT bridge_sm_inst/state_FSM_FFd2 AND bridge_sm_inst/mosi_sel(0)));
+</td></tr><tr><td>
+FDCPE_bridge_sm_inst/mosi_sel1: FDCPE port map (bridge_sm_inst/mosi_sel(1),bridge_sm_inst/mosi_sel_D(1),MCU_CLK_25_000,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;bridge_sm_inst/mosi_sel_D(1) <= ((RESET_N AND bridge_sm_inst/state_FSM_FFd3)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (RESET_N AND bridge_sm_inst/state_FSM_FFd4)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (bridge_sm_inst/mosi_sel(1) AND RESET_N AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	bridge_sm_inst/state_FSM_FFd6 AND NOT asynch_edge_detect_inst/signal_in)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (bridge_sm_inst/mosi_sel(1) AND RESET_N AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	bridge_sm_inst/state_FSM_FFd6 AND asynch_edge_detect_inst/signal_in_prev)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (bridge_sm_inst/mosi_sel(1) AND RESET_N AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT bridge_sm_inst/state_FSM_FFd5 AND NOT bridge_sm_inst/state_FSM_FFd6 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT bridge_sm_inst/state_FSM_FFd7 AND NOT bridge_sm_inst/state_FSM_FFd2));
+</td></tr><tr><td>
+FDCPE_bridge_sm_inst/sck_en: FDCPE port map (bridge_sm_inst/sck_en,bridge_sm_inst/sck_en_D,MCU_CLK_25_000,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;bridge_sm_inst/sck_en_D <= ((RESET_N AND bridge_sm_inst/state_FSM_FFd1 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	bridge_sm_inst/sck_en)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (RESET_N AND bridge_sm_inst/state_FSM_FFd6 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	asynch_edge_detect_inst/signal_in AND NOT asynch_edge_detect_inst/signal_in_prev)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (RESET_N AND asynch_edge_detect_inst/signal_in AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT asynch_edge_detect_inst/signal_in_prev AND bridge_sm_inst/state_FSM_FFd1)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (RESET_N AND NOT bridge_sm_inst/state_FSM_FFd6 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT bridge_sm_inst/state_FSM_FFd7 AND NOT bridge_sm_inst/state_FSM_FFd2 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	bridge_sm_inst/sck_en));
+</td></tr><tr><td>
+FDCPE_bridge_sm_inst/state_FSM_FFd1: FDCPE port map (bridge_sm_inst/state_FSM_FFd1,bridge_sm_inst/state_FSM_FFd1_D,MCU_CLK_25_000,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;bridge_sm_inst/state_FSM_FFd1_D <= ((RESET_N AND bridge_sm_inst/state_FSM_FFd2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (RESET_N AND NOT asynch_edge_detect_inst/signal_in AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	bridge_sm_inst/state_FSM_FFd1)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (RESET_N AND asynch_edge_detect_inst/signal_in_prev AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	bridge_sm_inst/state_FSM_FFd1));
+</td></tr><tr><td>
+FDCPE_bridge_sm_inst/state_FSM_FFd2: FDCPE port map (bridge_sm_inst/state_FSM_FFd2,bridge_sm_inst/state_FSM_FFd2_D,MCU_CLK_25_000,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;bridge_sm_inst/state_FSM_FFd2_D <= (RESET_N AND bridge_sm_inst/state_FSM_FFd3);
+</td></tr><tr><td>
+FDCPE_bridge_sm_inst/state_FSM_FFd3: FDCPE port map (bridge_sm_inst/state_FSM_FFd3,bridge_sm_inst/state_FSM_FFd3_D,MCU_CLK_25_000,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;bridge_sm_inst/state_FSM_FFd3_D <= (RESET_N AND bridge_sm_inst/state_FSM_FFd4);
+</td></tr><tr><td>
+FDCPE_bridge_sm_inst/state_FSM_FFd4: FDCPE port map (bridge_sm_inst/state_FSM_FFd4,bridge_sm_inst/state_FSM_FFd4_D,MCU_CLK_25_000,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;bridge_sm_inst/state_FSM_FFd4_D <= (RESET_N AND bridge_sm_inst/state_FSM_FFd5);
+</td></tr><tr><td>
+FDCPE_bridge_sm_inst/state_FSM_FFd5: FDCPE port map (bridge_sm_inst/state_FSM_FFd5,bridge_sm_inst/state_FSM_FFd5_D,MCU_CLK_25_000,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;bridge_sm_inst/state_FSM_FFd5_D <= ((RESET_N AND bridge_sm_inst/state_FSM_FFd6 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	asynch_edge_detect_inst/signal_in AND NOT asynch_edge_detect_inst/signal_in_prev)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (RESET_N AND asynch_edge_detect_inst/signal_in AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT asynch_edge_detect_inst/signal_in_prev AND bridge_sm_inst/state_FSM_FFd1));
+</td></tr><tr><td>
+FDCPE_bridge_sm_inst/state_FSM_FFd6: FDCPE port map (bridge_sm_inst/state_FSM_FFd6,bridge_sm_inst/state_FSM_FFd6_D,MCU_CLK_25_000,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;bridge_sm_inst/state_FSM_FFd6_D <= ((RESET_N AND bridge_sm_inst/state_FSM_FFd7)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (RESET_N AND bridge_sm_inst/state_FSM_FFd6 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT asynch_edge_detect_inst/signal_in)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (RESET_N AND bridge_sm_inst/state_FSM_FFd6 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	asynch_edge_detect_inst/signal_in_prev));
+</td></tr><tr><td>
+FDCPE_bridge_sm_inst/state_FSM_FFd7: FDCPE port map (bridge_sm_inst/state_FSM_FFd7,NOT RESET_N,MCU_CLK_25_000,'0','0','1');
+</td></tr><tr><td>
+FTCPE_clkdiv4_inst/clkdiv0: FTCPE port map (clkdiv4_inst/clkdiv(0),'0',GPS_CLK_16_368,NOT RESET_N,'0','1');
+</td></tr><tr><td>
+FDCPE_gps_i0_sync: FDCPE port map (gps_i0_sync,synch_inst_i0/synch_a,MCU_CLK_25_000,'0','0','1');
+</td></tr><tr><td>
+FDCPE_gps_i0_sync_reg: FDCPE port map (gps_i0_sync_reg,gps_i0_sync,MCU_CLK_25_000,'0','0','1');
+</td></tr><tr><td>
+FDCPE_gps_i1_sync: FDCPE port map (gps_i1_sync,synch_inst_i1/synch_a,MCU_CLK_25_000,'0','0','1');
+</td></tr><tr><td>
+FDCPE_gps_i1_sync_reg: FDCPE port map (gps_i1_sync_reg,gps_i1_sync,MCU_CLK_25_000,'0','0','1');
+</td></tr><tr><td>
+FDCPE_gps_q0_sync: FDCPE port map (gps_q0_sync,synch_inst_q0/synch_a,MCU_CLK_25_000,'0','0','1');
+</td></tr><tr><td>
+FDCPE_gps_q0_sync_reg: FDCPE port map (gps_q0_sync_reg,gps_q0_sync,MCU_CLK_25_000,'0','0','1');
+</td></tr><tr><td>
+FDCPE_gps_q1_sync: FDCPE port map (gps_q1_sync,synch_inst_q1/synch_a,MCU_CLK_25_000,'0','0','1');
+</td></tr><tr><td>
+FDCPE_gps_q1_sync_reg: FDCPE port map (gps_q1_sync_reg,gps_q1_sync,MCU_CLK_25_000,'0','0','1');
+</td></tr><tr><td>
+FDCPE_synch_inst_i0/synch_a: FDCPE port map (synch_inst_i0/synch_a,GPS_I0,MCU_CLK_25_000,'0','0','1');
+</td></tr><tr><td>
+FDCPE_synch_inst_i1/synch_a: FDCPE port map (synch_inst_i1/synch_a,GPS_I1,MCU_CLK_25_000,'0','0','1');
+</td></tr><tr><td>
+FDCPE_synch_inst_q0/synch_a: FDCPE port map (synch_inst_q0/synch_a,GPS_Q0,MCU_CLK_25_000,'0','0','1');
+</td></tr><tr><td>
+FDCPE_synch_inst_q1/synch_a: FDCPE port map (synch_inst_q1/synch_a,GPS_Q1,MCU_CLK_25_000,'0','0','1');
+</td></tr><tr><td>
+</td></tr><tr><td>
+Register Legend:
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FDCPE (Q,D,C,CLR,PRE,CE); 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FDDCPE (Q,D,C,CLR,PRE,CE); 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FTCPE (Q,D,C,CLR,PRE,CE); 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FTDCPE (Q,D,C,CLR,PRE,CE); 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; LDCP  (Q,D,G,CLR,PRE); 
+</td></tr><tr><td>
+</td></tr>
+</table>
+<form><span class="pgRef"><table width="90%" align="center"><tr>
+<td align="left"><input type="button" onclick="javascript:parent.leftnav.showTop()" onmouseover="window.status='goto top of page'; return true;" onmouseout="window.status=''" value="back to top"></td>
+<td align="right"><input type="button" onclick="window.print()" onmouseover="window.status='print page'; return true;" onmouseout="window.status=''" value="print page"></td>
+</tr></table></span></form>
+</body></html>

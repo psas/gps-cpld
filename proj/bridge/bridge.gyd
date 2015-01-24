@@ -1,0 +1,36 @@
+Pin Freeze File:  version P.20131013
+
+2C64A44VQ XC2C64A-7-VQ44
+BUTTON_N S:PIN18
+GPS_CLK_16_368 S:PIN37
+GPS_I0 S:PIN40
+GPS_I1 S:PIN41
+GPS_Q0 S:PIN42
+GPS_Q1 S:PIN43
+MCU_CLK_25_000 S:PIN16
+RESET_N S:PIN30
+LED_D1 S:PIN39
+LED_D2 S:PIN38
+MCU_MOSI S:PIN14
+MCU_SCK S:PIN12
+MCU_SS S:PIN13
+
+
+;The remaining section of the .gyd file is for documentation purposes only.
+;It shows where your internal equations were placed in the last successful fit.
+
+PARTITION FB1_1 LED_D2 bridge_sm_inst/state_FSM_FFd4 bridge_sm_inst/state_FSM_FFd3 bridge_sm_inst/mosi_sel<1>
+		 bridge_sm_inst/mosi_sel<0> bridge_sm_inst/sck_en bridge_sm_inst/state_FSM_FFd5 asynch_edge_detect_inst/signal_in_prev
+		 bridge_sm_inst/state_FSM_FFd2 bridge_sm_inst/bitcounter<7> bridge_sm_inst/ctr_restart bridge_sm_inst/state_FSM_FFd6
+		 bridge_sm_inst/state_FSM_FFd1 asynch_edge_detect_inst/signal_in clkdiv4_inst/clkdiv<0> GPS_CLK_4_092
+		
+PARTITION FB2_1 LED_D1 synch_inst_i0/synch_a gps_q0_sync gps_i1_sync_reg
+		 synch_inst_i1/synch_a synch_inst_q0/synch_a synch_inst_q1/synch_a
+PARTITION FB2_9 gps_i1_sync gps_q1_sync_reg gps_i0_sync_reg gps_q1_sync
+		 gps_q0_sync_reg gps_i0_sync bridge_sm_inst/state_FSM_FFd7 asynch_edge_detect_inst/synch_inst/synch_a
+		
+
+PARTITION FB4_11 MCU_SCK
+PARTITION FB4_13 MCU_SS MCU_MOSI
+
+

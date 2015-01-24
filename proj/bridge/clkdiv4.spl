@@ -1,0 +1,9 @@
+[Inputs]
+clk
+reset
+[Outputs]
+div4clk
+[BiDir]
+[ATTRIBUTES]
+VeriModel clkdiv4
+

@@ -1,0 +1,8 @@
+INTSTYLE=impact
+INFILE=/work/Projects/gps-cpld/proj/bridge/bridge_html/impact.xsl
+OUTFILE=/work/Projects/gps-cpld/proj/bridge/bridge_html/impact.xsl
+FAMILY=Single
+PART=Single
+WORKINGDIR=/work/Projects/gps-cpld/proj/bridge/bridge_html
+LICENSE=iMPACT
+USER_INFO=iMPACT
