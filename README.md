@@ -68,10 +68,16 @@ For bug reports, read
 	http://openocd.sourceforge.net/doc/doxygen/bugs.html
 adapter speed: 1000 kHz
 Info : only one transport option; autoselect 'jtag'
-Error: no device found
-Error: unable to open ftdi device with vid 15ba, pid 0003, description 'Olimex OpenOCD JTAG' and serial '*'
-in procedure 'init'
-~/.../gps-cpld/toolchain/openocd (master*) > 
+Info : clock speed 1000 kHz
+Warn : There are no enabled taps.  AUTO PROBING MIGHT NOT WORK!!
+Warn : AUTO auto0.tap - use "jtag newtap auto0 tap -expected-id 0x06e5e093 ..."
+Warn : AUTO auto0.tap - use "... -irlen 2"
+Error: IR capture error at bit 2, saw 0x3FFFFFFFFFFFFF05 not 0x...3
+Warn : Bypassing JTAG setup events due to errors
+Warn : gdb services need one or more targets defined
+Info : accepting 'telnet' connection from 4444
+
+
 ```
 
 * In another terminal window:
