@@ -1,0 +1,53 @@
+
+Fri 23 January 2015 17:23:04 (PST)
+
+Need to work on this command:
+	openocd  -f <cfg> -c "xsvf plain ./bridge.xsvf"
+
+
+xsvf (tapname|plain) filename [virt2] [quiet]
+
+
+source [find interface/ftdi/olimex-arm-usb-ocd.cfg]
+
+
+In one window from toolchain dir
+openocd -f ./olimex_coolrunner.cfg 
+
+
+In another widow
+telnet localhost 4444
+
+
+~/.../gps-cpld/toolchain/openocd (master*) > openocd -f ./olimex_coolrunner.cfg 
+Open On-Chip Debugger 0.8.0 (2014-04-29-15:41)
+Licensed under GNU GPL v2
+For bug reports, read
+	http://openocd.sourceforge.net/doc/doxygen/bugs.html
+adapter speed: 6000 kHz
+Info : only one transport option; autoselect 'jtag'
+Info : clock speed 6000 kHz
+Warn : There are no enabled taps.  AUTO PROBING MIGHT NOT WORK!!
+Warn : AUTO auto0.tap - use "jtag newtap auto0 tap -expected-id 0x06e5e093 ..."
+Warn : AUTO auto0.tap - use "... -irlen 2"
+Error: IR capture error at bit 2, saw 0x3FFFFFFFFFFFFF05 not 0x...3
+Warn : Bypassing JTAG setup events due to errors
+Warn : gdb services need one or more targets defined
+
+
+
+~/.../gps-cpld/toolchain/openocd (master*) > telnet localhost 4444
+Trying ::1...
+Connection failed: Connection refused
+Trying 127.0.0.1...
+Connected to localhost.
+Escape character is '^]'.
+Open On-Chip Debugger
+> 
+
+> xsvf plain ./bridge.xsvf      
+xsvf processing file: "./bridge.xsvf"
+XSVF file programmed successfully
+
+
+
