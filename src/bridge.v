@@ -8,6 +8,8 @@ module bridge(
 		input GPS_CLK_16_368,
 		input MCU_CLK_25_000,
 		input RESET_N,
+		input BUTTON_N,
+		output LED_D1,
 		output MCU_SCK,
 		output MCU_SS,
 		output MCU_MOSI);
@@ -26,7 +28,10 @@ reg   gps_i1_sync_reg;
 reg   gps_q0_sync_reg;
 reg   gps_q1_sync_reg;
 
+reg   led_d1_out;
+
 assign RESET_P = ~RESET_N;
+assign LED_D1  = led_d1_out;
 
 // Instantiate bridge state machine here
 bridge_sm bridge_sm_inst (
@@ -64,6 +69,7 @@ always@(posedge MCU_CLK_25_000) begin
    gps_i1_sync_reg <= gps_i1_sync;
    gps_q0_sync_reg <= gps_q1_sync;
    gps_q1_sync_reg <= gps_q1_sync;
+   led_d1_out      <= ~BUTTON_N;
 end
 
 synchronizer synch_inst_q1 (

@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2015-01-23T13:16:29</DateModified>
+  <DateModified>2015-01-23T17:20:53</DateModified>
   <ModuleName>bridge</ModuleName>
-  <SummaryTimeStamp>2015-01-23T13:10:56</SummaryTimeStamp>
-  <SavedFilePath>C:/Users/kwilson/Desktop/gps-cpld/proj/bridge/iseconfig/bridge.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>C:/Users/kwilson/Desktop/gps-cpld/proj/bridge\</ImplementationReportsDirectory>
+  <SummaryTimeStamp>2015-01-23T16:41:53</SummaryTimeStamp>
+  <SavedFilePath>/work/Projects/gps-cpld/proj/bridge/iseconfig/bridge.xreport</SavedFilePath>
+  <ImplementationReportsDirectory>/work/Projects/gps-cpld/proj/bridge/</ImplementationReportsDirectory>
   <DateInitialized>2015-01-01T17:23:23</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>

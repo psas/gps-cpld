@@ -13,4 +13,6 @@ _xmsgs/
 *.exe
 *.wdb
 *.xml
+*netgen
+*tmperr.err
 
