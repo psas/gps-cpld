@@ -37,7 +37,7 @@ LED_D2,
 
 See file:
 
-./proj/bridge/bridge.ucf
+./src/devices/bridge-xc2c64a.ucf
 
 
 ## References
