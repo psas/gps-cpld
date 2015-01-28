@@ -42,7 +42,7 @@ See file:
 This is specific to the xc2c64a breakout board
 
 | Name            | CPLD Pin | Note        |
-| -------------   | -------------          |
+|:---------------:|:--------:|:-----------:|
 | BUTTON_N        | P18      | Pullup      |
 | GPS_CLK_16_368  | P37      |             |
 | GPS_I0          | P40      |             |
