@@ -39,6 +39,27 @@ See file:
 
 ./src/devices/bridge-xc2c64a.ucf
 
+This is specific to the xc2c64a breakout board
+| Name            | CPLD Pin | Note
+| -------------   | -------------          |
+| BUTTON_N        | P18      | Pullup      |
+| GPS_CLK_16_368  | P37      |             |
+| GPS_I0          | P40      |             |
+| GPS_I1          | P41      |             |
+| GPS_Q0          | P42      |             |
+| GPS_Q1          | P43      |             |
+| MCU_CLK_25_000  | P16      |             |
+| MCU_MOSI        | P14      |             |
+| MCU_SCK         | P12      |             |
+| MCU_SS          | P13      |             |
+| RESET_N         | P30      |             |
+| LED_D1          | P39      |             |
+| LED_D2          | P38      |             |
+
+LVCMOS33 standard I/O voltages
+
+
+
 
 ## References
 
