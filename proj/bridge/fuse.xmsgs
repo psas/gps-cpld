@@ -5,5 +5,8 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
+<msg type="warning" file="HDLCompiler" num="1016" delta="unknown" >"/home/kwilson/Projects/gps-cpld/proj/bridge/../../testbench/bridge_tb.v" Line 32: Port <arg fmt="%s" index="1">BUTTON_N</arg> is not connected to this instance
+</msg>
+
 </messages>
 

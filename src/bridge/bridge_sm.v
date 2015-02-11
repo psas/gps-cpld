@@ -121,6 +121,7 @@ module bridge_sm(
 	  end
 
 	  i0_st : begin
+	    bitcount_en  <= 1'b1;
 		mosi_sel     <= i1_sel ;
 		state        <= i1_st;
 	  end
@@ -146,15 +147,17 @@ module bridge_sm(
 		if(bitcounter == 0)  begin
 		  bitcount_en  <= 1'b0;
 		  ctr_restart  <= 1'b1;
-		  ss           <= 1'b1;
+		  ss           <= 1'b1;  // 25 > 16...will keep high for at least one cycle
 		end 
 
 		if (DATAREADY) begin
-		  ss        <= 1'b0;
+		  ss           <= 1'b0;
+		  bitcount_en  <= 1'b1;
 		  sck_en       <= 1'b1;
 		  state     <= i0_st;
 		end
 		else begin
+		  bitcount_en  <= 1'b0;
 		  state     <= wait_dataready_st;
 		end
 	  end
