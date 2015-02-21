@@ -121,6 +121,7 @@ module bridge_sm(
 	  end
 
 	  i0_st : begin
+		ctr_restart  <= 1'b0;
 	    bitcount_en  <= 1'b1;
 		mosi_sel     <= i1_sel ;
 		state        <= i1_st;

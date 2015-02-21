@@ -10,6 +10,8 @@ module bridge_tb;
 	
 	reg gps_clk_16_368;
 	reg mcu_clk_25_000;
+    //reg reset_n,
+	reg button_n;
 
 	reg reset;
 	
@@ -23,6 +25,7 @@ module bridge_tb;
 		gps_clk_16_368  = 0;
 		mcu_clk_25_000  = 0;
 		reset           = 0;
+		button_n          = 1;
 		gps_i0          = 0;
 		gps_i1          = 1;
 		gps_q0          = 0;
