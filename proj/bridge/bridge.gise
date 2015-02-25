@@ -150,6 +150,8 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="InputChanged"/>
       <outfile xil_pn:name="_xmsgs/xst.xmsgs"/>
       <outfile xil_pn:name="bridge.lso"/>
       <outfile xil_pn:name="bridge.ngc"/>
@@ -170,6 +172,7 @@
     <transform xil_pn:end_ts="1424891030" xil_pn:in_ck="1664086588343121203" xil_pn:name="TRAN_ngdbuild" xil_pn:prop_ck="2260988109850707743" xil_pn:start_ts="1424891026">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
       <outfile xil_pn:name="_ngo"/>
       <outfile xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
       <outfile xil_pn:name="bridge.bld"/>
@@ -180,6 +183,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
       <outfile xil_pn:name="bridge.chk"/>
       <outfile xil_pn:name="bridge.cxt"/>
       <outfile xil_pn:name="bridge.gyd"/>
@@ -198,18 +202,21 @@
     <transform xil_pn:end_ts="1424891038" xil_pn:in_ck="4713264289689108" xil_pn:name="TRANEXT_crtProg_xbr" xil_pn:prop_ck="5245363024343" xil_pn:start_ts="1424891037">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
       <outfile xil_pn:name="bridge.jed"/>
     </transform>
     <transform xil_pn:end_ts="1424844965" xil_pn:in_ck="4713264289675822" xil_pn:name="TRAN_impactProgrammingTool_CPLD" xil_pn:prop_ck="7996569619189960536" xil_pn:start_ts="1424844965">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="InputChanged"/>
     </transform>
     <transform xil_pn:name="TRAN_timRpt">
       <status xil_pn:value="AbortedRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="InputAdded"/>
       <status xil_pn:value="InputChanged"/>
       <status xil_pn:value="InputRemoved"/>
