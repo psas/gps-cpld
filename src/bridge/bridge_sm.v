@@ -47,6 +47,7 @@ module bridge_sm(
   reg [1:0] mosi_sel = i0_sel;
   wire  sck;
   reg   sck_en;
+  wire   MCU_CLK_25_Delay;
   reg ss;
   reg mosi; 
 
@@ -55,7 +56,7 @@ module bridge_sm(
   assign gps_q0_in = GPS_Q0;
   assign gps_q1_in = GPS_Q1;
 
-  assign sck       = MCU_CLK_25_000 & sck_en;
+  assign sck       = MCU_CLK_25_Delay & sck_en;
 
   assign MCU_SS    = ss;
   assign MCU_SCK   = sck;
@@ -74,6 +75,8 @@ module bridge_sm(
   end
 
   assign reset_counter = ctr_restart | ~reset_n_in;
+
+  assign MCU_CLK_25_Delay = ~MCU_CLK_25_000;	
 
   always @(posedge MCU_CLK_25_000) begin
 	if (reset_counter)
