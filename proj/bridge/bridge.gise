@@ -78,13 +78,9 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1424846345" xil_pn:in_ck="-1798892801079992428" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1424846345">
+    <transform xil_pn:end_ts="1425073713" xil_pn:in_ck="-1798892801079992428" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1425073713">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="InputChanged"/>
-      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="../../src/bridge/adff.v"/>
       <outfile xil_pn:name="../../src/bridge/asynch_edge_detect.v"/>
       <outfile xil_pn:name="../../src/bridge/bridge.v"/>
@@ -97,14 +93,9 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1424846345" xil_pn:in_ck="-1798892801079992428" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1424846345">
+    <transform xil_pn:end_ts="1425073713" xil_pn:in_ck="-1798892801079992428" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1425073713">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
-      <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="InputChanged"/>
-      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="../../src/bridge/adff.v"/>
       <outfile xil_pn:name="../../src/bridge/asynch_edge_detect.v"/>
       <outfile xil_pn:name="../../src/bridge/bridge.v"/>
@@ -113,13 +104,10 @@
       <outfile xil_pn:name="../../src/bridge/synchronizer.v"/>
       <outfile xil_pn:name="../../testbench/bridge_tb.v"/>
     </transform>
-    <transform xil_pn:end_ts="1424890546" xil_pn:in_ck="-1798892801079992428" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="3020699756679501262" xil_pn:start_ts="1424890544">
+    <transform xil_pn:end_ts="1425073715" xil_pn:in_ck="-1798892801079992428" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="3020699756679501262" xil_pn:start_ts="1425073713">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="InputChanged"/>
       <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="bridge_tb_beh.prj"/>
       <outfile xil_pn:name="bridge_tb_isim_beh.exe"/>
@@ -128,30 +116,30 @@
       <outfile xil_pn:name="isim.log"/>
       <outfile xil_pn:name="xilinxsim.ini"/>
     </transform>
-    <transform xil_pn:end_ts="1424890546" xil_pn:in_ck="-2036880296485524079" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-4628124125814629717" xil_pn:start_ts="1424890546">
+    <transform xil_pn:end_ts="1425077884" xil_pn:in_ck="-2036880296485524079" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-4628124125814629717" xil_pn:start_ts="1425077884">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
       <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="bridge_tb_isim_beh.wdb"/>
       <outfile xil_pn:name="isim.cmd"/>
       <outfile xil_pn:name="isim.log"/>
     </transform>
-    <transform xil_pn:end_ts="1424891019" xil_pn:name="TRAN_copyInitialToXSTAbstractSynthesis" xil_pn:start_ts="1424891019">
+    <transform xil_pn:end_ts="1425073010" xil_pn:name="TRAN_copyInitialToXSTAbstractSynthesis" xil_pn:start_ts="1425073010">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1424891019" xil_pn:name="TRAN_schematicsToHdl" xil_pn:prop_ck="5190968058169330687" xil_pn:start_ts="1424891019">
+    <transform xil_pn:end_ts="1425073010" xil_pn:name="TRAN_schematicsToHdl" xil_pn:prop_ck="5190968058169330687" xil_pn:start_ts="1425073010">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1424891026" xil_pn:in_ck="-4963018165222109143" xil_pn:name="TRANEXT_xstsynthesize_xbr" xil_pn:prop_ck="4222344617095822647" xil_pn:start_ts="1424891019">
+    <transform xil_pn:end_ts="1425073017" xil_pn:in_ck="-4963018165222109143" xil_pn:name="TRANEXT_xstsynthesize_xbr" xil_pn:prop_ck="4222344617095822647" xil_pn:start_ts="1425073010">
       <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
       <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="_xmsgs/xst.xmsgs"/>
       <outfile xil_pn:name="bridge.lso"/>
       <outfile xil_pn:name="bridge.ngc"/>
@@ -169,7 +157,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1424891030" xil_pn:in_ck="1664086588343121203" xil_pn:name="TRAN_ngdbuild" xil_pn:prop_ck="2260988109850707743" xil_pn:start_ts="1424891026">
+    <transform xil_pn:end_ts="1425073022" xil_pn:in_ck="1664086588343121203" xil_pn:name="TRAN_ngdbuild" xil_pn:prop_ck="2260988109850707743" xil_pn:start_ts="1425073017">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForPredecessor"/>
@@ -179,7 +167,7 @@
       <outfile xil_pn:name="bridge.ngd"/>
       <outfile xil_pn:name="bridge_ngdbuild.xrpt"/>
     </transform>
-    <transform xil_pn:end_ts="1424891037" xil_pn:in_ck="4713264289680244" xil_pn:name="TRANEXT_vm6File_xbr" xil_pn:prop_ck="-7850201235337308932" xil_pn:start_ts="1424891030">
+    <transform xil_pn:end_ts="1425073028" xil_pn:in_ck="4713264289680244" xil_pn:name="TRANEXT_vm6File_xbr" xil_pn:prop_ck="-7850201235337308932" xil_pn:start_ts="1425073022">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
@@ -199,18 +187,16 @@
       <outfile xil_pn:name="bridge_html"/>
       <outfile xil_pn:name="bridge_pad.csv"/>
     </transform>
-    <transform xil_pn:end_ts="1424891038" xil_pn:in_ck="4713264289689108" xil_pn:name="TRANEXT_crtProg_xbr" xil_pn:prop_ck="5245363024343" xil_pn:start_ts="1424891037">
+    <transform xil_pn:end_ts="1425073029" xil_pn:in_ck="4713264289689108" xil_pn:name="TRANEXT_crtProg_xbr" xil_pn:prop_ck="5245363024343" xil_pn:start_ts="1425073028">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForPredecessor"/>
       <outfile xil_pn:name="bridge.jed"/>
     </transform>
-    <transform xil_pn:end_ts="1424844965" xil_pn:in_ck="4713264289675822" xil_pn:name="TRAN_impactProgrammingTool_CPLD" xil_pn:prop_ck="7996569619189960536" xil_pn:start_ts="1424844965">
+    <transform xil_pn:end_ts="1425073036" xil_pn:in_ck="4713264289675822" xil_pn:name="TRAN_impactProgrammingTool_CPLD" xil_pn:prop_ck="7996569619189960536" xil_pn:start_ts="1425073036">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForInputs"/>
       <status xil_pn:value="OutOfDateForPredecessor"/>
-      <status xil_pn:value="InputChanged"/>
     </transform>
     <transform xil_pn:name="TRAN_timRpt">
       <status xil_pn:value="AbortedRun"/>

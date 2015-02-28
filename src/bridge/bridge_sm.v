@@ -67,10 +67,10 @@ module bridge_sm(
   // Explicitly multiplex the output
   always @(mosi_sel, gps_i0_in, gps_i1_in, gps_q0_in, gps_q1_in) begin
 	case (mosi_sel)
-	  i0_sel: mosi = gps_i0_in;
-	  i1_sel: mosi = gps_i1_in;
-	  q0_sel: mosi = gps_q0_in;
-	  q1_sel: mosi = gps_q1_in;
+	  i0_sel: begin mosi = gps_i0_in; end
+	  i1_sel: begin mosi = gps_i1_in; end
+	  q0_sel: begin mosi = gps_q0_in; end
+	  q1_sel: begin mosi = gps_q1_in; end
 	endcase 
   end
 

@@ -27,9 +27,9 @@ module bridge_tb;
 		reset           = 0;
 		button_n          = 1;
 		gps_i0          = 0;
-		gps_i1          = 1;
+		gps_i1          = 0;
 		gps_q0          = 0;
-		gps_q1          = 1;
+		gps_q1          = 0;
 	end    
 
 	bridge uut (
@@ -56,7 +56,7 @@ module bridge_tb;
 		#20 mcu_clk_25_000  = ~mcu_clk_25_000;
 	end
 
-    always begin
+    /*always begin
 	    #150  gps_q0  = ~gps_q0;
 		#150  gps_q1  = ~gps_q1;
 		#150  gps_i0  = ~gps_i0;
@@ -66,7 +66,7 @@ module bridge_tb;
 		#273  gps_i0  = ~gps_i0;
 		#273  gps_i1  = ~gps_i1;
 
-	end
+	end*/
 
 endmodule
 
