@@ -82,7 +82,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1425268126" xil_pn:in_ck="-1798892801079992428" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1425268126">
+    <transform xil_pn:end_ts="1425268680" xil_pn:in_ck="-1798892801079992428" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1425268680">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="../../src/bridge/adff.v"/>
@@ -97,7 +97,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1425268126" xil_pn:in_ck="-1798892801079992428" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1425268126">
+    <transform xil_pn:end_ts="1425268684" xil_pn:in_ck="-1798892801079992428" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1425268684">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="../../src/bridge/adff.v"/>
@@ -108,7 +108,7 @@
       <outfile xil_pn:name="../../src/bridge/synchronizer.v"/>
       <outfile xil_pn:name="../../testbench/bridge_tb.v"/>
     </transform>
-    <transform xil_pn:end_ts="1425268128" xil_pn:in_ck="-1798892801079992428" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="3020699756679501262" xil_pn:start_ts="1425268126">
+    <transform xil_pn:end_ts="1425269167" xil_pn:in_ck="-1798892801079992428" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="3020699756679501262" xil_pn:start_ts="1425269165">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
@@ -120,7 +120,7 @@
       <outfile xil_pn:name="isim.log"/>
       <outfile xil_pn:name="xilinxsim.ini"/>
     </transform>
-    <transform xil_pn:end_ts="1425268128" xil_pn:in_ck="-2036880296485524079" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="1560543059793487969" xil_pn:start_ts="1425268128">
+    <transform xil_pn:end_ts="1425269167" xil_pn:in_ck="-2036880296485524079" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="1560543059793487969" xil_pn:start_ts="1425269167">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
@@ -140,6 +140,8 @@
     <transform xil_pn:end_ts="1425268196" xil_pn:in_ck="-4963018165222109143" xil_pn:name="TRANEXT_xstsynthesize_xbr" xil_pn:prop_ck="4222344617095822647" xil_pn:start_ts="1425268190">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name=".lso"/>
       <outfile xil_pn:name="_xmsgs/xst.xmsgs"/>
       <outfile xil_pn:name="bridge.lso"/>

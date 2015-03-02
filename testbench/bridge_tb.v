@@ -19,7 +19,8 @@ module bridge_tb;
 	wire mcu_sck;
 	wire mcu_ss;
 	wire mcu_mosi;
-		
+	wire gps_clk_16_out;
+	
 	initial begin
 		// Initialize Inputs
 		gps_clk_16_368  = 0;
@@ -42,8 +43,9 @@ module bridge_tb;
 		.RESET_N(reset),
 		.MCU_SCK(mcu_sck),
 		.MCU_SS(mcu_ss),
-		.MCU_MOSI(mcu_mosi)
-	);
+		.MCU_MOSI(mcu_mosi),
+        .GPS_CLK_16_OUT(gps_clk_16_out)
+		);
 	
 	always begin
 		#10   reset   = 1'b1;
