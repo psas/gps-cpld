@@ -40,7 +40,7 @@ module bridge_sm(
 
   reg ctr_restart;
   reg bitcount_en;
-  reg [7:0] bitcounter;
+  reg [12:0] bitcounter;
 
   reg [3:0] state = reset_st;
 
@@ -80,7 +80,7 @@ module bridge_sm(
 
   always @(posedge MCU_CLK_25_000) begin
 	if (reset_counter)
-	  bitcounter <= 8'b11111111;
+	  bitcounter <= 13'b1111111111111;
 	else if (bitcount_en)
 	  bitcounter <= bitcounter - 1;
   end
