@@ -10,23 +10,18 @@ module bridge_tb;
 	
 	reg gps_clk_16_368;
 	reg mcu_clk_25_000;
-    //reg reset_n,
-	reg button_n;
-
 	reg reset;
 	
 	// outputs
 	wire mcu_sck;
 	wire mcu_ss;
 	wire mcu_mosi;
-	wire gps_clk_16_out;
 	
 	initial begin
 		// Initialize Inputs
 		gps_clk_16_368  = 0;
 		mcu_clk_25_000  = 0;
 		reset           = 0;
-		button_n          = 1;
 		gps_i0          = 0;
 		gps_i1          = 0;
 		gps_q0          = 0;
@@ -43,13 +38,13 @@ module bridge_tb;
 		.RESET_N(reset),
 		.MCU_SCK(mcu_sck),
 		.MCU_SS(mcu_ss),
-		.MCU_MOSI(mcu_mosi),
-        .GPS_CLK_16_OUT(gps_clk_16_out)
+		.MCU_MOSI(mcu_mosi)
 		);
-	
+
 	always begin
 		#10   reset   = 1'b1;
     end
+
 	always begin
 		#30 gps_clk_16_368 = ~gps_clk_16_368;
 	end
