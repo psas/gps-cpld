@@ -42,8 +42,8 @@ module bridge_tb;
 		);
 
 	always begin
-		#10   reset   = 1'b1;
-    end
+		#50   reset   = 1'b1;
+	end
 
 	always begin
 		#30 gps_clk_16_368 = ~gps_clk_16_368;
@@ -53,17 +53,16 @@ module bridge_tb;
 		#20 mcu_clk_25_000  = ~mcu_clk_25_000;
 	end
 
-    /*always begin
-	    #150  gps_q0  = ~gps_q0;
+	always begin
+		#150  gps_q0  = ~gps_q0;
 		#150  gps_q1  = ~gps_q1;
 		#150  gps_i0  = ~gps_i0;
 		#150  gps_i1  = ~gps_i1;
-	    #273  gps_q0  = ~gps_q0;
+		#273  gps_q0  = ~gps_q0;
 		#273  gps_q1  = ~gps_q1;
 		#273  gps_i0  = ~gps_i0;
 		#273  gps_i1  = ~gps_i1;
-
-	end*/
+	end
 
 endmodule
 
