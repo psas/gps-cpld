@@ -8,6 +8,7 @@ module bridge(
 		input GPS_CLK_16_368,
 		input MCU_CLK_25_000,
 		input RESET_N,
+		input SELF_TEST,
 		output MCU_SCK,
 		output MCU_SS,
 		output MCU_MOSI);
@@ -36,6 +37,7 @@ bridge_sm bridge_sm_inst (
 .GPS_Q1(gps_q1_sync_reg),
 .MCU_CLK_25_000(MCU_CLK_25_000),
 .RESET_N(RESET_N),
+.SELF_TEST(SELF_TEST),
 .DATAREADY(datardy),
 .MCU_SCK(MCU_SCK),
 .MCU_SS(MCU_SS),
