@@ -8,8 +8,8 @@ module bridge_tb;
 	reg gps_q0;
 	reg gps_q1;
 	
-	reg gps_clk_16_368;
-	reg mcu_clk_25_000;
+	reg max2769_clk;
+	reg mcu_clk;
 	reg self_test;
 	reg reset;
 	
@@ -20,8 +20,8 @@ module bridge_tb;
 	
 	initial begin
 		// Initialize Inputs
-		gps_clk_16_368  = 0;
-		mcu_clk_25_000  = 0;
+		max2769_clk  = 0;
+		mcu_clk  = 0;
 		reset           = 0;
 		self_test       = 1;
 		gps_i0          = 0;
@@ -35,8 +35,8 @@ module bridge_tb;
 		.GPS_I1(gps_i1),
 		.GPS_Q0(gps_q0),
 		.GPS_Q1(gps_q1),
-		.GPS_CLK_16_368(gps_clk_16_368),
-		.MCU_CLK_25_000(mcu_clk_25_000),
+		.MAX2769_CLK(max2769_clk),
+		.MCU_CLK(mcu_clk),
 		.SELF_TEST(self_test),
 		.RESET_N(reset),
 		.MCU_SCK(mcu_sck),
@@ -49,11 +49,11 @@ module bridge_tb;
 	end
 
 	always begin
-		#30 gps_clk_16_368 = ~gps_clk_16_368;
+		#30 max2769_clk = ~max2769_clk;
 	end
 	
 	always begin
-		#13 mcu_clk_25_000  = ~mcu_clk_25_000;
+		#13 mcu_clk  = ~mcu_clk;
 	end
 
 	always begin

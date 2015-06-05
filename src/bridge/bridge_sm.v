@@ -6,7 +6,7 @@ module bridge_sm(
 	input GPS_I1,
 	input GPS_Q0,
 	input GPS_Q1,
-	input MCU_CLK_25_000,
+	input MCU_CLK,
 	input RESET_N,
 	input SELF_TEST,
 	input DATAREADY,
@@ -34,15 +34,15 @@ module bridge_sm(
   wire [1:0] mosi_sel;
   assign mosi_sel = bitcounter[1:0];
 
-  assign MCU_CLK_25_Delay = ~MCU_CLK_25_000;	
+  assign MCU_CLK_Delay = ~MCU_CLK;	
 
   assign MCU_SS    = ss_delay[0];
-  assign MCU_SCK   = MCU_CLK_25_Delay & sck_en;
+  assign MCU_SCK   = MCU_CLK_Delay & sck_en;
   assign MCU_MOSI  = mosi;
 
   assign reset_n_in = RESET_N;
 
-  always@(posedge MCU_CLK_25_000) begin
+  always@(posedge MCU_CLK) begin
 	if (reset_n_in == 0) begin
 		sck_en <= 1'b0;
 		ss_delay <= 0;
