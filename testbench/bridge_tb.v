@@ -49,7 +49,7 @@ module bridge_tb;
 	end
 
 	always begin
-		#30 max2769_clk = ~max2769_clk;
+		#120 max2769_clk = ~max2769_clk;
 	end
 	
 	always begin
