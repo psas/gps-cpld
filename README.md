@@ -195,11 +195,12 @@ Device specific options:
 * Connect JTAG device.
 * Put power the board
 
+You might need to sudo if you haven't added udev rules for 15ba:0003 Olimex Ltd. OpenOCD JTAG
 In one terminal window execute:
 
 ```
-~/.../gps-cpld/toolchain/openocd (master*) > sudo openocd -f olimex_coolrunner.cfg 
-Open On-Chip Debugger 0.8.0 (2014-04-29-15:41)
+~/.../gps-cpld/toolchain/openocd (master*) > openocd -f olimex_coolrunner.cfg -c init -c "xsvf plain ./bridge.xsvf" -c shutdown
+Open On-Chip Debugger 0.8.0 (2014-08-14-16:28)
 Licensed under GNU GPL v2
 For bug reports, read
 	http://openocd.sourceforge.net/doc/doxygen/bugs.html
@@ -208,32 +209,12 @@ Info : only one transport option; autoselect 'jtag'
 Info : clock speed 1000 kHz
 Warn : There are no enabled taps.  AUTO PROBING MIGHT NOT WORK!!
 Warn : AUTO auto0.tap - use "jtag newtap auto0 tap -expected-id 0x06e5e093 ..."
-Warn : AUTO auto0.tap - use "... -irlen 2"
-Error: IR capture error at bit 2, saw 0x3FFFFFFFFFFFFF05 not 0x...3
-Warn : Bypassing JTAG setup events due to errors
+Warn : AUTO auto0.tap - use "... -irlen 8"
 Warn : gdb services need one or more targets defined
-Info : accepting 'telnet' connection from 4444
-
-
-```
-
-* In another terminal window:
-
-```
-~/.../gps-cpld/toolchain/openocd (master*) > telnet localhost 4444
-Trying ::1...
-Connection failed: Connection refused
-Trying 127.0.0.1...
-Connected to localhost.
-Escape character is '^]'.
-Open On-Chip Debugger
->  xsvf plain ./bridge.xsvf
 xsvf processing file: "./bridge.xsvf"
 XSVF file programmed successfully
-> 
-
 ```
 
-* n.b.: The programming file bridge.xsvf should be in the same directory as where you execute these commands.
+* n.b.: The programming file bridge.xsvf (or a symlink to it) should be in the same directory as where you execute these commands.
 
 
