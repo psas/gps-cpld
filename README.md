@@ -1,4 +1,12 @@
 
+
+## Binary Files
+
+The Release directory contains the latest binary file. The toolchain directory
+has a link to this file.
+
+Please do not check in the ISE Webpack files in the proj directory.
+
 ## Verilog and Xilinx ISE Webpack project files for a GPS -> SPI Bridge
 
 ```
